@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>서울시연수원 통합예약시스템</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=1, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" media="all" href="css/jquery-ui.theme.min.css">
+    <link rel="stylesheet" media="all" href="css/common.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.placeholder.enhanced-1.5.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/common.js"></script>
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" media="all" href="css/ie.css">
+        <script src="js/html5.js"></script>
+        <script src="js/respond.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- 헤더 -->
+    <div id="header">
+        <div class="contains">
+            <h1 class="logo"><img src="img/common/logo.png" alt="서울시연수원 통합예약시스템"></h1>
+            <ul id="gnb">
+                <li><a href="#" class="btn_menu">예약관리</a></li>
+                <li><a href="#" class="btn_menu">운영자관리</a></li>
+                <li><a href="#" class="btn_menu">회원관리</a></li>
+                <li><a href="#" class="btn_menu">정산관리</a></li>
+                <li><a href="#" class="btn_menu">통계관리</a></li>
+                <li><a href="#" class="btn_menu">연수원관리</a></li>
+                <li><a href="#" class="btn_menu active">사이트관리</a></li>
+                <li><a href="#" class="btn_menu">환경설정</a></li>
+            </ul>
+            <div class="user">
+                <a href="#" class="btn_logout">로그아웃</a>
+            </div>
+        </div>
+    </div>
+    <!-- 헤더 -->
+    
+    <div id="content">
+        <div class="contains">
+            <!-- 컨텐츠 -->
+            <div class="content_wrap">
+                <!-- lnb -->
+                <div class="lnb_area">
+                    <div class="name_box">
+                        <p class="name">속초관리자명</p>
+                    </div>
+                    <ul class="lnb_list">
+                        <li><a href="#" class="btn_lnb">공지사항</a></li>
+                        <li><a href="#" class="btn_lnb">팝업설정</a></li>
+                        <li><a href="#" class="btn_lnb">FAQ</a></li>
+                        <li><a href="#" class="btn_lnb active">이벤트</a></li>
+                        <li><a href="#" class="btn_lnb">문의게시판</a></li>
+                        <li><a href="#" class="btn_lnb">포토갤러리</a></li>
+                        <li><a href="#" class="btn_lnb">연수후기</a></li>
+                        <li><a href="#" class="btn_lnb">만족도조사</a></li>
+                    </ul>
+                </div>
+                <!-- //lnb -->
+                
+                <!-- 메인 헤더 -->
+                <div class="main_header">
+                    <p class="title">이벤트</p>
+                    <ul class="navi_list">
+                        <li>서울시연수원 통합예약시스템</li>
+                        <li>회원관리</li>
+                        <li class="now">인사DB관리</li>
+                    </ul>
+                </div>
+                <!-- //메인 헤더 -->
+                
+                <!-- 메인 컨텐츠 -->
+                <div class="main_content">
+                    <table class="form_table">
+                        <colgroup>
+                            <col style="width:136px">
+                            <col style="width:448px">
+                            <col style="width:136px">
+                            <col style="width:448px">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>구분</th>
+                                <td>
+                                    <label class="radio_box">
+                                        <input type="radio" name="category" checked="checked" value="1" class="radio">
+                                        <span class="txt">통합</span>
+                                    </label>
+                                    <label class="radio_box">
+                                        <input type="radio" name="category" value="2" class="radio">
+                                        <span class="txt">속초</span>
+                                    </label>
+                                    <label class="radio_box">
+                                        <input type="radio" name="category" value="3" class="radio">
+                                        <span class="txt">서천</span>
+                                    </label>
+                                    <label class="radio_box">
+                                        <input type="radio" name="category" value="4" class="radio">
+                                        <span class="txt">수안보</span>
+                                    </label>
+                                </td>
+                                <th>공지</th>
+                                <td>
+                                    <label class="check_box">
+                                        <input type="checkbox" checked="checked" class="check">
+                                        <span class="txt">공지로 설정</span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>등록자</th>
+                                <td><p class="value">master01</p></td>
+                                <th>숨김</th>
+                                <td>
+                                    <label class="radio_box">
+                                        <input type="radio" name="visible" checked="checked" value="show" class="radio">
+                                        <span class="txt">보이기</span>
+                                    </label>
+                                    <label class="radio_box">
+                                        <input type="radio" name="visible" value="hide" class="radio">
+                                        <span class="txt">숨기기</span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>최종수정일</th>
+                                <td><p class="value">2018-09-01 12:54</p></td>
+                                <th>최종작성자</th>
+                                <td><p class="value">master01</p></td>
+                            </tr>
+                            <tr>
+                                <th>상태</th>
+                                <td colspan="3">
+                                    <label class="radio_box">
+                                        <input type="radio" name="status" checked="checked" value="start" class="radio">
+                                        <span class="txt">진행</span>
+                                    </label>
+                                    <label class="radio_box">
+                                        <input type="radio" name="status" value="stop" class="radio">
+                                        <span class="txt">정지</span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>기간</th>
+                                <td colspan="3">
+                                    <div class="date_box">
+                                        <input type="text" value="2018-11-06" class="input_text input_date">
+                                        <select class="select">
+                                            <option>10:00</option>
+                                        </select>
+                                        <p class="unit">~</p>
+                                        <input type="text" value="2018-11-06" class="input_text input_date">
+                                        <select class="select">
+                                            <option>10:00</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>제목</th>
+                                <td colspan="3"><input type="text" class="input_text"></td>
+                            </tr>
+                            <tr>
+                                <th>내용</th>
+                                <td colspan="3" class="editor">
+                                    <!-- 에디터 -->
+                                    <img src="img/temp/editor.png" alt="임시 에디터 이미지">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>썸네일<span class="red">(150*100)</span></th>
+                                <td colspan="3">
+                                    <div class="file_upload">
+                                        <input type="text" class="input_text">
+                                        <div class="file_box">
+                                            <a href="#" class="btn_file">파일선택</a>
+                                            <input type="file" class="input_file">
+                                        </div>
+                                        <a href="#" class="btn_del"><span class="icon"></span>삭제</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>파일첨부</th>
+                                <td colspan="3">
+                                    <div class="file_upload">
+                                        <input type="text" class="input_text">
+                                        <div class="file_box">
+                                            <a href="#" class="btn_file">파일선택</a>
+                                            <input type="file" class="input_file">
+                                        </div>
+                                        <a href="#" class="btn_del"><span class="icon"></span>삭제</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>파일첨부</th>
+                                <td colspan="3">
+                                    <div class="file_upload">
+                                        <input type="text" class="input_text">
+                                        <div class="file_box">
+                                            <a href="#" class="btn_file">파일선택</a>
+                                            <input type="file" class="input_file">
+                                        </div>
+                                        <a href="#" class="btn_del"><span class="icon"></span>삭제</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>파일첨부</th>
+                                <td colspan="3">
+                                    <div class="file_upload">
+                                        <input type="text" class="input_text">
+                                        <div class="file_box">
+                                            <a href="#" class="btn_file">파일선택</a>
+                                            <input type="file" class="input_file">
+                                        </div>
+                                        <a href="#" class="btn_del"><span class="icon"></span>삭제</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="form_btn">
+                        <a href="#" class="btns whiteline btn_list">목록</a>
+                        <a href="#" class="btns btn_confirm">수정</a>
+                    </div>
+                    
+                    <div class="comment_area">
+                        <p class="comment_title">댓글 <b>17</b></p>
+                        <ul class="comment_list">
+                            <li>
+                                <p class="num">01.</p><p class="info">gdhong(홍길동)<span class="date">2018.10.8 11:21</span></p>
+                                <div class="text_box">
+                                    <p>23일에 이벤트 신청합니다! 아버님과 좋은 추억 만들고 싶어요!</p>
+                                </div>
+                                <div class="btn_box">
+                                    <a href="#" class="btn_toggle"><span class="off">숨기기</span><span class="on">보이기</span></a>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="num">01.</p><p class="info">gdhong(홍길동)<span class="date">2018.10.8 11:21</span></p>
+                                <div class="text_box">
+                                    <p>9/23일에 이벤트 신청합니다! 어머님과 좋은 추억 만들고 싶어요!</p> 
+                                    <p>항상 고생만 하신 우리 어머니 언제 한번 큰 잔치 해드리고 싶었습니다. 효도 한번 제대로 하고싶습니다.</p> 
+                                    <p>항상 서울시 공무원이라고 자랑스러워 하셨었는데 이번 공무원 연수원에서 잔치를 해드리면 얼마나 즐거울까요.</p> 
+                                    <p>꼭 좀 부탁드립니다!</p>
+                                </div>
+                                <div class="btn_box">
+                                    <a href="#" class="btn_toggle"><span class="off">숨기기</span><span class="on">보이기</span></a>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="num">01.</p><p class="info">gdhong(홍길동)<span class="date">2018.10.8 11:21</span></p>
+                                <div class="text_box">
+                                    <p>23일에 이벤트 신청합니다! 아버님과 좋은 추억 만들고 싶어요!</p>
+                                </div>
+                                <div class="btn_box">
+                                    <a href="#" class="btn_toggle"><span class="off">숨기기</span><span class="on">보이기</span></a>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="num">01.</p><p class="info">gdhong(홍길동)<span class="date">2018.10.8 11:21</span></p>
+                                <div class="text_box">
+                                    <p>9/23일에 이벤트 신청합니다! 어머님과 좋은 추억 만들고 싶어요!</p> 
+                                    <p>항상 고생만 하신 우리 어머니 언제 한번 큰 잔치 해드리고 싶었습니다. 효도 한번 제대로 하고싶습니다.</p> 
+                                    <p>항상 서울시 공무원이라고 자랑스러워 하셨었는데 이번 공무원 연수원에서 잔치를 해드리면 얼마나 즐거울까요.</p> 
+                                    <p>꼭 좀 부탁드립니다!</p>
+                                </div>
+                                <div class="btn_box">
+                                    <a href="#" class="btn_toggle"><span class="off">숨기기</span><span class="on">보이기</span></a>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="num">01.</p><p class="info">gdhong(홍길동)<span class="date">2018.10.8 11:21</span></p>
+                                <div class="text_box">
+                                    <p>23일에 이벤트 신청합니다! 아버님과 좋은 추억 만들고 싶어요!</p>
+                                </div>
+                                <div class="btn_box">
+                                    <a href="#" class="btn_toggle"><span class="off">숨기기</span><span class="on">보이기</span></a>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="num">01.</p><p class="info">gdhong(홍길동)<span class="date">2018.10.8 11:21</span></p>
+                                <div class="text_box">
+                                    <p>9/23일에 이벤트 신청합니다! 어머님과 좋은 추억 만들고 싶어요!</p> 
+                                    <p>항상 고생만 하신 우리 어머니 언제 한번 큰 잔치 해드리고 싶었습니다. 효도 한번 제대로 하고싶습니다.</p> 
+                                    <p>항상 서울시 공무원이라고 자랑스러워 하셨었는데 이번 공무원 연수원에서 잔치를 해드리면 얼마나 즐거울까요.</p> 
+                                    <p>꼭 좀 부탁드립니다!</p>
+                                </div>
+                                <div class="btn_box">
+                                    <a href="#" class="btn_toggle"><span class="off">숨기기</span><span class="on">보이기</span></a>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="num">01.</p><p class="info">gdhong(홍길동)<span class="date">2018.10.8 11:21</span></p>
+                                <div class="text_box">
+                                    <p>23일에 이벤트 신청합니다! 아버님과 좋은 추억 만들고 싶어요!</p>
+                                </div>
+                                <div class="btn_box">
+                                    <a href="#" class="btn_toggle"><span class="off">숨기기</span><span class="on">보이기</span></a>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="num">01.</p><p class="info">gdhong(홍길동)<span class="date">2018.10.8 11:21</span></p>
+                                <div class="text_box">
+                                    <p>9/23일에 이벤트 신청합니다! 어머님과 좋은 추억 만들고 싶어요!</p> 
+                                    <p>항상 고생만 하신 우리 어머니 언제 한번 큰 잔치 해드리고 싶었습니다. 효도 한번 제대로 하고싶습니다.</p> 
+                                    <p>항상 서울시 공무원이라고 자랑스러워 하셨었는데 이번 공무원 연수원에서 잔치를 해드리면 얼마나 즐거울까요.</p> 
+                                    <p>꼭 좀 부탁드립니다!</p>
+                                </div>
+                                <div class="btn_box">
+                                    <a href="#" class="btn_toggle"><span class="off">숨기기</span><span class="on">보이기</span></a>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="num">01.</p><p class="info">gdhong(홍길동)<span class="date">2018.10.8 11:21</span></p>
+                                <div class="text_box">
+                                    <p>23일에 이벤트 신청합니다! 아버님과 좋은 추억 만들고 싶어요!</p>
+                                </div>
+                                <div class="btn_box">
+                                    <a href="#" class="btn_toggle"><span class="off">숨기기</span><span class="on">보이기</span></a>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="num">01.</p><p class="info">gdhong(홍길동)<span class="date">2018.10.8 11:21</span></p>
+                                <div class="text_box">
+                                    <p>9/23일에 이벤트 신청합니다! 어머님과 좋은 추억 만들고 싶어요!</p> 
+                                    <p>항상 고생만 하신 우리 어머니 언제 한번 큰 잔치 해드리고 싶었습니다. 효도 한번 제대로 하고싶습니다.</p> 
+                                    <p>항상 서울시 공무원이라고 자랑스러워 하셨었는데 이번 공무원 연수원에서 잔치를 해드리면 얼마나 즐거울까요.</p> 
+                                    <p>꼭 좀 부탁드립니다!</p>
+                                </div>
+                                <div class="btn_box">
+                                    <a href="#" class="btn_toggle"><span class="off">숨기기</span><span class="on">보이기</span></a>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="num">01.</p><p class="info">gdhong(홍길동)<span class="date">2018.10.8 11:21</span></p>
+                                <div class="text_box">
+                                    <p>23일에 이벤트 신청합니다! 아버님과 좋은 추억 만들고 싶어요!</p>
+                                </div>
+                                <div class="btn_box">
+                                    <a href="#" class="btn_toggle"><span class="off">숨기기</span><span class="on">보이기</span></a>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="num">01.</p><p class="info">gdhong(홍길동)<span class="date">2018.10.8 11:21</span></p>
+                                <div class="text_box">
+                                    <p>9/23일에 이벤트 신청합니다! 어머님과 좋은 추억 만들고 싶어요!</p> 
+                                    <p>항상 고생만 하신 우리 어머니 언제 한번 큰 잔치 해드리고 싶었습니다. 효도 한번 제대로 하고싶습니다.</p> 
+                                    <p>항상 서울시 공무원이라고 자랑스러워 하셨었는데 이번 공무원 연수원에서 잔치를 해드리면 얼마나 즐거울까요.</p> 
+                                    <p>꼭 좀 부탁드립니다!</p>
+                                </div>
+                                <div class="btn_box">
+                                    <a href="#" class="btn_toggle"><span class="off">숨기기</span><span class="on">보이기</span></a>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="num">01.</p><p class="info">gdhong(홍길동)<span class="date">2018.10.8 11:21</span></p>
+                                <div class="text_box">
+                                    <p>23일에 이벤트 신청합니다! 아버님과 좋은 추억 만들고 싶어요!</p>
+                                </div>
+                                <div class="btn_box">
+                                    <a href="#" class="btn_toggle"><span class="off">숨기기</span><span class="on">보이기</span></a>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="num">01.</p><p class="info">gdhong(홍길동)<span class="date">2018.10.8 11:21</span></p>
+                                <div class="text_box">
+                                    <p>9/23일에 이벤트 신청합니다! 어머님과 좋은 추억 만들고 싶어요!</p> 
+                                    <p>항상 고생만 하신 우리 어머니 언제 한번 큰 잔치 해드리고 싶었습니다. 효도 한번 제대로 하고싶습니다.</p> 
+                                    <p>항상 서울시 공무원이라고 자랑스러워 하셨었는데 이번 공무원 연수원에서 잔치를 해드리면 얼마나 즐거울까요.</p> 
+                                    <p>꼭 좀 부탁드립니다!</p>
+                                </div>
+                                <div class="btn_box">
+                                    <a href="#" class="btn_toggle"><span class="off">숨기기</span><span class="on">보이기</span></a>
+                                </div>
+                            </li>
+                        </ul>
+                        
+                        <!-- 페이징 -->
+                        <div class="bbs_page">
+                            <a href="#" class="btn_page first"></a>
+                            <a href="#" class="btn_page prev"></a>
+                            <a href="#" class="btn_page active">1</a>
+                            <a href="#" class="btn_page">2</a>
+                            <a href="#" class="btn_page">3</a>
+                            <a href="#" class="btn_page">4</a>
+                            <a href="#" class="btn_page">5</a>
+                            <a href="#" class="btn_page">6</a>
+                            <a href="#" class="btn_page">7</a>
+                            <a href="#" class="btn_page">8</a>
+                            <a href="#" class="btn_page">9</a>
+                            <a href="#" class="btn_page">10</a>
+                            <a href="#" class="btn_page next"></a>
+                            <a href="#" class="btn_page last"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //메인 컨텐츠 -->
+            </div>
+            <!-- //컨텐츠 -->
+        </div>
+    </div>
+</body>
+</html>

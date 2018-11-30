@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>서울시연수원 통합예약시스템</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=1, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" media="all" href="css/jquery-ui.theme.min.css">
+    <link rel="stylesheet" media="all" href="css/common.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.placeholder.enhanced-1.5.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/common.js"></script>
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" media="all" href="css/ie.css">
+        <script src="js/html5.js"></script>
+        <script src="js/respond.js"></script>
+    <![endif]-->
+</head>
+<body class="popup">
+    <div class="popup_area popup_schedule">
+        <div class="popup_header">
+            <p class="title">연수원 일정</p>
+            <a href="#" title="닫기" class="btn_close">닫기</a>
+        </div>
+        <div class="popup_content">
+            <div class="popup_contains">
+                <p class="form_title">27일 월요일</p>
+                <div class="sch_area">
+                    <table class="form_table">
+                        <tbody>
+                            <tr>
+                                <td class="stats_select">
+                                    <span class="icon_stats red"></span>
+                                    <select class="select sizess">
+                                        <option value="">예약불가</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" class="input_text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="date_box">
+                                        <input type="text" value="2018-11-06" class="input_text input_date">
+                                        <p class="unit">~</p>
+                                        <input type="text" value="2018-11-06" class="input_text input_date">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="label">반복</p>
+                                    <select class="select sizess">
+                                        <option value="">반복안함</option>
+                                    </select>
+                                    <p class="label">반복횟수</p>
+                                    <input type="text" class="input_text number">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <textarea class="input_text"></textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="popup_footer">
+            <a href="#" class="btns whiteline btn_delete">삭제</a>
+            <a href="#" class="btns whiteline btn_close">닫기</a>
+            <a href="#" class="btns whiteline btn_modify">수정</a>
+        </div>
+    </div>
+</body>
+</html>

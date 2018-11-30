@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>서울시연수원 통합예약시스템</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=1, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" media="all" href="css/jquery-ui.theme.min.css">
+    <link rel="stylesheet" media="all" href="css/common.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.placeholder.enhanced-1.5.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/common.js"></script>
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" media="all" href="css/ie.css">
+        <script src="js/html5.js"></script>
+        <script src="js/respond.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- 헤더 -->
+    <div id="header">
+        <div class="contains">
+            <h1 class="logo"><img src="img/common/logo.png" alt="서울시연수원 통합예약시스템"></h1>
+            <ul id="gnb">
+                <li><a href="#" class="btn_menu">예약관리</a></li>
+                <li><a href="#" class="btn_menu active">운영자관리</a></li>
+                <li><a href="#" class="btn_menu">회원관리</a></li>
+                <li><a href="#" class="btn_menu">정산관리</a></li>
+                <li><a href="#" class="btn_menu">통계관리</a></li>
+                <li><a href="#" class="btn_menu">연수원관리</a></li>
+                <li><a href="#" class="btn_menu">사이트관리</a></li>
+                <li><a href="#" class="btn_menu">환경설정</a></li>
+            </ul>
+            <div class="user">
+                <a href="#" class="btn_logout">로그아웃</a>
+            </div>
+        </div>
+    </div>
+    <!-- 헤더 -->
+    
+    <div id="content">
+        <div class="contains">
+            <!-- 컨텐츠 -->
+            <div class="content_wrap">
+                <!-- lnb -->
+                <div class="lnb_area">
+                    <div class="name_box">
+                        <p class="name">속초관리자명</p>
+                    </div>
+                    <ul class="lnb_list">
+                        <li><a href="#" class="btn_lnb">연수원운영자관리</a></li>
+                        <li><a href="#" class="btn_lnb active">권한관리</a></li>
+                    </ul>
+                </div>
+                <!-- //lnb -->
+                
+                <!-- 메인 헤더 -->
+                <div class="main_header">
+                    <p class="title">권한 관리</p>
+                    <ul class="navi_list">
+                        <li>서울시연수원 통합예약시스템</li>
+                        <li>회원관리</li>
+                        <li class="now">인사DB관리</li>
+                    </ul>
+                </div>
+                <!-- //메인 헤더 -->
+                
+                <!-- 메인 컨텐츠 -->
+                <div class="main_content">
+                    <p class="auth_select_area">운영자 그룹 : 자치구 객실배정담당자</p>
+                    <table class="form_table auth_area">
+                        <colgroup>
+                            <col style="width:170px">
+                            <col>
+                            <col style="width:115px">
+                            <col style="width:115px">
+                            <col style="width:115px">
+                            <col style="width:115px">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>1depth 메뉴</th>
+                                <th>2depth 메뉴</th>
+                                <th>목록읽기</th>
+                                <th>등록</th>
+                                <th>수정</th>
+                                <th>전체선택</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="7" class="label">예약관리</td>
+                                <td class="left">예약현황</td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                            </tr>
+                            <tr>
+                                <td class="left">객실현황</td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                            </tr>
+                            <tr>
+                                <td class="left">Forecast</td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                            </tr>
+                            <tr>
+                                <td class="left">기관배정예약관리</td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                            </tr>
+                            <tr>
+                                <td class="left">단체연수예약관리</td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                            </tr>
+                            <tr>
+                                <td class="left">시설예약관리</td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                            </tr>
+                            <tr>
+                                <td class="left">SMS 발송</td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                            </tr>
+                            
+                            <tr class="odd">
+                                <td rowspan="3" class="label">운영자관리</td>
+                                <td class="left">연수원운영자관리</td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                            </tr>
+                            <tr class="odd">
+                                <td class="left">기관배정담당자관리</td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                            </tr>
+                            <tr class="odd">
+                                <td class="left">권한관리</td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                            </tr>
+                            
+                            <tr>
+                                <td rowspan="3" class="label">회원관리</td>
+                                <td class="left">인사DB관리</td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                            </tr>
+                            <tr>
+                                <td class="left">연수원회원관리</td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                            </tr>
+                            <tr>
+                                <td class="left">패널티회원관리</td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                            </tr>
+                            
+                            <tr class="odd">
+                                <td rowspan="3" class="label">정산관리</td>
+                                <td class="left">일별마감</td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                            </tr>
+                            <tr class="odd">
+                                <td class="left">복지포인트복원관리</td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                            </tr>
+                            <tr class="odd">
+                                <td class="left">복지포인트연동관리</td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                            </tr>
+                            
+                            <tr>
+                                <td rowspan="4" class="label">통계관리</td>
+                                <td class="left">수련원운영일지</td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                            </tr>
+                            <tr>
+                                <td class="left">연수현황종합</td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                            </tr>
+                            <tr>
+                                <td class="left">소속별연수현황</td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                            </tr>
+                            <tr>
+                                <td class="left">객실청소현황</td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                            </tr>
+                            
+                            <tr class="odd">
+                                <td rowspan="4" class="label">연수원관리</td>
+                                <td class="left">객실관리</td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                            </tr>
+                            <tr class="odd">
+                                <td class="left">부대시설관리</td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                            </tr>
+                            <tr class="odd">
+                                <td class="left">분실물관리</td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                            </tr>
+                            <tr class="odd">
+                                <td class="left">컴플레인관리</td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                            </tr>
+                            
+                            <tr>
+                                <td rowspan="7" class="label">사이트관리</td>
+                                <td class="left">공지사항</td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                            </tr>
+                            <tr>
+                                <td class="left">팝업설정</td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                            </tr>
+                            <tr>
+                                <td class="left">FAQ</td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                            </tr>
+                            <tr>
+                                <td class="left">이벤트</td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                            </tr>
+                            <tr>
+                                <td class="left">문의게시판</td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                            </tr>
+                            <tr>
+                                <td class="left">포토갤러리</td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                            </tr>
+                            <tr>
+                                <td class="left">만족도조사</td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                            </tr>
+                            
+                            <tr class="odd">
+                                <td rowspan="4" class="label">설정</td>
+                                <td class="left">날짜별이용기관관리</td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                            </tr>
+                            <tr class="odd">
+                                <td class="left">시설별이용기간관리</td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                            </tr>
+                            <tr class="odd">
+                                <td class="left">예약기간관리</td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                            </tr>
+                            <tr class="odd">
+                                <td class="left">연수기관관리(기관배정)</td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                                <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="form_btn">
+                        <a href="#" class="btns whiteline btn_close">닫기</a>
+                        <a href="#" class="btns btn_confirm">확인</a>
+                    </div>
+                </div>
+                <!-- //메인 컨텐츠 -->
+            </div>
+            <!-- //컨텐츠 -->
+        </div>
+    </div>
+</body>
+</html>

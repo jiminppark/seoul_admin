@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>서울시연수원 통합예약시스템</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=1, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" media="all" href="css/jquery-ui.theme.min.css">
+    <link rel="stylesheet" media="all" href="css/common.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.placeholder.enhanced-1.5.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/common.js"></script>
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" media="all" href="css/ie.css">
+        <script src="js/html5.js"></script>
+        <script src="js/respond.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- 헤더 -->
+    <div id="header">
+        <div class="contains">
+            <h1 class="logo"><img src="img/common/logo.png" alt="서울시연수원 통합예약시스템"></h1>
+            <ul id="gnb">
+                <li><a href="#" class="btn_menu active">예약관리</a></li>
+                <li><a href="#" class="btn_menu">운영자관리</a></li>
+                <li><a href="#" class="btn_menu">회원관리</a></li>
+                <li><a href="#" class="btn_menu">정산관리</a></li>
+                <li><a href="#" class="btn_menu">통계관리</a></li>
+                <li><a href="#" class="btn_menu">연수원관리</a></li>
+                <li><a href="#" class="btn_menu">사이트관리</a></li>
+                <li><a href="#" class="btn_menu">환경설정</a></li>
+            </ul>
+            <div class="user">
+                <a href="#" class="btn_logout">로그아웃</a>
+            </div>
+        </div>
+    </div>
+    <!-- 헤더 -->
+    
+    <div id="content">
+        <div class="contains">
+            <!-- 컨텐츠 -->
+            <div class="content_wrap">
+                <!-- lnb -->
+                <div class="lnb_area">
+                    <div class="name_box">
+                        <p class="name">속초관리자명</p>
+                    </div>
+                    <ul class="lnb_list">
+                        <li><a href="#" class="btn_lnb">예약현황</a></li>
+                        <li><a href="#" class="btn_lnb">객실현황</a></li>
+                        <li><a href="#" class="btn_lnb">FORECAST</a></li>
+                        <li><a href="#" class="btn_lnb">단체연구예약</a></li>
+                        <li><a href="#" class="btn_lnb active">기관배정예약</a></li>
+                        <li><a href="#" class="btn_lnb">시설예약</a></li>
+                        <li><a href="#" class="btn_lnb">SMS 발송</a></li>
+                    </ul>
+                </div>
+                <!-- //lnb -->
+                
+                <!-- 메인 헤더 -->
+                <div class="main_header">
+                    <p class="title">기관배정예약</p>
+                    <ul class="navi_list">
+                        <li>서울시연수원 통합예약시스템</li>
+                        <li>예약관리</li>
+                        <li class="now">기관배정예약</li>
+                    </ul>
+                </div>
+                <!-- //메인 헤더 -->
+                
+                <!-- 메인 컨텐츠 -->
+                <div class="main_content">
+                    <table class="form_table">
+                        <colgroup>
+                            <col style="width:136px">
+                            <col style="width:448px">
+                            <col style="width:136px">
+                            <col style="width:448px">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>신청번호</th>
+                                <td><p class="value">2018080100001</p></td>
+                                <th>예약일</th>
+                                <td><p class="value">2018-08-01</p></td>
+                            </tr>
+                            <tr>
+                                <th>연수원</th>
+                                <td><p class="value">속초연수원</p></td>
+                                <th>객실타입</th>
+                                <td><p class="value">A형</p></td>
+                            </tr>
+                            <tr>
+                                <th>소속기관</th>
+                                <td><p class="value">행정국</p></td>
+                                <th>소속부서</th>
+                                <td><p class="value">인력개발과(<span class="red">격무부서</span>)</p></td>
+                            </tr>
+                            <tr>
+                                <th>예약자</th>
+                                <td>
+                                    <div class="btn_right_area">
+                                        <p class="value">신창균</p>
+                                        <div class="btn_right">
+                                            <a href="" data-width="1160" data-height="740" class="btns btn_panalty_history btn_popup">이용내역</a>
+                                            <a href="rsv_pscds_upt_popup.html" data-width="1160" data-height="740" class="btns btn_panalty_history btn_popup">패널티 이력 확인</a>
+                                            <a href="rsv_pscds_upt_popup2.html" data-width="1160" data-height="420" class="btns btn_panalty_add btn_popup">패널티 등록</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th>연락처</th>
+                                <td><p class="value">010-1234-5678</p></td>
+                            </tr>
+                            <tr>
+                                <th>재직상태</th>
+                                <td><p class="value">재직</p></td>
+                                <th>직급</th>
+                                <td><p class="value">지방행정주사보</p></td>
+                            </tr>
+                            <tr>
+                                <th>생년월일</th>
+                                <td><p class="value">1970-05-05</p></td>
+                                <th>임용일</th>
+                                <td><p class="value">2000-01-02</p></td>
+                            </tr>
+                            <tr>
+                                <th>최종이용실적</th>
+                                <td colspan="3"><p class="value">2016-05-04 속초수련원</p></td>
+                            </tr>
+                            <tr>
+                                <th>입실일</th>
+                                <td><p class="value">2018-08-01</p></td>
+                                <th>퇴실일</th>
+                                <td><p class="value">2018-08-01</p></td>
+                            </tr>
+                            <tr>
+                                <th>인원</th>
+                                <td><p class="value">2명</p></td>
+                                <th>차량번호</th>
+                                <td><p class="value">98하1234</p></td>
+                            </tr>
+                            <tr>
+                                <th>메모</th>
+                                <td class="memo_box" colspan="3">
+                                    <textarea class="input_text"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>승인상태</th>
+                                <td colspan="3">
+                                    <span>
+                                        <label class="radio_box">
+                                            <input type="radio" name="type" checked="checked" class="radio">
+                                            <span class="txt">승인요청</span>
+                                        </label>
+                                    </span>
+                                    <span>
+                                        <label class="radio_box">
+                                            <input type="radio" name="type" class="radio">
+                                            <span class="txt">승인완료</span>
+                                        </label>
+                                    </span>
+                                </td>
+                            </tr>
+                           <tr>
+                                <th>승인메모</th>
+                                <td colspan="3">
+                                    <input type="text" class="input_text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>최종수정일</th>
+                                <td><p class="value">2018-08-01 15:30</p></td>
+                                <th>작성자</th>
+                                <td><p class="value">관리자명</p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="form_btn center">
+                        <a href="#" class="btns red btn_checkout">예약취소</a>
+                        <a href="#" class="btns whiteline btn_list">목록</a>
+                        <a href="#" class="btns btn_confirm">수정</a>
+                    </div>
+                </div>
+                <!-- //메인 컨텐츠 -->
+            </div>
+            <!-- //컨텐츠 -->
+        </div>
+    </div>
+</body>
+</html>

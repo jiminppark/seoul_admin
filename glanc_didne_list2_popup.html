@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>서울시연수원 통합예약시스템</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=1, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" media="all" href="css/jquery-ui.theme.min.css">
+    <link rel="stylesheet" media="all" href="css/common.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.placeholder.enhanced-1.5.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/common.js"></script>
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" media="all" href="css/ie.css">
+        <script src="js/html5.js"></script>
+        <script src="js/respond.js"></script>
+    <![endif]-->
+</head>
+<body class="popup">
+    <div class="popup_area popup_point">
+        <div class="popup_header">
+            <p class="title">마감실패내역</p>
+            <a href="#" title="닫기" class="btn_close">닫기</a>
+        </div>
+        <div class="popup_content">
+            <div class="popup_contains">
+                <p class="form_title">마감실패내역</p>
+                <table class="form_table noborder">
+                    <colgroup>
+                        <col style="width:15%">
+                        <col style="width:345px">
+                        <col style="width:100px">
+                        <col>
+                        <col style="width:80px">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <select class="select">
+                                    <option>소속구분</option>
+                                </select>
+                            </td>
+                            <td>
+                                <div class="date_box">
+                                    <input type="text" value="2018-11-06" class="input_text input_date">
+                                    <p class="unit">-</p>
+                                    <input type="text" value="2018-11-06" class="input_text input_date">
+                                </div>
+                            </td>
+                            <td>
+                                <a href="#" class="btns btn_search">검색</a>
+                            </td>
+                            <td></td>
+                            <td>
+                                <a href="#" class="btns greenline btn_excel">엑셀등록</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="bbs_area">
+                    <table class="bbs">
+                        <colgroup>
+                            <col style="width:60px">
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>예약자명</th>
+                                <th>기관명</th>
+                                <th>부서명</th>
+                                <th>객실타입</th>
+                                <th>예약기간</th>
+                                <th>상태</th>
+                                <th>차감포인트</th>
+                                <th>차감포인트합계</th>
+                                <th>결과</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>5</td>
+                                <td>신창균</td>
+                                <td>시의회사무처</td>
+                                <td>부서명</td>
+                                <td>B타입</td>
+                                <td>1박2일</td>
+                                <td></td>
+                                <td>5</td>
+                                <td>10</td>
+                                <td><p class="red">마감실패</p><p>인사 DB에 없는 회원</p></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>신창균</td>
+                                <td>시의회사무처</td>
+                                <td>부서명</td>
+                                <td>B타입</td>
+                                <td>1박2일</td>
+                                <td></td>
+                                <td>5</td>
+                                <td>10</td>
+                                <td><p class="red">마감실패</p><p>인사 DB에 없는 회원</p></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>신창균</td>
+                                <td>시의회사무처</td>
+                                <td>부서명</td>
+                                <td>B타입</td>
+                                <td>1박2일</td>
+                                <td></td>
+                                <td>5</td>
+                                <td>10</td>
+                                <td><p class="red">마감실패</p><p>인사 DB에 없는 회원</p></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>신창균</td>
+                                <td>시의회사무처</td>
+                                <td>부서명</td>
+                                <td>B타입</td>
+                                <td>1박2일</td>
+                                <td></td>
+                                <td>5</td>
+                                <td>10</td>
+                                <td><p class="red">마감실패</p><p>인사 DB에 없는 회원</p></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>신창균</td>
+                                <td>시의회사무처</td>
+                                <td>부서명</td>
+                                <td>B타입</td>
+                                <td>1박2일</td>
+                                <td></td>
+                                <td>5</td>
+                                <td>10</td>
+                                <td><p class="red">마감실패</p><p>인사 DB에 없는 회원</p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <!-- 페이징 -->
+                    <div class="bbs_page">
+                        <a href="#" class="btn_page first"></a>
+                        <a href="#" class="btn_page prev"></a>
+                        <a href="#" class="btn_page active">1</a>
+                        <a href="#" class="btn_page">2</a>
+                        <a href="#" class="btn_page">3</a>
+                        <a href="#" class="btn_page">4</a>
+                        <a href="#" class="btn_page">5</a>
+                        <a href="#" class="btn_page">6</a>
+                        <a href="#" class="btn_page">7</a>
+                        <a href="#" class="btn_page">8</a>
+                        <a href="#" class="btn_page">9</a>
+                        <a href="#" class="btn_page">10</a>
+                        <a href="#" class="btn_page next"></a>
+                        <a href="#" class="btn_page last"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup_footer">
+            <a href="#" class="btns whiteline btn_close">닫기</a>
+        </div>
+    </div>
+</body>
+</html>

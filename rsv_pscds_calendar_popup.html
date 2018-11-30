@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>서울시연수원 통합예약시스템</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=1, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" media="all" href="css/jquery-ui.theme.min.css">
+    <link rel="stylesheet" media="all" href="css/common.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.placeholder.enhanced-1.5.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/common.js"></script>
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" media="all" href="css/ie.css">
+        <script src="js/html5.js"></script>
+        <script src="js/respond.js"></script>
+    <![endif]-->
+</head>
+<body class="popup">
+    <div class="popup_area reserve_room">
+        <div class="popup_header">
+            <p class="title">객실선택</p>
+            <a href="#" title="닫기" class="btn_close">닫기</a>
+        </div>
+        <div class="popup_content">
+            <div class="popup_contains">
+                <div class="room_area">
+                    <table class="room_table room_select_view">
+                        <tbody>
+                            <tr>
+                                <th>8층 6실</th>
+                                <td class="etc_room" colspan="2">
+                                    <div class="room_state"><p>세미나실</p></div>
+                                </td>
+                                <td class="room_state_area in_room" colspan="2"> <!-- 객실 상태가 붙을경우 클래스 room_state_area추가 후, 해당상태 클래스를 넣어주세요.-->
+                                    <div class="room_state">
+                                        <p>801호</p>
+                                        <p>박병호</p>
+                                        <a href="#" class="btns"><span class="icon"></span>재실중</a>
+                                    </div>
+                                </td>
+                                <td colspan="2">
+                                    <div class="room_state"><p>802호</p></div>
+                                </td>
+                                <td colspan="2">
+                                    <div class="room_state"><p>803호</p></div>
+                                </td>
+                                <td class="etc_room" colspan="3">
+                                    <div class="room_state"><p>카페테리아</p></div>
+                                </td>
+                                <td>
+                                    <div class="room_state"><p>804호</p></div>
+                                </td>
+                                <td>
+                                    <div class="room_state"><p>805호</p></div>
+                                </td>
+                                <td>
+                                    <div class="room_state"><p>806호</p></div>
+                                </td>
+                                <td class="btn"><a href="#" class="btn_select">8층<br>전체<br>선택</a></td>
+                            </tr>
+                            <tr>
+                                <th>7층 9실</th>
+                                <td class="room_state_area in_room" colspan="2">
+                                    <div class="room_state">
+                                        <p>701호</p>
+                                        <p>박한선</p>
+                                        <a href="#" class="btns"><span class="icon"></span>재실중</a>
+                                    </div>
+                                </td>
+                                <td class="room_state_area checking" colspan="2">
+                                    <div class="room_state">
+                                        <p>702호</p>
+                                        <p>박한선</p>
+                                        <a href="#" class="btns"><span class="icon"></span>점검중</a>
+                                    </div>
+                                </td>
+                                <td colspan="2">
+                                    <div class="room_state">
+                                        <p>703호</p>
+                                    </div>
+                                </td>
+                                <td colspan="2">
+                                    <div class="room_state">
+                                        <p>704호</p>
+                                    </div>
+                                </td>
+                                <td colspan="2">
+                                    <div class="room_state">
+                                        <p>705호</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="room_state">
+                                        <p>706호</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="room_state">
+                                        <p>707호</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="room_state">
+                                        <p>708호</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="room_state">
+                                        <p>709호</p>
+                                    </div>
+                                </td>
+                                <td class="btn"><a href="#" class="btn_select">8층<br>전체<br>선택</a></td>
+                            </tr>
+                            <tr>
+                                <th>6층 9실</th>
+                                <td class="room_state_area cleaning" colspan="2">
+                                    <div class="room_state">
+                                        <p>601호</p>
+                                        <p>박한선</p>
+                                        <a href="#" class="btns"><span class="icon"></span>청소중</a>
+                                    </div>
+                                </td>
+                                <td class="room_state_area room_out" colspan="2">
+                                    <div class="room_state">
+                                        <p>602호</p>
+                                        <p>박병호</p>
+                                        <a href="#" class="btns"><span class="icon"></span>외출중</a>
+                                    </div>
+                                </td>
+                                <td class="room_state_area room_out" colspan="2">
+                                    <div class="room_state">
+                                        <p>603호</p>
+                                        <p>박병호</p>
+                                        <a href="#" class="btns"><span class="icon"></span>외출중</a>
+                                    </div>
+                                </td>
+                                <td colspan="2">
+                                    <div class="room_state">
+                                        <p>604호</p>
+                                    </div>
+                                </td>
+                                <td colspan="2">
+                                    <div class="room_state">
+                                        <p>605호</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="room_state">
+                                        <p>606호</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="room_state">
+                                        <p>607호</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="room_state">
+                                        <p>608호</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="room_state">
+                                        <p>609호</p>
+                                    </div>
+                                </td>
+                                <td class="btn"><a href="#" class="btn_select">8층<br>전체<br>선택</a></td>
+                            </tr>
+                            <tr>
+                                <th>5층 14실</th>
+                                <td class="batch">
+                                    <div class="room_state">
+                                        <p>501호</p>
+                                        <span>마포구<br>단체연수</span>
+                                    </div>
+                                </td>
+                                <td class="batch">
+                                    <div class="room_state">
+                                        <p>502호</p>
+                                        <span>마포구<br>단체연수</span>
+                                    </div>
+                                </td>
+                                <td class="batch">
+                                    <div class="room_state">
+                                        <p>503호</p>
+                                        <span>마포구<br>단체연수</span>
+                                    </div>
+                                </td>
+                                <td class="batch">
+                                    <div class="room_state">
+                                        <p>504호</p>
+                                        <span>마포구<br>단체연수</span>
+                                    </div>
+                                </td>
+                                <td class="batch">
+                                    <div class="room_state">
+                                        <p>505호</p>
+                                        <span>마포구<br>단체연수</span>
+                                    </div>
+                                </td>
+                                <td class="batch">
+                                    <div class="room_state">
+                                        <p>506호</p>
+                                        <span>마포구<br>단체연수</span>
+                                    </div>
+                                </td>
+                                <td class="batch">
+                                    <div class="room_state">
+                                        <p>507호</p>
+                                        <span>마포구<br>단체연수</span>
+                                    </div>
+                                </td>
+                                <td class="batch">
+                                    <div class="room_state">
+                                        <p>508호</p>
+                                        <span>마포구<br>단체연수</span>
+                                    </div>
+                                </td>
+                                <td class="batch">
+                                    <div class="room_state">
+                                        <p>509호</p>
+                                        <span>마포구<br>단체연수</span>
+                                    </div>
+                                </td>
+                                <td class="batch">
+                                    <div class="room_state">
+                                        <p>510호</p>
+                                        <span>마포구<br>단체연수</span>
+                                    </div>
+                                </td>
+                                <td class="batch">
+                                    <div class="room_state">
+                                        <p>511호</p>
+                                        <span>마포구<br>단체연수</span>
+                                    </div>
+                                </td>
+                                <td class="batch">
+                                    <div class="room_state">
+                                        <p>512호</p>
+                                        <span>마포구<br>단체연수</span>
+                                    </div>
+                                </td>
+                                <td class="batch">
+                                    <div class="room_state">
+                                        <p>513호</p>
+                                        <span>마포구<br>단체연수</span>
+                                    </div>
+                                </td>
+                                <td class="batch">
+                                    <div class="room_state">
+                                        <p>514호</p>
+                                        <span>마포구<br>단체연수</span>
+                                    </div>
+                                </td>
+                                <td class="btn"><a href="#" class="btn_select">8층<br>전체<br>선택</a></td>
+                            </tr>
+                            <tr>
+                                <th>4층 14실</th>
+                                <td>
+                                    <div class="room_state">
+                                        <p>401호</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="room_state">
+                                        <p>402호</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="room_state">
+                                        <p>403호</p>
+                                    </div>
+                                </td>
+                                <td class="one_room room_state_area room_out"> <!-- colspan이 없을 경우, one_room과 room_state_area 클래스를 붙여주시고, 해당상태 클래스를 넣어주세요.-->
+                                    <div class="room_state">
+                                        <p>404호</p>
+                                        <p>한효주</p>
+                                        <a href="#" class="btns"><span class="icon"></span>외출중</a>
+                                    </div>
+                                </td>
+                                <td class="one_room room_state_area in_room">
+                                    <div class="room_state">
+                                        <p>405호</p>
+                                        <p>한별</p>
+                                        <a href="#" class="btns"><span class="icon"></span>재실중</a>
+                                    </div>
+                                </td>
+                                <td class="one_room room_state_area in_room">
+                                    <div class="room_state">
+                                        <p>406호</p>
+                                        <p>허강</p>
+                                        <a href="#" class="btns"><span class="icon"></span>재실중</a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="room_state">
+                                        <p>407호</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="room_state">
+                                        <p>408호</p>
+                                </td>
+                                <td>
+                                    <div class="room_state">
+                                        <p>409호</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="room_state">
+                                        <p>410호</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="room_state">
+                                        <p>411호</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="room_state">
+                                        <p>412호</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="room_state">
+                                        <p>413호</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="room_state">
+                                        <p>414호</p>
+                                    </div>
+                                </td>
+                                <td class="btn"><a href="#" class="btn_select">8층<br>전체<br>선택</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="form_btn">
+                    <a href="#" class="btns btn_cancel">닫기</a>
+                    <a href="#" class="btns btn_confirm">객실 배정</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

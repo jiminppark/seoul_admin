@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>서울시연수원 통합예약시스템</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=1, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" media="all" href="css/jquery-ui.theme.min.css">
+    <link rel="stylesheet" media="all" href="css/common.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.placeholder.enhanced-1.5.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/common.js"></script>
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" media="all" href="css/ie.css">
+        <script src="js/html5.js"></script>
+        <script src="js/respond.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- 헤더 -->
+    <div id="header">
+        <div class="contains">
+            <h1 class="logo"><img src="img/common/logo.png" alt="서울시연수원 통합예약시스템"></h1>
+            <ul id="gnb">
+                <li><a href="#" class="btn_menu active">예약관리</a></li>
+                <li><a href="#" class="btn_menu">운영자관리</a></li>
+                <li><a href="#" class="btn_menu">회원관리</a></li>
+                <li><a href="#" class="btn_menu">정산관리</a></li>
+                <li><a href="#" class="btn_menu">통계관리</a></li>
+                <li><a href="#" class="btn_menu">연수원관리</a></li>
+                <li><a href="#" class="btn_menu">사이트관리</a></li>
+                <li><a href="#" class="btn_menu">환경설정</a></li>
+            </ul>
+            <div class="user">
+                <a href="#" class="btn_logout">로그아웃</a>
+            </div>
+        </div>
+    </div>
+    <!-- 헤더 -->
+    
+    <div id="content">
+        <div class="contains">
+            <!-- 컨텐츠 -->
+            <div class="content_wrap">
+                <!-- lnb -->
+                <div class="lnb_area">
+                    <div class="name_box">
+                        <p class="name">속초관리자명</p>
+                    </div>
+                    <ul class="lnb_list">
+                        <li><a href="#" class="btn_lnb">예약현황</a></li>
+                        <li><a href="#" class="btn_lnb active">객실현황</a></li>
+                        <li><a href="#" class="btn_lnb">FORECAST</a></li>
+                        <li><a href="#" class="btn_lnb">단체연구예약</a></li>
+                        <li><a href="#" class="btn_lnb">기관배정예약</a></li>
+                        <li><a href="#" class="btn_lnb">시설예약</a></li>
+                        <li><a href="#" class="btn_lnb">SMS 발송</a></li>
+                    </ul>
+                </div>
+                <!-- //lnb -->
+                
+                <!-- 메인 헤더 -->
+                <div class="main_header main_header_typ2">
+                    <p class="title">객실현황</p>
+                    <ul class="navi_list">
+                        <li>서울시연수원 통합예약시스템</li>
+                        <li>회원관리</li>
+                        <li class="now">인사DB관리</li>
+                    </ul>
+                </div>
+                <!-- //메인 헤더 -->
+                
+                <!-- 메인 컨텐츠 -->
+                <div class="main_content">
+                    <div class="schedule_area">
+                        <div class="sch_table_header room_table_header">
+                            <select class="select">
+                                <option value="">수안보연수원</option>
+                                <option value="">수안보연수원</option>
+                            </select>
+
+                            <div class="btn_group">
+                                <button type="button" class="btns">하늘관</button>
+                                <button type="button" class="btns">숲속관</button>
+                                <button type="button" class="btns active">연수동</button>
+                            </div>
+
+                            <div class="fr">
+                                <select class="select select-type4">
+                                    <option value="">화면 새로고침 주기</option>
+                                    <option value="">화면 새로고침 주기</option>
+                                </select>
+
+                                <div class="date_area">
+                                    <button type="button" class="btns">새로고침</button>
+
+                                    <div class="date_box">
+                                        <span><input type="text" value="2018-11-06" class="input_text input_date"></span>
+                                        <button type="button" class="btns btn_today">오늘</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bbs_area">
+                            <div class="reserve_room">
+                                <div class="bbs_header">
+                                    <div class="bbs_list">
+                                        <p class="total total_type">이용 중 객실 수 : <span class="blue">10</span><span class="black"> / 10개</span>  잔여객실 수 : <span class="blue">0</span><span class="black"> / 10개</span>   총 이용자 수 : <span class="red">36</span><span class="black">명</span></p>
+                                    </div>
+                                </div>
+                                
+                                <table class="room_table">
+                                    <tbody>
+                                        <tr>
+                                            <th>2층</th>
+                                            <td><div class="room_state" onclick="window.open('daily_popup.html','window_name','width=470,height=260,location=no,status=no,scrollbars=yes');"><p>221호</p></div></td>
+                                            <td><div class="room_state" onclick="window.open('http://www.naver.com')"><p>222호</p></div></td>
+                                            <td><div class="room_state"><p>223호</p></div></td>
+                                            <td><div class="room_state"><p>224호</p></div></td>
+                                            <td><div class="room_state"><p>225호</p></div></td>
+                                            <td><div class="room_state"><p>226호</p></div></td>
+                                            <td><div class="room_state"><p>227호</p></div></td>
+                                            <td><div class="room_state"><p>228호</p></div></td>
+                                            <td><div class="room_state"><p>229호</p></div></td>
+                                            <td><div class="room_state"><p>230호</p></div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //메인 컨텐츠 -->
+            </div>
+            <!-- //컨텐츠 -->
+        </div>
+    </div>
+</body>
+</html>

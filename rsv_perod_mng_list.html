@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>서울시연수원 통합예약시스템</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=1, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" media="all" href="css/jquery-ui.theme.min.css">
+    <link rel="stylesheet" media="all" href="css/common.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.placeholder.enhanced-1.5.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/common.js"></script>
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" media="all" href="css/ie.css">
+        <script src="js/html5.js"></script>
+        <script src="js/respond.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- 헤더 -->
+    <div id="header">
+        <div class="contains">
+            <h1 class="logo"><img src="img/common/logo.png" alt="서울시연수원 통합예약시스템"></h1>
+            <ul id="gnb">
+                <li><a href="#" class="btn_menu">예약관리</a></li>
+                <li><a href="#" class="btn_menu">운영자관리</a></li>
+                <li><a href="#" class="btn_menu">회원관리</a></li>
+                <li><a href="#" class="btn_menu">정산관리</a></li>
+                <li><a href="#" class="btn_menu">통계관리</a></li>
+                <li><a href="#" class="btn_menu">연수원관리</a></li>
+                <li><a href="#" class="btn_menu">사이트관리</a></li>
+                <li><a href="#" class="btn_menu active">환경설정</a></li>
+            </ul>
+            <div class="user">
+                <a href="#" class="btn_logout">로그아웃</a>
+            </div>
+        </div>
+    </div>
+    <!-- 헤더 -->
+    
+    <div id="content">
+        <div class="contains">
+            <!-- 컨텐츠 -->
+            <div class="content_wrap">
+                <!-- lnb -->
+                <div class="lnb_area">
+                    <div class="name_box">
+                        <p class="name">속초관리자명</p>
+                    </div>
+                    <ul class="lnb_list">
+                        <li><a href="#" class="btn_lnb">날짜별 이용기간 관리</a></li>
+                        <li><a href="#" class="btn_lnb active">예약기관 관리</a></li>
+                        <li><a href="#" class="btn_lnb">패널티 항목 관리</a></li>
+                        <li><a href="#" class="btn_lnb">연수기관 관리</a></li>
+                        <li><a href="#" class="btn_lnb">기관배정 담당자 관리</a></li>
+                        <li><a href="#" class="btn_lnb">격무부서 관리</a></li>
+                        <li><a href="#" class="btn_lnb">공통코드관리</a></li>
+                    </ul>
+                </div>
+                <!-- //lnb -->
+                
+                <!-- 메인 헤더 -->
+                <div class="main_header">
+                    <p class="title">예약기간 관리</p>
+                    <ul class="navi_list">
+                        <li>서울시연수원 통합예약시스템</li>
+                        <li>회원관리</li>
+                        <li class="now">인사DB관리</li>
+                    </ul>
+                </div>
+                <!-- //메인 헤더 -->
+                
+                <!-- 메인 컨텐츠 -->
+                <div class="main_content">
+                    <div class="bbs_area">
+                        <p class="sub_title">※ 날짜는 DD, 시간은 24시 표기법으로 입력해주세요.</p>
+                        <table class="bbs fixed">
+                            <colgroup>
+                                <col style="width:10%">
+                                <col style="width:15%">
+                                <col style="width:50%">
+                                <col style="width:15%">
+                                <col style="width:10%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>번호</th>
+                                    <th>운영규정 구분</th>
+                                    <th></th>
+                                    <th>최종수정일</th>
+                                    <th>수정</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>4</td>
+                                    <td>단체예약 시작일</td>
+                                    <td>
+                                        <div class="sch_box month">
+                                            <input type="text" class="input_text">
+                                            <p class="label">개월 전</p>
+                                        </div>
+                                    </td>
+                                    <td>2018-08-01 관리자명</td>
+                                    <td><a href="#" class="btns btn_modify">수정</a></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>일반예약 시작일</td>
+                                    <td>
+                                        <div class="sch_box day">
+                                            <p class="label">매월</p>
+                                            <input type="text" class="input_text day">
+                                            <p class="label unit">일</p>
+                                            <input type="text" class="input_text time">
+                                            <p class="label">시~</p>
+                                            <input type="text" class="input_text day">
+                                            <p class="label unit">일</p>
+                                            <input type="text" class="input_text time">
+                                            <p class="label unit">시</p>
+                                        </div>
+                                    </td>
+                                    <td>2018-08-01 관리자명</td>
+                                    <td><a href="#" class="btns btn_modify">수정</a></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>기관예약 시작일</td>
+                                    <td>
+                                        <div class="sch_box day">
+                                            <p class="label">매월</p>
+                                            <input type="text" class="input_text day">
+                                            <p class="label unit">일</p>
+                                            <input type="text" class="input_text time">
+                                            <p class="label">시~</p>
+                                            <input type="text" class="input_text day">
+                                            <p class="label unit">일</p>
+                                            <input type="text" class="input_text time">
+                                            <p class="label unit">시</p>
+                                        </div>
+                                    </td>
+                                    <td>2018-08-01 관리자명</td>
+                                    <td><a href="#" class="btns btn_modify">수정</a></td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>월 최대 예약 횟수</td>
+                                    <td>
+                                        <div class="sch_box month">
+                                            <input type="text" class="input_text">
+                                            <p class="label">회</p>
+                                        </div>
+                                    </td>
+                                    <td>2018-08-01 관리자명</td>
+                                    <td><a href="#" class="btns btn_modify">수정</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <br>
+                        <br>
+                        <p class="sub_title">속초 수련원</p>
+                        <table class="bbs fixed">
+                            <colgroup>
+                                <col style="width:10%">
+                                <col style="width:15%">
+                                <col style="width:50%">
+                                <col style="width:15%">
+                                <col style="width:10%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>번호</th>
+                                    <th>운영규정 구분</th>
+                                    <th></th>
+                                    <th>최종수정일</th>
+                                    <th>수정</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2</td>
+                                    <td>성수기 1회 박수 제한</td>
+                                    <td>
+                                        <div class="sch_box point">
+                                            <p class="label">최대</p>
+                                            <input type="text" class="input_text">
+                                            <p class="label">일</p>
+                                            <p class="label">포인트차감</p>
+                                            <p class="label type">A타입</p>
+                                            <input type="text" class="input_text">
+                                            <p class="label type">B타입</p>
+                                            <input type="text" class="input_text">
+                                        </div>
+                                    </td>
+                                    <td>2018-08-01 관리자명</td>
+                                    <td><a href="#" class="btns btn_modify">수정</a></td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>비수기 1회 박수 제한</td>
+                                    <td>
+                                        <div class="sch_box point">
+                                            <p class="label">최대</p>
+                                            <input type="text" class="input_text">
+                                            <p class="label">일</p>
+                                            <p class="label">포인트차감</p>
+                                            <p class="label type">A타입</p>
+                                            <input type="text" class="input_text">
+                                            <p class="label type">B타입</p>
+                                            <input type="text" class="input_text">
+                                        </div>
+                                    </td>
+                                    <td>2018-08-01 관리자명</td>
+                                    <td><a href="#" class="btns btn_modify">수정</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <br>
+                        <br>
+                        <p class="sub_title">서천 연수원</p>
+                        <table class="bbs fixed">
+                            <colgroup>
+                                <col style="width:10%">
+                                <col style="width:15%">
+                                <col style="width:50%">
+                                <col style="width:15%">
+                                <col style="width:10%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>번호</th>
+                                    <th>운영규정 구분</th>
+                                    <th></th>
+                                    <th>최종수정일</th>
+                                    <th>수정</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2</td>
+                                    <td>성수기 1회 박수 제한</td>
+                                    <td>
+                                        <div class="sch_box point">
+                                            <p class="label">최대</p>
+                                            <input type="text" class="input_text">
+                                            <p class="label">일</p>
+                                            <p class="label">포인트차감</p>
+                                            <p class="label type">A타입</p>
+                                            <input type="text" class="input_text">
+                                            <p class="label type">B타입</p>
+                                            <input type="text" class="input_text">
+                                            <p class="label type">C타입</p>
+                                            <input type="text" class="input_text">
+                                        </div>
+                                    </td>
+                                    <td>2018-08-01 관리자명</td>
+                                    <td><a href="#" class="btns btn_modify">수정</a></td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>비수기 1회 박수 제한</td>
+                                    <td>
+                                        <div class="sch_box point">
+                                            <p class="label">최대</p>
+                                            <input type="text" class="input_text">
+                                            <p class="label">일</p>
+                                            <p class="label">포인트차감</p>
+                                            <p class="label type">A타입</p>
+                                            <input type="text" class="input_text">
+                                            <p class="label type">B타입</p>
+                                            <input type="text" class="input_text">
+                                            <p class="label type">C타입</p>
+                                            <input type="text" class="input_text">
+                                        </div>
+                                    </td>
+                                    <td>2018-08-01 관리자명</td>
+                                    <td><a href="#" class="btns btn_modify">수정</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <br>
+                        <br>
+                        <p class="sub_title">수안보 연수원</p>
+                        <table class="bbs fixed">
+                            <colgroup>
+                                <col style="width:10%">
+                                <col style="width:15%">
+                                <col style="width:50%">
+                                <col style="width:15%">
+                                <col style="width:10%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>번호</th>
+                                    <th>운영규정 구분</th>
+                                    <th></th>
+                                    <th>최종수정일</th>
+                                    <th>수정</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2</td>
+                                    <td>성수기 1회 박수 제한</td>
+                                    <td>
+                                        <div class="sch_box point">
+                                            <p class="label">최대</p>
+                                            <input type="text" class="input_text">
+                                            <p class="label">일</p>
+                                            <p class="label">포인트차감</p>
+                                            <p class="label type">A타입</p>
+                                            <input type="text" class="input_text">
+                                            <p class="label type">B타입</p>
+                                            <input type="text" class="input_text">
+                                        </div>
+                                    </td>
+                                    <td>2018-08-01 관리자명</td>
+                                    <td><a href="#" class="btns btn_modify">수정</a></td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>비수기 1회 박수 제한</td>
+                                    <td>
+                                        <div class="sch_box point">
+                                            <p class="label">최대</p>
+                                            <input type="text" class="input_text">
+                                            <p class="label">일</p>
+                                            <p class="label">포인트차감</p>
+                                            <p class="label type">A타입</p>
+                                            <input type="text" class="input_text">
+                                            <p class="label type">B타입</p>
+                                            <input type="text" class="input_text">
+                                        </div>
+                                    </td>
+                                    <td>2018-08-01 관리자명</td>
+                                    <td><a href="#" class="btns btn_modify">수정</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        
+                    </div>
+                </div>
+                <!-- //메인 컨텐츠 -->
+            </div>
+            <!-- //컨텐츠 -->
+        </div>
+    </div>
+</body>
+</html>

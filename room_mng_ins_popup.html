@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>서울시연수원 통합예약시스템</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=1, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" media="all" href="css/jquery-ui.theme.min.css">
+    <link rel="stylesheet" media="all" href="css/common.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.placeholder.enhanced-1.5.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/common.js"></script>
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" media="all" href="css/ie.css">
+        <script src="js/html5.js"></script>
+        <script src="js/respond.js"></script>
+    <![endif]-->
+</head>
+<body class="popup">
+    <div class="popup_area room_select">
+        <div class="popup_header">
+            <p class="title">객실선택</p>
+            <a href="#" title="닫기" class="btn_close">닫기</a>
+        </div>
+        <div class="popup_content">
+            <div class="popup_contains">
+                <div class="room_area">
+                    <table class="room_table">
+                        <tbody>
+                            <tr>
+                                <th>8층<br>6실</th>
+                                <td class="room">세미나실</td>
+                                <td class="room">801호</td>
+                                <td class="room">802호</td>
+                                <td class="room">803호</td>
+                                <td class="room" colspan="2">카페테리아</td>
+                                <td class="room">804호</td>
+                                <td class="room">805호</td>
+                                <td class="room_select"><a href="#" class="btn_select">8층<br>전체선택</a></td>
+                            </tr>
+                            <tr>
+                                <th>7층<br>9실</th>
+                                <td class="room">701호</td>
+                                <td class="room">702호</td>
+                                <td class="room">703호</td>
+                                <td class="room">704호</td>
+                                <td class="room">705호</td>
+                                <td class="room">706호</td>
+                                <td class="room">707호</td>
+                                <td class="room">708호</td>
+                                <td class="room_select"><a href="#" class="btn_select">7층<br>전체선택</a></td>
+                            </tr>
+                            <tr>
+                                <th>6층<br>9실</th>
+                                <td class="room">601호</td>
+                                <td class="room">602호</td>
+                                <td class="room">603호</td>
+                                <td class="room">604호(VIP)</td>
+                                <td class="room">605호(VIP)</td>
+                                <td class="room">606호</td>
+                                <td class="room">607호</td>
+                                <td class="room">608호</td>
+                                <td class="room_select"><a href="#" class="btn_select">6층<br>전체선택</a></td>
+                            </tr>
+                            <tr>
+                                <th>7층<br>9실</th>
+                                <td class="room">701호</td>
+                                <td class="room">702호</td>
+                                <td class="room">703호</td>
+                                <td class="room">704호</td>
+                                <td class="room">705호</td>
+                                <td class="room">706호</td>
+                                <td class="room">707호</td>
+                                <td class="room">708호</td>
+                                <td class="room_select"><a href="#" class="btn_select">7층<br>전체선택</a></td>
+                            </tr>
+                            <tr>
+                                <th>6층<br>9실</th>
+                                <td class="room">601호</td>
+                                <td class="room">602호</td>
+                                <td class="room">603호</td>
+                                <td class="room">604호(VIP)</td>
+                                <td class="room">605호(VIP)</td>
+                                <td class="room">606호</td>
+                                <td class="room">607호</td>
+                                <td class="room">608호</td>
+                                <td class="room_select"><a href="#" class="btn_select">6층<br>전체선택</a></td>
+                            </tr>
+                            <tr>
+                                <th>7층<br>9실</th>
+                                <td class="room">701호</td>
+                                <td class="room">702호</td>
+                                <td class="room">703호</td>
+                                <td class="room">704호</td>
+                                <td class="room">705호</td>
+                                <td class="room">706호</td>
+                                <td class="room">707호</td>
+                                <td class="room">708호</td>
+                                <td class="room_select"><a href="#" class="btn_select">7층<br>전체선택</a></td>
+                            </tr>
+                            <tr>
+                                <th>6층<br>9실</th>
+                                <td class="room">601호</td>
+                                <td class="room">602호</td>
+                                <td class="room">603호</td>
+                                <td class="room">604호(VIP)</td>
+                                <td class="room">605호(VIP)</td>
+                                <td class="room">606호</td>
+                                <td class="room">607호</td>
+                                <td class="room">608호</td>
+                                <td class="room_select"><a href="#" class="btn_select">6층<br>전체선택</a></td>
+                            </tr>
+                            <tr>
+                                <th>7층<br>9실</th>
+                                <td class="room">701호</td>
+                                <td class="room">702호</td>
+                                <td class="room">703호</td>
+                                <td class="room">704호</td>
+                                <td class="room">705호</td>
+                                <td class="room">706호</td>
+                                <td class="room">707호</td>
+                                <td class="room">708호</td>
+                                <td class="room_select"><a href="#" class="btn_select">7층<br>전체선택</a></td>
+                            </tr>
+                            <tr>
+                                <th>6층<br>9실</th>
+                                <td class="room">601호</td>
+                                <td class="room">602호</td>
+                                <td class="room">603호</td>
+                                <td class="room">604호(VIP)</td>
+                                <td class="room">605호(VIP)</td>
+                                <td class="room">606호</td>
+                                <td class="room">607호</td>
+                                <td class="room">608호</td>
+                                <td class="room_select"><a href="#" class="btn_select">6층<br>전체선택</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="form_btn">
+                    <a href="#" class="btns whiteline btn_cancel">닫기</a>
+                    <a href="#" class="btns btn_confirm">객실 선택</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

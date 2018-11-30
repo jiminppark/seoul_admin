@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>서울시연수원 통합예약시스템</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=1, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" media="all" href="css/jquery-ui.theme.min.css">
+    <link rel="stylesheet" media="all" href="css/common.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.placeholder.enhanced-1.5.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/common.js"></script>
+    <!--[if lt IE]>
+        <link rel="stylesheet" media="all" href="css/ie.css">
+        <script src="js/html5.js"></script>
+        <script src="js/respond.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- 헤더 -->
+    <div id="header">
+        <div class="contains">
+            <h1 class="logo"><img src="img/common/logo.png" alt="서울시연수원 통합예약시스템"></h1>
+            <ul id="gnb">
+                <li><a href="#" class="btn_menu active">예약관리</a></li>
+                <li><a href="#" class="btn_menu">운영자관리</a></li>
+                <li><a href="#" class="btn_menu">회원관리</a></li>
+                <li><a href="#" class="btn_menu">정산관리</a></li>
+                <li><a href="#" class="btn_menu">통계관리</a></li>
+                <li><a href="#" class="btn_menu">연수원관리</a></li>
+                <li><a href="#" class="btn_menu">사이트관리</a></li>
+                <li><a href="#" class="btn_menu">환경설정</a></li>
+            </ul>
+            <div class="user">
+                <a href="#" class="btn_logout">로그아웃</a>
+            </div>
+        </div>
+    </div>
+    <!-- 헤더 -->
+    
+    <div id="content">
+        <div class="contains">
+            <!-- 컨텐츠 -->
+            <div class="content_wrap">
+               <!-- lnb -->
+               <div class="lnb_area">
+                    <div class="name_box">
+                        <p class="name">속초관리자명</p>
+                    </div>
+                    <ul class="lnb_list">
+                        <li><a href="#" class="btn_lnb">예약현황</a></li>
+                        <li><a href="#" class="btn_lnb">객실현황</a></li>
+                        <li><a href="#" class="btn_lnb">FORECAST</a></li>
+                        <li><a href="#" class="btn_lnb">단체연구예약</a></li>
+                        <li><a href="#" class="btn_lnb">기관배정예약</a></li>
+                        <li><a href="#" class="btn_lnb">시설예약</a></li>
+                        <li><a href="#" class="btn_lnb active">SMS 발송</a></li>
+                    </ul>
+                </div>
+                <!-- //lnb -->
+                
+                <!-- 메인 헤더 -->
+                <div class="main_header main_header_typ2">
+                    <p class="title">SMS 발송</p>
+                    <ul class="navi_list">
+                        <li>서울시연수원 통합예약시스템</li>
+                        <li>예약관리</li>
+                        <li class="now">SMS 발송</li>
+                    </ul>
+                </div>
+                <!-- //메인 헤더 -->
+                
+                <!-- 메인 컨텐츠 -->
+                <div class="main_content">
+                    <div class="sch_table_header">
+                        <select class="select">
+                            <option value="">연수원명</option>
+                            <option value="">연수원명</option>
+                        </select>
+                        
+                        <div class="radio_toggle btn_group">
+                            <label class="radio_box active">
+                                <input type="radio" name="date" checked="checked" class="radio">
+                                <span class="txt">지난 3개월</span>
+                            </label>
+                            <label class="radio_box">
+                                <input type="radio" name="date" class="radio">
+                                <span class="txt">지난달</span>
+                            </label>
+                            <label class="radio_box">
+                                <input type="radio" name="date" class="radio">
+                                <span class="txt">이번달</span>
+                            </label>
+                            <label class="radio_box">
+                                <input type="radio" name="date" class="radio">
+                                <span class="txt">오늘</span>
+                            </label>
+                        </div>
+
+                        <div class="date_box calendar_select_group">
+                            <input type="text" value="2018-11-06" class="input_text input_date">
+                            <p class="unit">~</p>
+                            <input type="text" value="2018-11-06" class="input_text input_date">
+                        </div>
+                        
+                        <div class="search_box right_search">
+                            <input type="text" class="input_text" placeholder="이름검색">
+                            <button type="button" class="btn_search"><span>검색</span></button>
+                        </div>
+                    </div>
+                    
+                    <!-- bbs -->
+                    <div class="bbs_area bbs_area2">
+                        <div class="bbs_header">
+                            <div class="bbs_list">
+                                <p class="label">출력 수</p>
+                                <select class="select">
+                                    <option value="10">10개</option>
+                                </select>
+                                <p class="total">총 60,231건 (1 / 603 Page)</p>
+                            </div>
+                            <div class="btn_box">
+                                <a href="#" class="btns btns-type2 red">SMS 발송</a>
+                            </div>
+                        </div>
+                        
+                        <!-- bbs -->
+                        <table class="bbs bbs_type2 fixed">
+                            <colgroup>
+                                <col style="width:8%">
+                                <col style="width:15%">
+                                <col style="width:10%">
+                                <col style="width:auto">
+                                <col style="width:10%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>번호</th>
+                                    <th>발송일</th>
+                                    <th>수신번호</th>
+                                    <th>내용</th>
+                                    <th>발송결과</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>103</td>
+                                    <td>2018-08-10</td>
+                                    <td>10</td>
+                                    <td class="link"><a href="">속초수련원 이벤트 안내입니다.</a></td>
+                                    <td>전송</td>
+                                </tr>
+                                <tr>
+                                    <td>103</td>
+                                    <td>2018-08-10</td>
+                                    <td>10</td>
+                                    <td class="link"><a href="">속초수련원 이벤트 안내입니다.</a></td>
+                                    <td>실패</td>
+                                </tr>
+                                <tr>
+                                    <td>103</td>
+                                    <td>2018-08-10</td>
+                                    <td>10</td>
+                                    <td class="link"><a href="">속초수련원 이벤트 안내입니다.</a></td>
+                                    <td>예약</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <!-- 페이징 -->
+                        <div class="bbs_page">
+                            <a href="#" class="btn_page first"></a>
+                            <a href="#" class="btn_page prev"></a>
+                            <a href="#" class="btn_page active">1</a>
+                            <a href="#" class="btn_page">2</a>
+                            <a href="#" class="btn_page">3</a>
+                            <a href="#" class="btn_page">4</a>
+                            <a href="#" class="btn_page">5</a>
+                            <a href="#" class="btn_page">6</a>
+                            <a href="#" class="btn_page">7</a>
+                            <a href="#" class="btn_page">8</a>
+                            <a href="#" class="btn_page">9</a>
+                            <a href="#" class="btn_page">10</a>
+                            <a href="#" class="btn_page next"></a>
+                            <a href="#" class="btn_page last"></a>
+                        </div>
+                    </div>
+                    <!-- //bbs -->
+                </div>
+                <!-- //메인 컨텐츠 -->
+            </div>
+            <!-- //컨텐츠 -->
+        </div>
+    </div>
+</body>
+</html>

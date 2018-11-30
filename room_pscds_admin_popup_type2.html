@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>서울시연수원 통합예약시스템</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=1, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" media="all" href="css/jquery-ui.theme.min.css">
+    <link rel="stylesheet" media="all" href="css/common.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.placeholder.enhanced-1.5.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/common.js"></script>
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" media="all" href="css/ie.css">
+        <script src="js/html5.js"></script>
+        <script src="js/respond.js"></script>
+    <![endif]-->
+</head>
+<body class="popup">
+    <div class="popup_area reserve_stats">
+        <div class="popup_header">
+            <p class="title">예약현황</p>
+            <a href="#" title="닫기" class="btn_close">닫기</a>
+        </div>
+        <div class="popup_content">
+            <div class="popup_contains">
+                <p class="form_title">예약정보</p>
+                <table class="form_table">
+                    <colgroup>
+                        <col style="width:136px">
+                        <col style="width:448px">
+                        <col style="width:136px">
+                        <col style="width:448px">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>예약번호</th>
+                            <td><p class="value">2018080100001</p></td>
+                            <th>예약일</th>
+                            <td><p class="value">2018-08-01</p></td>
+                        </tr>
+                        <tr>
+                            <th>연수구분</th>
+                            <td><p class="value">단체연수</p></td>
+                            <th>단체연수명</th>
+                            <td><p class="value">노원구 단체연수</p></td>
+                        </tr>
+                        <tr>
+                            <th>단체연수내용</th>
+                            <td colspan="3"><p class="value">단체연수내용입니다.</p></td>
+                        </tr>
+                        <tr>
+                            <th>소속기관</th>
+                            <td>
+                                <div class="btn_right_area">
+                                    <p class="value">노원구</p>
+                                    <div class="btn_right">
+                                        <a href="rsv_pscds_ins_popup.html" data-width="1160" data-height="740" class="btns btn_panalty_history btn_popup">패널티 확인</a>
+                                        <a href="rsv_pscds_ins_popup2.html" data-width="1160" data-height="420" class="btns btn_panalty_add btn_popup">패널티 등록</a>
+                                    </div>
+                                </div>
+                            </td>
+                            <th>소속부서</th>
+                            <td><p class="value">구청</p></td>
+                        </tr>
+                        <tr>
+                            <th>예약자</th>
+                            <td><p class="value">김성민</p></td>
+                            <th>예약자 연락처</th>
+                            <td><p class="value">010-1234-5678</p></td>
+                        </tr>
+                        <tr>
+                            <th>입실일</th>
+                            <td><p class="value">2018-08-01</p></td>
+                            <th>퇴실일</th>
+                            <td><p class="value">2018-08-01</p></td>
+                        </tr>
+                        <tr>
+                            <th>인원</th>
+                            <td><p class="value">3</p></td>
+                            <th>차량번호</th>
+                            <td><p class="value">98하1234</p></td>
+                        </tr>
+                        <tr>
+                            <th>메모</th>
+                            <td colspan="3"><input type="text" class="input_text"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <br>
+                <p class="sub_title">체크인 정보</p>
+                <table class="form_table">
+                    <colgroup>
+                        <col style="width:136px">
+                        <col style="width:448px">
+                        <col style="width:136px">
+                        <col style="width:448px">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>객실</th>
+                            <td colspan="3">
+                                <p class="value">B형 201호</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>메모</th>
+                            <td class="memo_box" colspan="3">
+                                <textarea class="input_text"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>객실요청사항</th>
+                            <td colspan="3">
+                                <div class="room_request">
+                                    <div class="request_box">
+                                        <div class="add_box">
+                                            <select class="select sizes">
+                                                <option value="">이불</option>
+                                            </select>
+                                            <select class="select sizess">
+                                                <option value="">3</option>
+                                            </select>
+                                            <a href="#" class="btns btn_add">추가</a>
+                                            <p class="value">이불 3, 요 3</p>
+                                        </div>
+                                        <div class="input_box">
+                                            <input type="text" class="input_text">
+                                        </div>
+                                        <div class="time_box">
+                                            <p class="value">2018-08-01  20:30   수건 10장 </p>
+                                            <a href="#" class="btns btn_delete">삭제</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>체크인</th>
+                            <td><p class="value red">2018-08-01 14:00</p></td>
+                            <th>체크아웃</th>
+                            <td>
+                                <p class="value red">2018-08-01 연장</p>
+                                <p class="value">2018-08-01 예정</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>서명</th>
+                            <td><p class="value">서명예정</p></td>
+                            <th>차감포인트</th>
+                            <td><p class="value">5포인트</p></td>
+                        </tr>
+                        <tr>
+                            <th>최종수정일</th>
+                            <td><p class="value">2018-08-01 15:30</p></td>
+                            <th>관리자</th>
+                            <td><p class="value">관리자명</p></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="form_btn">
+                    <a href="#" class="btns whiteline btn_cancel">닫기</a>
+                    <a href="#" class="btns btn_confirm">확인</a>
+                    <a href="#" class="btns red btn_checkout">체크아웃</a>
+                    <a href="#" class="btns clean_request">청소요청</a>
+                    <!-- 청소요청 클릭시 청소요청취소 버튼으로 됐을 경우 아래버튼으로 텍스트 바꿔주세요.
+                         <a href="#" class="btns clean_request">청소요청 취소</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

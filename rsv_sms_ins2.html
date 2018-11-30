@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>서울시연수원 통합예약시스템</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=1, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" media="all" href="css/jquery-ui.theme.min.css">
+    <link rel="stylesheet" media="all" href="css/common.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.placeholder.enhanced-1.5.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/common.js"></script>
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" media="all" href="css/ie.css">
+        <script src="js/html5.js"></script>
+        <script src="js/respond.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- 헤더 -->
+    <div id="header">
+        <div class="contains">
+            <h1 class="logo"><img src="img/common/logo.png" alt="서울시연수원 통합예약시스템"></h1>
+            <ul id="gnb">
+                <li><a href="#" class="btn_menu active">예약관리</a></li>
+                <li><a href="#" class="btn_menu">운영자관리</a></li>
+                <li><a href="#" class="btn_menu">회원관리</a></li>
+                <li><a href="#" class="btn_menu">정산관리</a></li>
+                <li><a href="#" class="btn_menu">통계관리</a></li>
+                <li><a href="#" class="btn_menu">연수원관리</a></li>
+                <li><a href="#" class="btn_menu">사이트관리</a></li>
+                <li><a href="#" class="btn_menu">환경설정</a></li>
+            </ul>
+            <div class="user">
+                <a href="#" class="btn_logout">로그아웃</a>
+            </div>
+        </div>
+    </div>
+    <!-- 헤더 -->
+    
+    <div id="content">
+        <div class="contains">
+            <!-- 컨텐츠 -->
+            <div class="content_wrap">
+                <!-- lnb -->
+                <div class="lnb_area">
+                    <div class="name_box">
+                        <p class="name">속초관리자명</p>
+                    </div>
+                    <ul class="lnb_list">
+                        <li><a href="#" class="btn_lnb">예약현황</a></li>
+                        <li><a href="#" class="btn_lnb">객실현황</a></li>
+                        <li><a href="#" class="btn_lnb">FORECAST</a></li>
+                        <li><a href="#" class="btn_lnb">단체연구예약</a></li>
+                        <li><a href="#" class="btn_lnb">기관배정예약</a></li>
+                        <li><a href="#" class="btn_lnb">시설예약</a></li>
+                        <li><a href="#" class="btn_lnb active">SMS 발송</a></li>
+                    </ul>
+                </div>
+                <!-- //lnb -->
+                
+                <!-- 메인 헤더 -->
+                <div class="main_header">
+                    <p class="title">SMS 발송</p>
+                    <ul class="navi_list">
+                        <li>서울시연수원 통합예약시스템</li>
+                        <li>예약관리</li>
+                        <li class="now">SMS 발송</li>
+                    </ul>
+                </div>
+                <!-- //메인 헤더 -->
+                
+                <!-- 메인 컨텐츠 -->
+                <div class="main_content">
+                    <table class="form_table">
+                        <colgroup>
+                            <col style="width:136px">
+                            <col style="width:448px">
+                            <col style="width:136px">
+                            <col style="width:448px">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>발송일</th>
+                                <td><p class="value">2018080100001</p></td>
+                                <th>작성자</th>
+                                <td><p class="value">관리자명</p></td>
+                            </tr>
+                            <tr>
+                                <th>발신번호</th>
+                                <td colspan="3"><p class="value"></p></td>
+                            </tr>
+                            <tr>
+                                <th>수신번호</th>
+                                <td colspan="3">
+                                    <p class="value sms_list">
+                                        <span>강민정 010-1234-5678</span>
+                                        <span>강민정 010-1234-5678</span>
+                                        <span>강민정 010-1234-5678</span>
+                                        <span>강민정 010-1234-5678</span>
+                                        <span>강민정 010-1234-5678</span>
+                                    </p>
+                                    <p class="value sms_list">
+                                        <span>강민정 010-1234-5678</span>
+                                        <span>강민정 010-1234-5678</span>
+                                        <span>강민정 010-1234-5678</span>
+                                        <span>강민정 010-1234-5678</span>
+                                        <span>강민정 010-1234-5678</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>내용</th>
+                                <td colspan="3">
+                                    <div class="sms_txt">
+                                        <p class="value">속초수련원[예약완료]</p>
+                                        <p class="value">예약이 완료되었습니다.</p>
+                                        <p class="value">
+                                            <span>예약번호 : 2018080100001</span>
+                                            <span>일시 : 2018년 10월 03일 수요일</span>
+                                            <span>객실 : B형</span>
+                                        </p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>발송상태</th>
+                                <td colspan="3"><p class="value">발송 실패</p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="form_btn center">
+                        <a href="#" class="btns whiteline btn_list">목록</a>
+                        <a href="#" class="btns btn_confirm">확인</a>
+                        <a href="#" class="btns red btn_checkin">재전송</a>
+                    </div>
+                </div>
+                <!-- //메인 컨텐츠 -->
+            </div>
+            <!-- //컨텐츠 -->
+        </div>
+    </div>
+</body>
+</html>

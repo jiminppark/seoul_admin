@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>서울시연수원 통합예약시스템</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=1, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" media="all" href="css/jquery-ui.theme.min.css">
+    <link rel="stylesheet" media="all" href="css/common.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.placeholder.enhanced-1.5.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/common.js"></script>
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" media="all" href="css/ie.css">
+        <script src="js/html5.js"></script>
+        <script src="js/respond.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- 헤더 -->
+    <div id="header">
+        <div class="contains">
+            <h1 class="logo"><img src="img/common/logo.png" alt="서울시연수원 통합예약시스템"></h1>
+            <ul id="gnb">
+                <li><a href="#" class="btn_menu">예약관리</a></li>
+                <li><a href="#" class="btn_menu">운영자관리</a></li>
+                <li><a href="#" class="btn_menu">회원관리</a></li>
+                <li><a href="#" class="btn_menu">정산관리</a></li>
+                <li><a href="#" class="btn_menu">통계관리</a></li>
+                <li><a href="#" class="btn_menu">연수원관리</a></li>
+                <li><a href="#" class="btn_menu active">사이트관리</a></li>
+                <li><a href="#" class="btn_menu">환경설정</a></li>
+            </ul>
+            <div class="user">
+                <a href="#" class="btn_logout">로그아웃</a>
+            </div>
+        </div>
+    </div>
+    <!-- 헤더 -->
+    
+    <div id="content">
+        <div class="contains">
+            <!-- 컨텐츠 -->
+            <div class="content_wrap">
+                <!-- lnb -->
+                <div class="lnb_area">
+                    <div class="name_box">
+                        <p class="name">속초관리자명</p>
+                    </div>
+                    <ul class="lnb_list">
+                        <li><a href="#" class="btn_lnb">객실 관리</a></li>
+                        <li><a href="#" class="btn_lnb active">시설 관리</a></li>
+                        <li><a href="#" class="btn_lnb">분실물 관리</a></li>
+                        <li><a href="#" class="btn_lnb">컴플레인 관리</a></li>
+                    </ul>
+                </div>
+                <!-- //lnb -->
+                
+                <!-- 메인 헤더 -->
+                <div class="main_header">
+                    <p class="title">시설 관리</p>
+                    <ul class="navi_list">
+                        <li>서울시연수원 통합예약시스템</li>
+                        <li>회원관리</li>
+                        <li class="now">인사DB관리</li>
+                    </ul>
+                </div>
+                <!-- //메인 헤더 -->
+                
+                <!-- 메인 컨텐츠 -->
+                <div class="main_content">
+                    <table class="form_table">
+                        <colgroup>
+                            <col style="width:136px">
+                            <col style="width:448px">
+                            <col style="width:136px">
+                            <col style="width:448px">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>구분</th>
+                                <td>
+                                    <select class="select sizess">
+                                        <option value="">속초</option>
+                                    </select>
+                                </td>
+                                <th>시설종류</th>
+                                <td>
+                                    <input type="text" class="input_text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>시설명</th>
+                                <td colspan="3">
+                                    <input type="text" class="input_text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>운영시간</th>
+                                <td>
+                                    <div class="time_box">
+                                        <select class="select sizess">
+                                            <option value="00:00">00:00</option>
+                                        </select>
+                                        <p class="unit">~</p>
+                                        <select class="select sizess">
+                                            <option value="00:00">00:00</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <th>사용가능인원</th>
+                                <td>
+                                    <div class="number_box">
+                                        <input type="text" class="input_text"><p class="unit">명</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>사진</th>
+                                <td colspan="3" class="picture_wrap">
+                                    <div class="picture_upload">
+                                        <input type="file" class="input_file">
+                                        <a href="#" class="btns btn_upload">찾기</a>
+                                    </div>
+                                    <div class="picture_area">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>보유시설</th>
+                                <td colspan="3" class="memo_box"><textarea class="input_text"></textarea></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="form_btn">
+                        <a href="#" class="btns whiteline btn_list">목록</a>
+                        <a href="#" class="btns btn_confirm">등록</a>
+                    </div>
+                </div>
+                <!-- //메인 컨텐츠 -->
+            </div>
+            <!-- //컨텐츠 -->
+        </div>
+    </div>
+</body>
+</html>

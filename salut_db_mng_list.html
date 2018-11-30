@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>서울시연수원 통합예약시스템</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=1, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" media="all" href="css/jquery-ui.theme.min.css">
+    <link rel="stylesheet" media="all" href="css/common.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.placeholder.enhanced-1.5.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/common.js"></script>
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" media="all" href="css/ie.css">
+        <script src="js/html5.js"></script>
+        <script src="js/respond.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- 헤더 -->
+    <div id="header">
+        <div class="contains">
+            <h1 class="logo"><img src="img/common/logo.png" alt="서울시연수원 통합예약시스템"></h1>
+            <ul id="gnb">
+                <li><a href="#" class="btn_menu">예약관리</a></li>
+                <li><a href="#" class="btn_menu">운영자관리</a></li>
+                <li><a href="#" class="btn_menu active">회원관리</a></li>
+                <li><a href="#" class="btn_menu">정산관리</a></li>
+                <li><a href="#" class="btn_menu">통계관리</a></li>
+                <li><a href="#" class="btn_menu">연수원관리</a></li>
+                <li><a href="#" class="btn_menu">사이트관리</a></li>
+                <li><a href="#" class="btn_menu">환경설정</a></li>
+            </ul>
+            <div class="user">
+                <a href="#" class="btn_logout">로그아웃</a>
+            </div>
+        </div>
+    </div>
+    <!-- 헤더 -->
+    
+    <div id="content">
+        <div class="contains">
+            <!-- 컨텐츠 -->
+            <div class="content_wrap">
+                <!-- lnb -->
+                <div class="lnb_area">
+                    <div class="name_box">
+                        <p class="name">속초관리자명</p>
+                    </div>
+                    <ul class="lnb_list">
+                        <li><a href="#" class="btn_lnb active">인사 DB관리</a></li>
+                        <li><a href="#" class="btn_lnb">연수원 회원관리</a></li>
+                        <li><a href="#" class="btn_lnb">패널티 회원관리</a></li>
+                    </ul>
+                </div>
+                <!-- //lnb -->
+                
+                <!-- 메인 헤더 -->
+                <div class="main_header">
+                    <p class="title">인사DB 관리</p>
+                    <ul class="navi_list">
+                        <li>서울시연수원 통합예약시스템</li>
+                        <li>회원관리</li>
+                        <li class="now">인사DB관리</li>
+                    </ul>
+                </div>
+                <!-- //메인 헤더 -->
+                
+                <!-- 메인 컨텐츠 -->
+                <div class="main_content">
+                    <table class="search_table form_area">
+                        <colgroup>
+                            <col style="width:40px">
+                            <col style="width:226px">
+                            <col style="width:90px">
+                            <col style="width:130px">
+                            <col style="width:80px">
+                            <col style="width:130px">
+                            <col style="width:70px">
+                            <col style="width:150px">
+                            <col style="width:88px">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>소속</th>
+                                <td>
+                                    <select class="select">
+                                        <option>전체</option>
+                                    </select>
+                                </td>
+                                <th>재직 상태</th>
+                                <td>
+                                    <select class="select">
+                                        <option>전체</option>
+                                    </select>
+                                </td>
+                                <th>공무직</th>
+                                <td>
+                                    <select class="select">
+                                        <option>전체</option>
+                                    </select>
+                                </td>
+                                <th>회원</th>
+                                <td>
+                                    <select class="select">
+                                        <option>전체</option>
+                                    </select>
+                                </td>
+                                <th>수기등록</th>
+                                <td>
+                                    <select class="select">
+                                        <option>전체</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>검색어</th>
+                                <td colspan="9">
+                                    <div class="search_box">
+                                        <select class="select">
+                                            <option>전체</option>
+                                        </select>
+                                        <input type="text" class="input_text">
+                                        <a href="#" class="btns btn_search">검색</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <!-- bbs -->
+                    <div class="bbs_area">
+                        <div class="bbs_header">
+                            <div class="bbs_list">
+                                <p class="label">출력 수</p>
+                                <select class="select">
+                                    <option value="10">10개</option>
+                                </select>
+                                <p class="total">총 <b>60,231</b>건 (<span>1</span> / 603 Page)</p>
+                            </div>
+                            <div class="btn_box">
+                                <a href="#" class="btns btn_add">등록</a>
+                                <a href="salut_db_mng_list_excel_popup.html" data-width="400" data-height="210" class="btns greenline btn_excel btn_popup">엑셀등록</a>
+                                <a href="#" class="btns greenline btn_download">양식 다운로드</a>
+                            </div>
+                        </div>
+                        
+                        <!-- bbs -->
+                        <table class="bbs">
+                            <thead>
+                                <tr>
+                                    <th>번호</th>
+                                    <th>소속</th>
+                                    <th>부서</th>
+                                    <th>직류</th>
+                                    <th>직급</th>
+                                    <th>이름</th>
+                                    <th>재직상태</th>
+                                    <th>공무직</th>
+                                    <th>회원</th>
+                                    <th>수기등록</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>11276</td>
+                                    <td>행정국</td>
+                                    <td>인력개발과</td>
+                                    <td>일반행정</td>
+                                    <td>지방행정주사보</td>
+                                    <td>신창균</td>
+                                    <td>재직</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                </tr>
+                                <tr>
+                                    <td>11276</td>
+                                    <td>행정국</td>
+                                    <td>인력개발과</td>
+                                    <td>일반행정</td>
+                                    <td>지방행정주사보</td>
+                                    <td>신창균</td>
+                                    <td>재직</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                </tr>
+                                <tr>
+                                    <td>11276</td>
+                                    <td>행정국</td>
+                                    <td>인력개발과</td>
+                                    <td>일반행정</td>
+                                    <td>지방행정주사보</td>
+                                    <td>신창균</td>
+                                    <td>재직</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                </tr>
+                                <tr>
+                                    <td>11276</td>
+                                    <td>행정국</td>
+                                    <td>인력개발과</td>
+                                    <td>일반행정</td>
+                                    <td>지방행정주사보</td>
+                                    <td>신창균</td>
+                                    <td>재직</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                </tr>
+                                <tr>
+                                    <td>11276</td>
+                                    <td>행정국</td>
+                                    <td>인력개발과</td>
+                                    <td>일반행정</td>
+                                    <td>지방행정주사보</td>
+                                    <td>신창균</td>
+                                    <td>재직</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                </tr>
+                                <tr>
+                                    <td>11276</td>
+                                    <td>행정국</td>
+                                    <td>인력개발과</td>
+                                    <td>일반행정</td>
+                                    <td>지방행정주사보</td>
+                                    <td>신창균</td>
+                                    <td>재직</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                </tr>
+                                <tr>
+                                    <td>11276</td>
+                                    <td>행정국</td>
+                                    <td>인력개발과</td>
+                                    <td>일반행정</td>
+                                    <td>지방행정주사보</td>
+                                    <td>신창균</td>
+                                    <td>재직</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                </tr>
+                                <tr>
+                                    <td>11276</td>
+                                    <td>행정국</td>
+                                    <td>인력개발과</td>
+                                    <td>일반행정</td>
+                                    <td>지방행정주사보</td>
+                                    <td>신창균</td>
+                                    <td>재직</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                </tr>
+                                <tr>
+                                    <td>11276</td>
+                                    <td>행정국</td>
+                                    <td>인력개발과</td>
+                                    <td>일반행정</td>
+                                    <td>지방행정주사보</td>
+                                    <td>신창균</td>
+                                    <td>재직</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                </tr>
+                                <tr>
+                                    <td>11276</td>
+                                    <td>행정국</td>
+                                    <td>인력개발과</td>
+                                    <td>일반행정</td>
+                                    <td>지방행정주사보</td>
+                                    <td>신창균</td>
+                                    <td>재직</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                    <td>Y</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <!-- 페이징 -->
+                        <div class="bbs_page">
+                            <a href="#" class="btn_page first"></a>
+                            <a href="#" class="btn_page prev"></a>
+                            <a href="#" class="btn_page active">1</a>
+                            <a href="#" class="btn_page">2</a>
+                            <a href="#" class="btn_page">3</a>
+                            <a href="#" class="btn_page">4</a>
+                            <a href="#" class="btn_page">5</a>
+                            <a href="#" class="btn_page">6</a>
+                            <a href="#" class="btn_page">7</a>
+                            <a href="#" class="btn_page">8</a>
+                            <a href="#" class="btn_page">9</a>
+                            <a href="#" class="btn_page">10</a>
+                            <a href="#" class="btn_page next"></a>
+                            <a href="#" class="btn_page last"></a>
+                        </div>
+                    </div>
+                    <!-- //bbs -->
+                </div>
+                <!-- //메인 컨텐츠 -->
+            </div>
+            <!-- //컨텐츠 -->
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>무제 문서</title>
+<style>
+@charset "utf-8";
+
+/* fonts */
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(font-awesome.min.css);
+
+/* reset */
+html * {max-height: 999999px} /* font size bug fix */
+html,body{margin:0px;padding:0px;width:100%;font-size:10px;font-family:'Noto Sans KR', sans-serif;-webkit-text-size-adjust:none;-webkit-font-smoothing:antialiased; background:#f0f0f0;}
+ul,ol,li,dl,dd,dt,input,h1,h2,h3,h4,h5,h6,p,b,input,button,textarea,fieldset,legend,td,th{margin:0px;padding:0px;font-weight:normal;word-break:keep-all}
+li{list-style:none}
+fieldset,img,a{border:0px}
+a{text-decoration:none;}
+a:link, a:hover, a:active, a:visited{color:#999;}
+
+legend,.blind{position:absolute;top:0;left:-10000px;width:0;height:0;overflow:hidden;font-size:0;line-height:0}
+caption{display:none}
+button,label{cursor:pointer}
+button{overflow:visible\9}	/* button fix for ie8 */
+input,textarea,button{font-family:'Noto Sans KR', sans-serif;}
+table{width:100%;border-collapse:collapse;border-spacing:0;text-align:left}
+table th, table td{text-align:left}
+input::-webkit-input-placeholder{color:#929292}
+input::-moz-placeholder{color:#929292}
+input:-moz-placeholder{color:#929292}
+input:-ms-input-placeholder{color:#929292}
+textarea::-webkit-input-placeholder{color:#929292}
+textarea::-moz-placeholder{color:#929292}
+textarea:-moz-placeholder{color:#929292}
+textarea:-ms-input-placeholder{color:#929292}
+input:focus::-webkit-input-placeholder{color:transparent!important}
+input:focus::-moz-placeholder{color:transparent!important}
+input:focus:-moz-placeholder{color:transparent!important}
+input:focus:-ms-input-placeholder{color:transparent!important}
+textarea:focus::-webkit-input-placeholder{color:transparent!important}
+textarea:focus::-moz-placeholder{color:transparent!important}
+textarea:focus:-moz-placeholder{color:transparent!important}
+textarea:focus:-ms-input-placeholder{color:transparent!important}
+header, footer, section, article, aside, nav, address { display: block; margin:0; } /* ie8 */
+
+.clear_wrap:before,.clear_wrap:after{content:" ";display:table}
+.clear_wrap:after{clear:both}
+.clear_wrap{*zoom:1}
+.clear_ine{clear:both}
+.ellipsis{text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
+.appearance{border:0;-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;-o-appearance:none;appearance:none}
+.boxsizing{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+.mobilescrolling{-webkit-overflow-scrolling:touch}
+
+.contains{position:relative;margin:0 auto;max-width:1200px}
+.bg_cover{background-size:cover;background-position:center center;background-repeat:no-repeat}
+.bg_cover .bg_img{display:none}
+
+.mobile,
+.tablet{display:none!important}
+.whbg{background:#FFF;}
+
+
+.write table {border-top:1px solid #ccc;border-left:1px solid #ccc;margin-bottom:10px}
+.write table th {border-right:1px solid #ccc;border-bottom:1px solid #ccc;text-align:center;font-size:16px;color:#555;background-color:#f9f9f9;vertical-align:middle;padding:15px 0}
+.write table td {border-right:1px solid #ccc;border-bottom:1px solid #ccc;padding:10px 0 10px 10px; background:#FFF; font-size:13px;}
+.write table th.ar{text-align:right;padding:7px 6px 7px 0}
+.write table td label {margin:0 10px 0 2px;display:inline-block}
+.write table td.ar{text-align:right;padding:7px 10px 7px 0}
+.write table td.ac{text-align:center; padding:7px 0 7px 0}
+.write table td.al{text-align:left;padding:7px 0 7px 0}
+.write table th.vs{color:#eb6100; vertical-align:middle;}
+
+h1 {padding:30px 0 30px 30px;}
+.btn {
+  display: inline-block;
+  *display: inline;
+  padding: 7px 12px;
+  margin-bottom: 0;
+  *margin-left: .3em;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #fff;
+  background-repeat: repeat-x;
+  border: 1px solid #cccccc;
+  *border: 0;
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  border-bottom-color: #b3b3b3;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;  
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  *zoom: 1;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+</style>
+</head>
+
+<body>
+<h1>서울시연수원 통합예약시스템</h1>
+
+<div class="write">
+  <table>
+    <colgroup>
+      <col width="10%" />    
+      <col width="18%" />
+      <col width="12%" />
+      <col width="12%" />
+      <col width="12%" />                  
+      <col width="12%" />
+      <col width="10%" />
+    </colgroup>
+    <tbody>
+        <tr>
+            <th rowspan="27" scope="col">예약관리</th>
+            <td rowspan="18">예약현황</td>
+            <td>캘린더보기</td>
+            <td></td>
+            <td></td>
+            <td><a href="rsv_pscds_calendar.html" target="_blank"><button type="submit" class="btn btn-logout">바로가기</button></a> </td>
+        </tr>
+        <tr>
+            <td>리스트보기</td>
+            <td></td>
+            <td></td>
+            <td><a href="rsv_pscds_list.html" target="_blank"><button type="submit" class="btn btn-logout">바로가기</button></a> </td>
+        </tr>
+        <tr>
+            <td>예약정보</td>
+            <td></td>
+            <td></td>
+            <td><a href="rsv_pscds_ins.html" target="_blank"><button type="submit" class="btn btn-logout">바로가기</button></a> </td>
+        </tr>
+        <tr>
+            <td>예약정보2</td>
+            <td></td>
+            <td></td>
+            <td><a href="rsv_pscds_ins2.html" target="_blank"><button type="submit" class="btn btn-logout">바로가기</button></a> </td>
+        </tr>
+        <tr>
+            <td>예약정보</td>
+            <td>패널티이력 팝업</td>
+            <td></td>
+            <td><a href="rsv_pscds_ins_popup.html" target="_blank"><button type="submit" class="btn btn-logout">바로가기</button></a> </td>
+        </tr>
+        <tr>
+            <td>예약정보</td>
+            <td>패널티등록 팝업</td>
+            <td></td>
+            <td><a href="rsv_pscds_ins_popup2.html" target="_blank"><button type="submit" class="btn btn-logout">바로가기</button></a> </td>
+        </tr>
+        <tr>
+            <td>예약정보</td>
+            <td>체크인후</td>
+            <td></td>
+            <td><a href="rsv_pscds_ins_checkin.html" target="_blank"><button type="submit" class="btn btn-logout">바로가기</button></a> </td>
+        </tr>
+        <tr>
+            <td>예약정보</td>
+            <td>예약연장</td>
+            <td></td>
+            <td><a href="rsv_pscds_ins_extension.html" target="_blank"><button type="submit" class="btn btn-logout">바로가기</button></a> </td>
+        </tr>
+        <tr>
+            <td>예약정보</td>
+            <td>객실배정순위 팝업</td>
+            <td></td>
+            <td><a href="rsv_pscds_ins_popup3.html" target="_blank"><button type="submit" class="btn btn-logout">바로가기</button></a> </td>
+        </tr>
+        <tr>
+            <td>예약정보</td>
+            <td>객실배정순위 팝업2</td>
+            <td></td>
+            <td><a href="rsv_pscds_ins_popup4.html" target="_blank"><button type="submit" class="btn btn-logout">바로가기</button></a> </td>
+        </tr>
+        <tr>
+            <td>예약정보</td>
+            <td>체크아웃후</td>
+            <td></td>
+            <td><a href="rsv_pscds_ins_checkout.html" target="_blank"><button type="submit" class="btn btn-logout">바로가기</button></a> </td>
+        </tr>
+        <tr>
+            <td>예약정보</td>
+            <td>예약확인</td>
+            <td></td>
+            <td><a href="rsv_pscds_ins_confirm.html" target="_blank"><button type="submit" class="btn btn-logout">바로가기</button></a> </td>
+        </tr>
+        <tr>
+            <td>예약정보</td>
+            <td>체크인 팝업</td>
+            <td></td>
+            <td><a href="rsv_pscds_ins_confirm_popup.html" target="_blank"><button type="submit" class="btn btn-logout">바로가기</button></a> </td>
+        </tr>
+        <tr>
+            <td>예약정보</td>
+            <td>객실선택 팝업</td>
+            <td></td>
+            <td><a href="rsv_pscds_calendar_popup.html" target="_blank"><button type="submit" class="btn btn-logout">바로가기</button></a> </td>
+        </tr>
+        <tr>
+            <td>예약정보</td>
+            <td>객실선택 팝업2</td>
+            <td></td>
+            <td><a href="rsv_pscds_calendar_popu2p.html" target="_blank"><button type="submit" class="btn btn-logout">바로가기</button></a> </td>
+        </tr>
+        <tr>
+            <td>예약정보</td>
+            <td>객실선택 팝업3</td>
+            <td></td>
+            <td><a href="rsv_pscds_calendar_popup3.html" target="_blank"><button type="submit" class="btn btn-logout">바로가기</button></a> </td>
+        </tr>
+        <tr>
+            <td>예약정보</td>
+            <td>단체연수 체크인후</td>
+            <td></td>
+            <td><a href="rsv_pscds_ins_checkin.html" target="_blank"><button type="submit" class="btn btn-logout">바로가기</button></a> </td>
+        </tr>
+        <tr>
+            <td>예약정보</td>
+            <td>단체연수 체크아웃후</td>
+            <td></td>
+            <td><a href="rsv_pscds_ins_checkout.html" target="_blank"><button type="submit" class="btn btn-logout">바로가기</button></a> </td>
+        </tr>
+        
+        <tr>
+            <td rowspan="4">객실현황</td>
+            <td>객실현황판</td>
+            <td></td>
+            <td></td>
+            <td><a href="room_pscds_admin.html" target="_blank"><button type="submit" class="btn btn-logout">바로가기</button></a> </td>
+        </tr>
+        <tr>
+            <td>객실현황판2</td>
+            <td></td>
+            <td></td>
+            <td><a href="room_pscds_admin2.html" target="_blank"><button type="submit" class="btn btn-logout">바로가기</button></a> </td>
+        </tr>
+        <tr>
+            <td>객실현황판</td>
+            <td>예약현황</td>
+            <td>체크인 팝업</td>
+            <td><a href="room_pscds_admin_popup.html" target="_blank"><button type="submit" class="btn btn-logout">바로가기</button></a> </td>
+        </tr>
+        <tr>
+            <td>객실현황판</td>
+            <td>예약현황</td>
+            <td>체크아웃 팝업</td>
+            <td><a href="room_pscds_admin_popup2.html" target="_blank"><button type="submit" class="btn btn-logout">바로가기</button></a> </td>
+        </tr>
+        
+        <tr>
+            <td rowspan="5">단체연수예약</td>
+            <td>리스트</td>
+            <td></td>
+            <td></td>
+            <td><a href="socty_tran_rsv_mng_list.html" target="_blank"><button type="submit" class="btn btn-logout">바로가기</button></a> </td>
+        </tr>
+        <tr>
+            <td>등록</td>
+            <td></td>
+            <td></td>
+            <td><a href="socty_tran_rsv_mng_ins.html" target="_blank"><button type="submit" class="btn btn-logout">바로가기</button></a> </td>
+        </tr>
+        <tr>
+            <td>등록</td>
+            <td>회원 확인 팝업</td>
+            <td></td>
+            <td><a href="socty_tran_rsv_mng_ins_popup.html" target="_blank"><button type="submit" class="btn btn-logout">바로가기</button></a> </td>
+        </tr>
+        <tr>
+            <td>등록2</td>
+            <td></td>
+            <td></td>
+            <td><a href="socty_tran_rsv_mng_ins2.html" target="_blank"><button type="submit" class="btn btn-logout">바로가기</button></a> </td>
+        </tr>
+        <tr>
+            <td>예약 취소</td>
+            <td></td>
+            <td></td>
+            <td><a href="socty_tran_rsv_mng_cancel.html" target="_blank"><button type="submit" class="btn btn-logout">바로가기</button></a> </td>
+        </tr>
+        
+    </tbody>
+  </table>
+</div>  
+</body>
+</html>

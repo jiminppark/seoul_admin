@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>서울시연수원 통합예약시스템</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=1, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" media="all" href="css/jquery-ui.theme.min.css">
+    <link rel="stylesheet" media="all" href="css/common.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.placeholder.enhanced-1.5.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/common.js"></script>
+    <!--[if lt IE]>
+        <link rel="stylesheet" media="all" href="css/ie.css">
+        <script src="js/html5.js"></script>
+        <script src="js/respond.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- 헤더 -->
+    <div id="header">
+        <div class="contains">
+            <h1 class="logo"><img src="img/common/logo.png" alt="서울시연수원 통합예약시스템"></h1>
+            <ul id="gnb">
+                <li><a href="#" class="btn_menu active">예약관리</a></li>
+                <li><a href="#" class="btn_menu">운영자관리</a></li>
+                <li><a href="#" class="btn_menu">회원관리</a></li>
+                <li><a href="#" class="btn_menu">정산관리</a></li>
+                <li><a href="#" class="btn_menu">통계관리</a></li>
+                <li><a href="#" class="btn_menu">연수원관리</a></li>
+                <li><a href="#" class="btn_menu">사이트관리</a></li>
+                <li><a href="#" class="btn_menu">환경설정</a></li>
+            </ul>
+            <div class="user">
+                <a href="#" class="btn_logout">로그아웃</a>
+            </div>
+        </div>
+    </div>
+    <!-- 헤더 -->
+    
+    <div id="content">
+        <div class="contains">
+            <!-- 컨텐츠 -->
+            <div class="content_wrap">
+               <!-- lnb -->
+               <div class="lnb_area">
+                    <div class="name_box">
+                        <p class="name">속초관리자명</p>
+                    </div>
+                    <ul class="lnb_list">
+                        <li><a href="#" class="btn_lnb">예약현황</a></li>
+                        <li><a href="#" class="btn_lnb">객실현황</a></li>
+                        <li><a href="#" class="btn_lnb">FORECAST</a></li>
+                        <li><a href="#" class="btn_lnb">단체연구예약</a></li>
+                        <li><a href="#" class="btn_lnb">기관배정예약</a></li>
+                        <li><a href="#" class="btn_lnb">시설예약</a></li>
+                        <li><a href="#" class="btn_lnb active">SMS 발송</a></li>
+                    </ul>
+                </div>
+                <!-- //lnb -->
+                
+                <!-- 메인 헤더 -->
+                <div class="main_header">
+                    <p class="title">SMS 발송</p>
+                    <ul class="navi_list">
+                        <li>서울시연수원 통합예약시스템</li>
+                        <li>예약관리</li>
+                        <li class="now">SMS 발송</li>
+                    </ul>
+                </div>
+                <!-- //메인 헤더 -->
+                
+                <!-- 메인 컨텐츠 -->
+                <div class="main_content">   
+
+                    <div class="bbs_area bbs_area3 clear_fix">
+                        <div class="message_area fl">
+                            <p class="sub_title">메세지 내용<span class="text_byte fr">(0/60 byte)</span></p>
+                            <textarea class="input_text"></textarea>
+
+                            <div class="message_area_bottom">
+                                <label class="check_box active">
+                                    <input type="checkbox" name="send" checked="checked" class="check">
+                                    <span class="txt">예약발송</span>
+                                </label>
+                                <span class="sms_time">2018-08-01 15:00</span>
+                            </div>
+                        </div>
+
+                        <div class="number_area fr text_right">
+                            <div>
+                                <label for="caller_number" class="sub_title">발신번호</label>
+                                <input type="text" id="caller_number" class="input_text">
+                            </div>
+                            <div>
+                                <label for="reception_number" class="sub_title">수신번호</label>
+                                <textarea class="input_text" id="reception_number"></textarea>
+                            </div>
+                           
+                            <div class="btn_group text_right">
+                                <button type="button" class="btns btn_add">초기화</button>
+                                <button type="button" class="btns btn_add">발송</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- bbs -->
+                    <div class="bbs_area bbs_area3">
+                        <p class="sub_title">전화번호 검색</p>
+
+                        <table class="search_table form_area">
+                            <colgroup>
+                                <col style="width:840px">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td colspan="2">
+                                        <label class="radio_box">
+                                            <input type="radio" name="reserve" checked="checked" class="radio">
+                                            <span class="txt">퇴직예정자</span>
+                                        </label>
+                                        <label class="radio_box">
+                                            <input type="radio" name="reserve" class="radio">
+                                            <span class="txt">단체연수예약자</span>
+                                        </label>
+                                        <label class="radio_box">
+                                            <input type="radio" name="reserve" class="radio">
+                                            <span class="txt">생활연수(기관)예약자</span>
+                                        </label>
+                                        <label class="radio_box">
+                                            <input type="radio" name="reserve" class="radio">
+                                            <span class="txt">생활연수(개인)예약자</span>
+                                        </label>
+                                        <label class="radio_box">
+                                            <input type="radio" name="reserve" class="radio">
+                                            <span class="txt">연수원 회원</span>
+                                        </label> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                   <td>
+                                        <div class="search_box">
+                                            <select class="select">
+                                                <option>속초연수원</option>
+                                                <option>속초연수원</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="radio_toggle btn_group">
+                                            <label class="radio_box active">
+                                                <input type="radio" name="date" checked="checked" class="radio">
+                                                <span class="txt">지난 3개월</span>
+                                            </label>
+                                            <label class="radio_box">
+                                                <input type="radio" name="date" class="radio">
+                                                <span class="txt">지난달</span>
+                                            </label>
+                                            <label class="radio_box">
+                                                <input type="radio" name="date" class="radio">
+                                                <span class="txt">이번달</span>
+                                            </label>
+                                            <label class="radio_box">
+                                                <input type="radio" name="date" class="radio">
+                                                <span class="txt">오늘</span>
+                                            </label>
+                                        </div>
+
+                                        <div class="date_box">
+                                            <input type="text" value="2018-11-06" class="input_text input_date">
+                                            <p class="unit">~</p>
+                                            <input type="text" value="2018-11-06" class="input_text input_date">
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="search_box">
+                                            <select class="select">
+                                                <option>소속기관</option>
+                                                <option>소속기관</option>
+                                            </select>
+                                            <select class="select">
+                                                <option>소속부서</option>
+                                                <option>소속부서</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                         <div class="search_box search_box_type2">
+                                            <input type="text" class="input_text" placeholder="단체명 및 이름검색">
+                                             <a href="#" class="btns btn_search">검색</a>
+                                         </div>
+                                     </td>
+                                 </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="btn_box text_right">
+                            <a href="#" class="btns btns-type2 red">수신번호 선택</a>
+                        </div>
+                       
+                        
+                        <!-- bbs -->
+                        <table class="bbs bbs_type2 fixed">
+                            <colgroup>
+                                <col style="width:8%">
+                                <col style="width:20%">
+                                <col style="width:20%">
+                                <col style="width:20%">
+                                <col style="width:20%">
+                                <col style="width:auto">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>번호</th>
+                                    <th>소속기관</th>
+                                    <th>소속부서</th>
+                                    <th>이름</th>
+                                    <th>전화번호</th>
+                                    <th>
+                                        <label class="check_box">
+                                            <input type="checkbox" class="check">
+                                            <span class="txt">전체선택</span>
+                                        </label>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>4</td>
+                                    <td>기관명</td>
+                                    <td>부서명</td>
+                                    <td>송민정</td>
+                                    <td>010-1234-5678</td>
+                                    <td>
+                                        <label class="check_box">
+                                            <input type="checkbox" class="check">
+                                            <span class="txt">전체선택</span>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>기관명</td>
+                                    <td>부서명</td>
+                                    <td>박기호</td>
+                                    <td>010-1234-5678</td>
+                                    <td>
+                                        <label class="check_box">
+                                            <input type="checkbox" class="check">
+                                            <span class="txt">전체선택</span>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>기관명</td>
+                                    <td>부서명</td>
+                                    <td>박기호</td>
+                                    <td>010-1234-5678</td>
+                                    <td>
+                                        <label class="check_box">
+                                            <input type="checkbox" class="check">
+                                            <span class="txt">전체선택</span>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>기관명</td>
+                                    <td>부서명</td>
+                                    <td>박기호</td>
+                                    <td>010-1234-5678</td>
+                                    <td>
+                                        <label class="check_box">
+                                            <input type="checkbox" class="check">
+                                            <span class="txt">전체선택</span>
+                                        </label>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //bbs -->
+                </div>
+                <!-- //메인 컨텐츠 -->
+            </div>
+            <!-- //컨텐츠 -->
+        </div>
+    </div>
+</body>
+</html>

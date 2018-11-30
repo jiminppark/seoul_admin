@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>서울시연수원 통합예약시스템</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=1, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" media="all" href="css/jquery-ui.theme.min.css">
+    <link rel="stylesheet" media="all" href="css/common.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.placeholder.enhanced-1.5.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/common.js"></script>
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" media="all" href="css/ie.css">
+        <script src="js/html5.js"></script>
+        <script src="js/respond.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- 헤더 -->
+    <div id="header">
+        <div class="contains">
+            <h1 class="logo"><img src="img/common/logo.png" alt="서울시연수원 통합예약시스템"></h1>
+            <ul id="gnb">
+                <li><a href="#" class="btn_menu">예약관리</a></li>
+                <li><a href="#" class="btn_menu">운영자관리</a></li>
+                <li><a href="#" class="btn_menu">회원관리</a></li>
+                <li><a href="#" class="btn_menu">정산관리</a></li>
+                <li><a href="#" class="btn_menu">통계관리</a></li>
+                <li><a href="#" class="btn_menu">연수원관리</a></li>
+                <li><a href="#" class="btn_menu">사이트관리</a></li>
+                <li><a href="#" class="btn_menu active">환경설정</a></li>
+            </ul>
+            <div class="user">
+                <a href="#" class="btn_logout">로그아웃</a>
+            </div>
+        </div>
+    </div>
+    <!-- 헤더 -->
+    
+    <div id="content">
+        <div class="contains">
+            <!-- 컨텐츠 -->
+            <div class="content_wrap">
+                <!-- lnb -->
+                <div class="lnb_area">
+                    <div class="name_box">
+                        <p class="name">속초관리자명</p>
+                    </div>
+                    <ul class="lnb_list">
+                        <li><a href="#" class="btn_lnb">날짜별 이용기간 관리</a></li>
+                        <li><a href="#" class="btn_lnb">예약기관 관리</a></li>
+                        <li><a href="#" class="btn_lnb">패널티 항목 관리</a></li>
+                        <li><a href="#" class="btn_lnb active">연수기관 관리</a></li>
+                        <li><a href="#" class="btn_lnb">기관배정 담당자 관리</a></li>
+                        <li><a href="#" class="btn_lnb">격무부서 관리</a></li>
+                        <li><a href="#" class="btn_lnb">공통코드관리</a></li>
+                    </ul>
+                </div>
+                <!-- //lnb -->
+                
+                <!-- 메인 헤더 -->
+                <div class="main_header">
+                    <p class="title">연수기관 관리</p>
+                    <ul class="navi_list">
+                        <li>서울시연수원 통합예약시스템</li>
+                        <li>회원관리</li>
+                        <li class="now">인사DB관리</li>
+                    </ul>
+                </div>
+                <!-- //메인 헤더 -->
+                
+                <!-- 메인 컨텐츠 -->
+                <div class="main_content">
+                    <table class="search_table form_area">
+                        <colgroup>
+                            <col style="width:60px">
+                            <col style="width:320px">
+                            <col style="width:120px">
+                            <col>
+                            <col style="width:220px">
+                            <col style="width:150px">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td colspan="4">
+                                    <div class="sch_date">
+                                        <select class="select sizess">
+                                            <option value="">속초연수원</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td colspan="2">
+                                    <div class="search_box sizem">
+                                        <input type="text" class="input_text">
+                                        <a href="#" class="btns btn_search">검색</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>연수원</th>
+                                <td>
+                                    <select class="select sizess">
+                                        <option value="">속초연수원</option>
+                                    </select>
+                                </td>
+                                <th>기관명</th>
+                                <td colspan="4">
+                                    <div class="org_box">
+                                        <label class="radio_box">
+                                            <input type="radio" name="org" checked="checked" class="radio">
+                                            <span class="txt">실국본부</span>
+                                        </label>
+                                        <select class="select">
+                                            <option value="">선택하세요</option>
+                                        </select>
+                                        <label class="radio_box">
+                                            <input type="radio" name="org" class="radio">
+                                            <span class="txt">자치구</span>
+                                        </label>
+                                        <select class="select">
+                                            <option value="">선택하세요</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>객실</th>
+                                <td>
+                                    <select class="select sizess">
+                                        <option value="A">A타입</option>
+                                    </select>
+                                    <input type="text" class="input_text number">
+                                </td>
+                                <th>예약가능기간</th>
+                                <td>
+                                    <div class="range_box">
+                                        <input type="text" class="input_text number">
+                                        <p class="unit">일</p>
+                                        <p class="unit">~</p>
+                                        <input type="text" class="input_text number">
+                                        <p class="unit">일</p>
+                                    </div>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <div class="search_box panalty">
+                                        <a href="#" class="btns red btn_add">연수기관 등록</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="bbs_area">
+                        <table class="bbs fixed">
+                            <colgroup>
+                                <col style="width:6%">
+                                <col style="width:12%">
+                                <col style="width:25%">
+                                <col style="width:20%">
+                                <col style="width:10%">
+                                <col style="width:18%">
+                                <col style="width:9%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>번호</th>
+                                    <th>기관명</th>
+                                    <th>예약가능 기간</th>
+                                    <th>객실수</th>
+                                    <th>사용여부</th>
+                                    <th>최종수정일</th>
+                                    <th>수정</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>4</td>
+                                    <td>감사관</td>
+                                    <td>
+                                        <div class="range_box">
+                                            <input type="text" class="input_text number">
+                                            <p class="unit">일</p><p class="unit">~</p>
+                                            <input type="text" class="input_text number">
+                                            <p class="unit">일</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="type_box">
+                                            <p class="label">A타입</p>
+                                            <input type="text" class="input_text number">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <select class="select">
+                                            <option value="">사용여부</option>
+                                        </select>
+                                    </td>
+                                    <td>2018-08-01 관리자명</td>
+                                    <td><a href="#" class="btns btn_modify">수정</a></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>감사관</td>
+                                    <td>
+                                        <div class="range_box">
+                                            <input type="text" class="input_text number">
+                                            <p class="unit">일</p><p class="unit">~</p>
+                                            <input type="text" class="input_text number">
+                                            <p class="unit">일</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="type_box">
+                                            <p class="label">B타입</p>
+                                            <input type="text" class="input_text number">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <select class="select">
+                                            <option value="">사용여부</option>
+                                        </select>
+                                    </td>
+                                    <td>2018-08-01 관리자명</td>
+                                    <td><a href="#" class="btns btn_modify">수정</a></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>감사관</td>
+                                    <td>
+                                        <div class="range_box">
+                                            <input type="text" class="input_text number">
+                                            <p class="unit">일</p><p class="unit">~</p>
+                                            <input type="text" class="input_text number">
+                                            <p class="unit">일</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="type_box">
+                                            <p class="label">C타입</p>
+                                            <input type="text" class="input_text number">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <select class="select">
+                                            <option value="">사용여부</option>
+                                        </select>
+                                    </td>
+                                    <td>2018-08-01 관리자명</td>
+                                    <td><a href="#" class="btns btn_modify">수정</a></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>감사관</td>
+                                    <td>
+                                        <div class="range_box">
+                                            <input type="text" class="input_text number">
+                                            <p class="unit">일</p><p class="unit">~</p>
+                                            <input type="text" class="input_text number">
+                                            <p class="unit">일</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="type_box">
+                                            <p class="label">A타입</p>
+                                            <input type="text" class="input_text number">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <select class="select">
+                                            <option value="">사용여부</option>
+                                        </select>
+                                    </td>
+                                    <td>2018-08-01 관리자명</td>
+                                    <td><a href="#" class="btns btn_modify">수정</a></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>감사관</td>
+                                    <td>
+                                        <div class="range_box">
+                                            <input type="text" class="input_text number">
+                                            <p class="unit">일</p><p class="unit">~</p>
+                                            <input type="text" class="input_text number">
+                                            <p class="unit">일</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="type_box">
+                                            <p class="label">B타입</p>
+                                            <input type="text" class="input_text number">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <select class="select">
+                                            <option value="">사용여부</option>
+                                        </select>
+                                    </td>
+                                    <td>2018-08-01 관리자명</td>
+                                    <td><a href="#" class="btns btn_modify">수정</a></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>감사관</td>
+                                    <td>
+                                        <div class="range_box">
+                                            <input type="text" class="input_text number">
+                                            <p class="unit">일</p><p class="unit">~</p>
+                                            <input type="text" class="input_text number">
+                                            <p class="unit">일</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="type_box">
+                                            <p class="label">C타입</p>
+                                            <input type="text" class="input_text number">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <select class="select">
+                                            <option value="">사용여부</option>
+                                        </select>
+                                    </td>
+                                    <td>2018-08-01 관리자명</td>
+                                    <td><a href="#" class="btns btn_modify">수정</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- //메인 컨텐츠 -->
+            </div>
+            <!-- //컨텐츠 -->
+        </div>
+    </div>
+</body>
+</html>
