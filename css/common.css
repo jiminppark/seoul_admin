@@ -51,6 +51,7 @@ input::-ms-clear{display:none}
 .fr {float:right}
 .text_right {text-align:right}
 .text_center {text-align:center}
+.vt_top {vertical-align:top !important;}
 .blind {color:transparent;text-indent:-9999px;position:fixed;left:0;top:0;overflow:hidden;}
 
 .bg_cover{background-size:cover;background-position:center center;background-repeat:no-repeat}
@@ -114,6 +115,7 @@ body{min-width:1600px;background:#f2f5f8}
 .search_table th{padding:7px 8px 7px 20px;height:32px;font-size:15px;color:#354052;font-weight:700;white-space:nowrap}
 .search_table tr th:first-child{padding-left:0}
 .search_table td{padding:7px 0;height:32px}
+.search_table.stats_form_header tr th:first-child {padding:7px 8px 7px 20px;}
 
 select.select{padding:0 10px;width:100%;height:32px;font-size:14px;color:#354052;border:1px solid #bfc2c7;border-radius:2px;background:#fff url("../img/icon/select_arrow.png") no-repeat right center;-webkit-appearance:none;-moz-appearance:none;appearance:none}
 select.select::-ms-expand{display:none}
@@ -290,8 +292,9 @@ select.select:focus,
 
 .date_box{display:inline-block;vertical-align:middle;*display:inline;zoom:1;white-space:nowrap}
 .date_box .input_date,
-.date_box .input_month {float:left;width:128px;border-right:0;border-radius:2px 0 0 2px}
-.date_box .ui-datepicker-trigger{float:left;width:30px;height:32px;text-align:left;text-indent:-9999px;border:1px solid #bfc2c7;border-radius:0 2px 2px 0;background:url("../img/icon/date.png") no-repeat -1px center}
+.date_box .input_month,
+.date_box .input_year {float:left;width:128px;border-right:0;border-radius:2px 0 0 2px}
+.date_box .ui-datepicker-trigger{float:left;width:30px;height:32px;text-align:left;text-indent:-9999px;border:1px solid #bfc2c7;border-radius:0 2px 2px 0;background:#fff url("../img/icon/date.png") no-repeat -1px center}
 .date_box .unit{float:left;width:20px;height:32px;line-height:32px;text-align:center;font-size:14px;color:#354052}
 .date_box .input_date_value {float:left;width:60px;margin-left:7px;}
 .date_box select.select{float:left;margin-left:5px;width:96px}
@@ -348,12 +351,14 @@ select.select:focus,
 .bbs_area .bbs_header .bbs_list .total:first-child{margin-left:0}
 .bbs_area .bbs_header .bbs_list .title{float:left;line-height:32px;font-size:20px;color:#354052;font-weight:500}
 .bbs_area .bbs_header .bbs_list .title2 {font-size:16px;}
+.bbs_area .bbs_header .bbs_list .title2 .blue {margin:0 5px;}
 .bbs_area .bbs_header .bbs_list .total b{font-weight:700}
 .bbs_area .bbs_header .bbs_list .total span{color:#0094f7}
 .bbs_area .bbs_header .bbs_list .point{float:left;margin-left:30px;line-height:32px;font-size:14px;color:#354052}
 .bbs_area .bbs_header .btn_box{float:right;}
 .bbs_area .bbs_header .btn_box .btns{float:left;margin-left:5px}
 .bbs_area .bbs_header .btn_box .btn_excel{padding-left:30px;background:url("../img/icon/excel.png") no-repeat 10px center}
+.bbs_area .bbs_header .btn_box .btn_print{padding-left:30px;background:#1b89f9 url("../img/icon/print.png") no-repeat 25px center}
 .bbs_area .bbs_header .sub_title{float:left;padding-top:6px;margin:0}
 
 .bbs_area2{padding:24px 28px;margin-top:30px;}
@@ -411,10 +416,12 @@ select.select:focus,
 .bbs_table_type3 {border-top:1px solid #dfe4e9;}
 .popup_area .bbs_table_type3 {border-top:2px solid #354052;}
 .bbs_table_type3 thead tr th {background-color:#f0f2f7}
+.bbs_table_type3 tbody tr:hover td {background:transparent;}
 .bbs_table_type3 thead tr:first-child th {background-color:#e5e7ec}
 .bbs_table_type3 tfoot td {background-color:#e6ebf7;font-weight:600;color:#354052}
 .table_bg {background-color:#eff7ff}
-.bbs_table_type3 tfoot .table_bg {background-color:#d8e4f7}
+.bbs_table_type3 tfoot .table_bg2 {background-color:#d8e4f7}
+.bbs_table_type3 td strong {color:#354052}
 
 .bbs_area3 .message_area {width:780px;}
 .message_area .sub_title {margin-bottom:10px;}
@@ -456,7 +463,7 @@ select.select:focus,
 .total.total_type:first-child{margin-left:0}
 .total.total_type b{font-weight:700}
 .total.total_type span.blue{color:#0094f7}
-.total.total_type span.blue+span.black {margin-right:16px}
+.total.total_type span.black {margin-right:16px}
 .total.total_type span.black{color:#354052 !important}
 .bbs_table_type2 .bbs_header .sub_title{display:inline-block;font-size:20px;line-height:20px;margin:0;letter-spacing:-0.05em;}
 
@@ -953,7 +960,7 @@ button.btns.type_b:disabled:hover {opacity:1}
 .ui-datepicker {background-color:#f7f7fa;border-radius:0;padding:0}
 .ui-datepicker {width:300px;background-color:#fff}
 .ui-datepicker .ui-widget-header {background-color:transparent;border-color:transparent}
-.ui-datepicker .ui-widget-header .ui-icon {background:url("../img/icon/calendar_btn.png") no-repeat 0 0;}
+.ui-datepicker .ui-widget-header .ui-icon, .ui-widget-header .ui-icon {background:url("../img/icon/calendar_btn.png") no-repeat 0 0;}
 .ui-datepicker .ui-state-default,
 .ui-datepicker .ui-widget-content .ui-state-default {height:100%;padding:0;line-height:40px;font-size:14px;text-align:center;font-family:'Roboto', 'sans-serif';border:none;background-color:transparent;font-weight:600}
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {font-weight:600}
@@ -975,12 +982,25 @@ button.btns.type_b:disabled:hover {opacity:1}
 .ui-widget.ui-datepicker .ui-datepicker-prev span {background-position-x:0}
 .ui-widget.ui-datepicker .ui-datepicker-next span {background-position-x:-23px}
 
-
 /*dateapicker layer popup*/
 .datepicker_layer_pop .ui-datepicker {width:100%;}
 .datepicker_layer_pop .search_box {display:table;width:100%;margin-top:10px;}
 .datepicker_layer_pop .search_box > span {display:table-cell;width:50%;padding:0 0 0 5px;}
 .datepicker_layer_pop .search_box > span:first-child {padding:0 5px 0 0;}
+
+/*date picker -month*/
+.input_month+img {width:30px;height:30px;background:#fff;cursor:pointer;vertical-align:top;border:1px solid #bfc2c7;border-left:none;border-radius:0 2px 2px 0;}
+.input_month:focus +img {background-color:#e8f3fe;border:1px solid #5facfb;border-left:none;}
+.ui-widget-header + div {padding:12px 0;border-top:1px solid #bfc2d0;}
+.ui-widget.ui-widget-content {border:1px solid #606372}
+.ui-widget-header {margin:0;padding:0;border-radius:0;background-color:#f7f7fa;border-color:transparent;}
+.month-picker table {border-spacing:0 !important;height:46px;}
+.ui-widget-header, .ui-widget-header a {color:#333 !important}
+.ui-widget-header .ui-icon.ui-icon-circle-triangle-e {background-position-x:-23px;}
+
+/*date picker - year*/
+.year_datepicker .ui-datepicker-calendar,
+.year_datepicker .ui-datepicker-month {display:none;}
 
 /*날짜별 이용관리*/
 .reserve_schedule_area .sch_table tbody p.day_text {position:relative;font-size:14px;color:#30384d;padding-left:20px;margin-top:5px;}
@@ -991,8 +1011,27 @@ button.btns.type_b:disabled:hover {opacity:1}
 .no_reservation::before {background-position: -30px 0;}
 .temporary_holiday::before {background-position: -60px 0;}
 .holiday::before {background-position: -60px -24px;}
-
 .daliy_popup_txt p {font-size:14px;color:#30384d;}
 .daliy_popup_txt .day {font-weight: 600;margin-bottom:10px}
 .daliy_popup_txt p.day_status {display:inline-block;margin-bottom:5px;padding:2px 17px;color:#fff;background-color:#f04c5d;border-radius:15px;}
 .daliy_popup_txt .desc {line-height:22px;}
+
+/*객실별 리포트*/
+.reserve_room_report table:not(:first-child) {margin-top:30px;}
+.reserve_room_report .room_table td:hover {cursor:default;}
+.reserve_room_report .room_table td:hover .room_state::after {display:none;}
+.reserve_room_report .room_table_type2 th {color:#fff;font-weight:normal;}
+.reserve_room_report .room_table_type2 th, 
+.reserve_room_report .room_table_type2 td {font-size:14px;text-align:center;height:44px;vertical-align:middle;}
+.reserve_room_report .room_table_type2 td {color:#596a7f}
+.reserve_room_report .room_table_type2 tr:first-child td {background-color:#e5e7ec;color:#354052;}
+.reserve_room_report .room_table_type2 td span:not(:first-child) {margin-left:10px;}
+.roport_share {position:absolute;bottom:0;color:#1b89f9 !important;font-size:12px !important;}
+
+
+
+
+
+
+
+

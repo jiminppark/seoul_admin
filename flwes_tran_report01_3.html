@@ -54,11 +54,11 @@
                         <p class="name">속초관리자명</p>
                     </div>
                     <ul class="lnb_list">
-                        <li><a href="#" class="btn_lnb active">FORECAST</a></li>
+                        <li><a href="#" class="btn_lnb">FORECAST</a></li>
                         <li><a href="#" class="btn_lnb">연수원 이용률 리포트</a></li>
                         <li><a href="#" class="btn_lnb">객실별 리포트</a></li>
                         <li><a href="#" class="btn_lnb">연수내용별 리포트</a></li>
-                        <li><a href="#" class="btn_lnb">소속별 리포트</a></li>
+                        <li><a href="#" class="btn_lnb active">소속별 리포트</a></li>
                         <li><a href="#" class="btn_lnb">사용자별 리포트</a></li>
                         <li><a href="#" class="btn_lnb">후생복지시스템 리포트</a></li>
                         <li><a href="#" class="btn_lnb">객실청소현황</a></li>
@@ -68,11 +68,11 @@
                 
                 <!-- 메인 헤더 -->
                 <div class="main_header">
-                    <p class="title">FORECAST</p>
+                    <p class="title">소속별 리포트</p>
                     <ul class="navi_list">
                         <li>서울시연수원 통합예약시스템</li>
                         <li>통계관리</li>
-                        <li class="now">FORECAST</li>
+                        <li class="now">소속별 리포트</li>
                     </ul>
                 </div>
                 <!-- //메인 헤더 -->
@@ -89,7 +89,7 @@
                         </colgroup>
                         <tbody>
                             <tr>
-                                <td>
+                                <td rowspan="2" class="vt_top">
                                     <select class="select">
                                         <option>속초연수원</option>
                                         <option>속초연수원</option>
@@ -144,6 +144,23 @@
                                     </div>
                                 </td>
                             </tr>
+                            <tr>
+                                <th>소속</th>
+                                <td colspan="4">
+                                    <label class="radio_box">
+                                        <input type="radio" name="group" checked="checked" class="radio">
+                                        <span class="txt">실국본부</span>
+                                    </label>
+                                    <label class="radio_box">
+                                        <input type="radio" name="group" class="radio">
+                                        <span class="txt">자치구</span>
+                                    </label>
+                                    <label class="radio_box">
+                                        <input type="radio" name="group" class="radio">
+                                        <span class="txt">기관배정담당부서</span>
+                                    </label>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
 
@@ -151,10 +168,11 @@
                     <div class="bbs_area">
                         <div class="bbs_header">
                             <div class="bbs_list">
-                                <p class="title title2">속초 연수원 <span class="blue">2018-08-01 ~ 2018-08-07</span> 예약 현황</p>
+                                <p class="title title2">속초 연수원 <span class="blue">2018-08-01 ~ 2018-08-07</span> 실국본부 이용현황</p>
                             </div>
                             <div class="btn_box">
-                                <a href="salut_db_mng_list_excel_popup.html" data-width="400" data-height="210" class="btns greenline btn_excel btn_popup">엑셀등록</a>
+                                <a href="" class="btns greenline btn_excel">전체 이용률 엑셀저장</a>
+                                <a href="" class="btns greenline btn_excel">엑셀저장</a>
                                 <a href="flwes_tran_pscds_popup.html" data-width="780" data-height="640" class="btns btn_print btn_popup">인쇄</a>
                             </div>
                         </div>
@@ -162,115 +180,159 @@
                         <!-- bbs -->
                         <table class="bbs bbs_table_type3">
                             <colgroup>
-                                <col style="width:7%">
-                                <col style="width:13%">
-                                <col style="width:13%">
-                                <col style="width:13%">
-                                <col style="width:13%">
-                                <col style="width:13%">
-                                <col style="width:13%">
                                 <col style="width:12%">
+                                <col style="width:14%">
+                                <col style="width:14%">
+                                <col style="width:14%">
+                                <col style="width:14%">
+                                <col style="width:14%">
+                                <col style="width:14%">
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th rowspan="2">날짜</th>
-                                    <th colspan="2">A타입(객실수:13)</th>
-                                    <th colspan="2">B타입(객실수:67)</th>
-                                    <th colspan="2">합계(총 객실수:80)</th>
-                                    <th rowspan="2">점유율</th>
+                                    <th rowspan="2">실국본부</th>
+                                    <th colspan="2">A타입</th>
+                                    <th colspan="2">B타입</th>
+                                    <th colspan="2">합계</th>
                                 </tr>
                                 <tr>
-                                    <th>예약객실수</th>
-                                    <th>잔여객실수</th>
-                                    <th>예약객실수</th>
-                                    <th>잔여객실수</th>
-                                    <th>예약객실수 총합</th>
-                                    <th>잔여객실수 총합</th>
+                                    <th>객실 이용률</th>
+                                    <th>이용인원</th>
+                                    <th>객실 이용률</th>
+                                    <th>이용인원</th>
+                                    <th>객실 이용률</th>
+                                    <th>이용인원</th>
                                 </tr>
                             </thead>
                             <tfoot>
                                 <tr>
                                     <td>합계</td>
-                                    <td>35</td>
-                                    <td>56</td>
-                                    <td>90</td>
-                                    <td>379</td>
-                                    <td class="table_bg2">125</td>
-                                    <td class="table_bg2">435</td>
-                                    <td class="table_bg2">22.4</td>
+                                    <td>931(22.3%)</td>
+                                    <td>1352</td>
+                                    <td>796(27.3%)</td>
+                                    <td>1156</td>
+                                    <td class="table_bg2">2,523(25.6%)</td>
+                                    <td class="table_bg2">3,664</td>
                                 </tr>
                             </tfoot>
                             <tbody>
                                 <tr>
-                                    <td>7일</td>
-                                    <td>6</td>
-                                    <td>7</td>
-                                    <td>10</td>
-                                    <td>57</td>
-                                    <td class="table_bg">16</td>
-                                    <td class="table_bg">64</td>
-                                    <td class="table_bg">20.0</td>
+                                    <td>감사위원회</td>
+                                    <td>16(20.0%)</td>
+                                    <td>205</td>
+                                    <td>16(20.0%)</td>
+                                    <td>205</td>
+                                    <td class="table_bg"><strong>16(20.0%)</strong></td>
+                                    <td class="table_bg"><strong>205</strong></td>
                                 </tr>
                                 <tr>
-                                    <td>6일</td>
-                                    <td>6</td>
-                                    <td>7</td>
-                                    <td>10</td>
-                                    <td>57</td>
-                                    <td class="table_bg">16</td>
-                                    <td class="table_bg">64</td>
-                                    <td class="table_bg">20.0</td>
+                                    <td>대변인</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                    <td class="table_bg"><strong></strong></td>
                                 </tr>
                                 <tr>
-                                    <td>5일</td>
-                                    <td>6</td>
-                                    <td>7</td>
-                                    <td>10</td>
-                                    <td>57</td>
-                                    <td class="table_bg">16</td>
-                                    <td class="table_bg">64</td>
-                                    <td class="table_bg">20.0</td>
+                                    <td>가족가족정책실</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                    <td class="table_bg"><strong></strong></td>
                                 </tr>
                                 <tr>
-                                    <td>4일</td>
-                                    <td>6</td>
-                                    <td>7</td>
-                                    <td>10</td>
-                                    <td>57</td>
-                                    <td class="table_bg">16</td>
-                                    <td class="table_bg">64</td>
-                                    <td class="table_bg">20.0</td>
+                                    <td>아동복지센터</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                    <td class="table_bg"><strong></strong></td>
                                 </tr>
                                 <tr>
-                                    <td>3일</td>
-                                    <td>6</td>
-                                    <td>7</td>
-                                    <td>10</td>
-                                    <td>57</td>
-                                    <td class="table_bg">16</td>
-                                    <td class="table_bg">64</td>
-                                    <td class="table_bg">20.0</td>
+                                    <td>시민소통기획관</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                    <td class="table_bg"><strong></strong></td>
                                 </tr>
                                 <tr>
-                                    <td>2일</td>
-                                    <td>6</td>
-                                    <td>7</td>
-                                    <td>10</td>
-                                    <td>57</td>
-                                    <td class="table_bg">16</td>
-                                    <td class="table_bg">64</td>
-                                    <td class="table_bg">20.0</td>
+                                    <td>정무부시장실</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                    <td class="table_bg"><strong></strong></td>
                                 </tr>
                                 <tr>
-                                    <td>1일</td>
-                                    <td>6</td>
-                                    <td>7</td>
-                                    <td>10</td>
-                                    <td>57</td>
-                                    <td class="table_bg">16</td>
-                                    <td class="table_bg">64</td>
-                                    <td class="table_bg">20.0</td>
+                                    <td>시민감사오브즈만위원회</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                    <td class="table_bg"><strong></strong></td>
                                 </tr>
+                                <tr>
+                                    <td>기획조정실</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                </tr>    
+                                <tr>
+                                    <td>서울시립대</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                </tr>
+                                <tr>
+                                    <td>평생교육정책관</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                </tr>
+                                <tr>
+                                    <td>비상기획관</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                </tr>
+                                <tr>
+                                    <td>정보기획관</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                </tr>
+                                <tr>
+                                    <td>데이터센터</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                </tr>                       
                             </tbody>
                         </table>
 

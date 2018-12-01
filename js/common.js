@@ -1,10 +1,13 @@
 $(function() {
     page.init();
+    month_calendar();
 });
 
 var page = {
     init: function() {
         page.calendar();
+
+        //page.year_calendar();
         
         page.popup();
         
@@ -20,8 +23,7 @@ var page = {
                 if($(this).data("min") === true || $(this).data("min") == "true") {
                     dateOpt.minDate = 0;
                 }
-                $(this).datepicker(dateOpt);
-                
+                $(this).datepicker(dateOpt);    
 
                 $.datepicker.setDefaults({
                     dateFormat: 'yy-mm-dd',
@@ -40,7 +42,30 @@ var page = {
                 
             });
         }
+
+        if($(".input_year").length > 0) {
+            $.each($(".input_year"), function() {
+                var dateOpt = {
+                    showOn: "button",
+                    dateFormat: "yymmdd"
+                };
+                
+                $(this).datepicker(dateOpt);    
+                
+                $.datepicker.setDefaults({
+                    dateFormat: 'yy-mm-dd',
+                    prevText: '이전 달',
+                    nextText: '다음 달',
+                    showMonthAfterYear: true,
+                    yearSuffix: '',
+                    altField: "#alternate",
+                    altFormat: "yy-mm-dd"
+                });
+                
+            });
+        }
     },
+
     popup: function() {
         $(".popup_area .btn_close, .popup_area .btn_cancel").on("click", function() {
             self.close();
@@ -106,4 +131,47 @@ var page = {
             return false;
         });
     }
+}
+
+function Rradio_OnOff(id){
+    if(id == "radio_days"){
+        document.all["radio_days"].style.display = '';        
+        document.all["radio_month"].style.display = 'none';
+        document.all["radio_year"].style.display = 'none';
+        $(".ui-datepicker").removeClass("year_datepicker");
+    }
+    
+    else if(id == "radio_month") {
+        document.all["radio_days"].style.display = 'none';   
+        document.all["radio_month"].style.display = '';
+        document.all["radio_year"].style.display = 'none';                  
+    }
+
+    else {       
+        document.all["radio_days"].style.display = 'none';      
+        document.all["radio_month"].style.display = 'none'; 
+        document.all["radio_year"].style.display = '';
+        $(".ui-datepicker").addClass("year_datepicker");              
+    }                           
+}
+
+function month_calendar(){
+    $("#ImageButton").MonthPicker({
+        Button: '<img class="icon" src="img/icon/date.png" />'
+    });
+
+    var options = {
+        pattern: 'yyyy-mm',
+        monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월']
+    };
+
+    $('.input_month').MonthPicker(options);
+
+    $( ".input_month" ).focus(function() {
+        $(this).next().attr('src','img/icon/date_on.png');
+    });
+
+    $( ".input_month" ).focusout(function() {
+        $(this).next().attr('src','img/icon/date.png');
+    });
 }

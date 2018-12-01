@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>서울시연수원 통합예약시스템</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=1, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/jquery-ui-monthpicker.css">
+    <link rel="stylesheet" media="all" href="css/common.css">
+    <link rel="stylesheet" media="all" href="css/MonthPicker.min.css" />
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.placeholder.enhanced-1.5.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/MonthPicker.min.js"></script>
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" media="all" href="css/ie.css">
+        <script src="js/html5.js"></script>
+        <script src="js/respond.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- 헤더 -->
+    <div id="header">
+        <div class="contains">
+            <h1 class="logo"><img src="img/common/logo.png" alt="서울시연수원 통합예약시스템"></h1>
+            <ul id="gnb">
+                <li><a href="#" class="btn_menu">예약관리</a></li>
+                <li><a href="#" class="btn_menu">운영자관리</a></li>
+                <li><a href="#" class="btn_menu">회원관리</a></li>
+                <li><a href="#" class="btn_menu">정산관리</a></li>
+                <li><a href="#" class="btn_menu active">통계관리</a></li>
+                <li><a href="#" class="btn_menu">연수원관리</a></li>
+                <li><a href="#" class="btn_menu">사이트관리</a></li>
+                <li><a href="#" class="btn_menu">환경설정</a></li>
+            </ul>
+            <div class="user">
+                <a href="#" class="btn_logout">로그아웃</a>
+            </div>
+        </div>
+    </div>
+    <!-- 헤더 -->
+    
+    <div id="content">
+        <div class="contains">
+            <!-- 컨텐츠 -->
+            <div class="content_wrap">
+                <!-- lnb -->
+                <div class="lnb_area">
+                    <div class="name_box">
+                        <p class="name">속초관리자명</p>
+                    </div>
+                    <ul class="lnb_list">
+                        <li><a href="#" class="btn_lnb">FORECAST</a></li>
+                        <li><a href="#" class="btn_lnb">연수원 이용률 리포트</a></li>
+                        <li><a href="#" class="btn_lnb">객실별 리포트</a></li>
+                        <li><a href="#" class="btn_lnb">연수내용별 리포트</a></li>
+                        <li><a href="#" class="btn_lnb active">소속별 리포트</a></li>
+                        <li><a href="#" class="btn_lnb">사용자별 리포트</a></li>
+                        <li><a href="#" class="btn_lnb">후생복지시스템 리포트</a></li>
+                        <li><a href="#" class="btn_lnb">객실청소현황</a></li>
+                    </ul>
+                </div>
+                <!-- //lnb -->
+                
+                <!-- 메인 헤더 -->
+                <div class="main_header">
+                    <p class="title">소속별 리포트</p>
+                    <ul class="navi_list">
+                        <li>서울시연수원 통합예약시스템</li>
+                        <li>통계관리</li>
+                        <li class="now">소속별 리포트</li>
+                    </ul>
+                </div>
+                <!-- //메인 헤더 -->
+                
+                <!-- 메인 컨텐츠 -->
+                <div class="main_content">
+                    <table class="search_table form_area stats_form_header">
+                        <colgroup>
+                            <col style="width:170px;">
+                            <col style="width:50px;">
+                            <col style="width:230px;">
+                            <col style="width:380px;">
+                            <col style="width:auto;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td rowspan="2" class="vt_top">
+                                    <select class="select">
+                                        <option>속초연수원</option>
+                                        <option>속초연수원</option>
+                                    </select>
+                                </td>
+                                <th>기간</th>
+                                <td>
+                                    <label class="radio_box">
+                                        <input type="radio" name="period" checked="checked" value="today" class="radio" onclick="Rradio_OnOff('radio_days');">
+                                        <span class="txt">일별</span>
+                                    </label>
+                                    <label class="radio_box">
+                                        <input type="radio" name="period" value="moday" class="radio" onclick="Rradio_OnOff('radio_month');">
+                                        <span class="txt">월별</span>
+                                    </label>
+                                    <label class="radio_box">
+                                        <input type="radio" name="period" value="year" class="radio" onclick="Rradio_OnOff('radio_year');">
+                                        <span class="txt">연별</span>
+                                    </label>
+                                </td>
+
+                                <!-- 일별일 경우 -->
+                                <td id="radio_days">
+                                    <div class="date_box">
+                                        <input type="text" value="2018-11-06" class="input_text input_date">
+                                        <p class="unit">-</p>
+                                        <input type="text" value="2018-11-06" class="input_text input_date">
+                                    </div>
+                                </td>
+                                <!--// 일별일 경우 -->
+
+                                <!-- 월별일 경우 -->
+                                <td id="radio_month" style="display:none">
+                                    <div class="date_box">
+                                        <input type="text" id="ImageButton" class="input_text input_month">
+                                    </div>
+                                </td>
+                                 <!--// 월별일 경우 -->
+
+                                 <!--년별일 경우 -->
+                                 <td id="radio_year" style="display:none">
+                                    <div class="date_box">
+                                        <input type="text" id="schYear" class="input_text input_year">
+                                    </div>
+                                </td>
+                                <!--// 년별일 경우 -->
+
+                                <td>
+                                    <div class="search_box">
+                                        <input type="text" class="input_text">
+                                        <a href="#" class="btns btn_search">검색</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>소속</th>
+                                <td colspan="4">
+                                    <label class="radio_box">
+                                        <input type="radio" name="group" checked="checked" class="radio">
+                                        <span class="txt">실국본부</span>
+                                    </label>
+                                    <label class="radio_box">
+                                        <input type="radio" name="group" class="radio">
+                                        <span class="txt">자치구</span>
+                                    </label>
+                                    <label class="radio_box">
+                                        <input type="radio" name="group" class="radio">
+                                        <span class="txt">기관배정담당부서</span>
+                                    </label>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- bbs -->
+                    <div class="bbs_area">
+                        <div class="bbs_header">
+                            <div class="bbs_list">
+                                <p class="title title2">수안보연수원 <span class="blue">2018-08-01 ~ 2018-08-07</span> 실국본부 이용현황</p>
+                            </div>
+                            <div class="btn_box">
+                                <a href="" class="btns greenline btn_excel">전체 이용률 엑셀저장</a>
+                                <a href="" class="btns greenline btn_excel">엑셀저장</a>
+                                <a href="flwes_tran_pscds_popup.html" data-width="780" data-height="640" class="btns btn_print btn_popup">인쇄</a>
+                            </div>
+                        </div>
+                        
+                        <!-- bbs -->
+                        <table class="bbs bbs_table_type3">
+                            <colgroup>
+                                <col style="width:12%">
+                                <col style="width:11%">
+                                <col style="width:11%">
+                                <col style="width:11%">
+                                <col style="width:11%">
+                                <col style="width:11%">
+                                <col style="width:11%">
+                                <col style="width:11%">
+                                <col style="width:11%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th rowspan="2">실국본부</th>
+                                    <th colspan="2">A타입</th>
+                                    <th colspan="2">B타입</th>
+                                    <th colspan="2">C타입</th>
+                                    <th colspan="2">합계</th>
+                                </tr>
+                                <tr>
+                                    <th>객실 이용률</th>
+                                    <th>이용인원</th>
+                                    <th>객실 이용률</th>
+                                    <th>이용인원</th>
+                                    <th>객실 이용률</th>
+                                    <th>이용인원</th>
+                                    <th>객실 이용률</th>
+                                    <th>이용인원</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <td>합계</td>
+                                    <td>931(22.3%)</td>
+                                    <td>1352</td>
+                                    <td>796(27.3%)</td>
+                                    <td>1156</td>
+                                    <td>796(27.3%)</td>
+                                    <td>1352</td>
+                                    <td class="table_bg2">2,523(25.6%)</td>
+                                    <td class="table_bg2">3,664</td>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+                                <tr>
+                                    <td>감사위원회</td>
+                                    <td>16(20.0%)</td>
+                                    <td>205</td>
+                                    <td>16(20.0%)</td>
+                                    <td>205</td>
+                                    <td>16(20.0%)</td>
+                                    <td>205</td>
+                                    <td class="table_bg"><strong>16(20.0%)</strong></td>
+                                    <td class="table_bg"><strong>205</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>대변인</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                </tr>
+                                <tr>
+                                    <td>가족가족정책실</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                </tr>
+                                <tr>
+                                    <td>아동복지센터</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                </tr>
+                                <tr>
+                                    <td>시민소통기획관</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                </tr>
+                                <tr>
+                                    <td>정무부시장실</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                </tr>
+                                <tr>
+                                    <td>시민감사오브즈만위원회</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                </tr>
+                                <tr>
+                                    <td>기획조정실</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                </tr>    
+                                <tr>
+                                    <td>서울시립대</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                </tr>
+                                <tr>
+                                    <td>평생교육정책관</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                </tr>
+                                <tr>
+                                    <td>비상기획관</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                </tr>
+                                <tr>
+                                    <td>정보기획관</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                </tr>
+                                <tr>
+                                    <td>데이터센터</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                    <td class="table_bg"><strong></strong></td>
+                                </tr>                       
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <!-- //bbs -->
+                </div>
+                <!-- //메인 컨텐츠 -->
+            </div>
+            <!-- //컨텐츠 -->
+        </div>
+    </div>
+</body>
+</html>
