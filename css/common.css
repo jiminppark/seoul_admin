@@ -997,6 +997,8 @@ button.btns.type_b:disabled:hover {opacity:1}
 .month-picker table {border-spacing:0 !important;height:46px;}
 .ui-widget-header, .ui-widget-header a {color:#333 !important}
 .ui-widget-header .ui-icon.ui-icon-circle-triangle-e {background-position-x:-23px;}
+.month-picker-year-table .month-picker-title {position:relative}
+.month-picker-year-table .month-picker-title:after {content:'';position:absolute;top:0;right:0;bottom:0;left:0;z-index:10}
 
 /*date picker - year*/
 .year_datepicker .ui-datepicker-calendar,

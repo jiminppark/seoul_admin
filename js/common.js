@@ -50,18 +50,7 @@ var page = {
                     dateFormat: "yymmdd"
                 };
                 
-                $(this).datepicker(dateOpt);    
-                
-                $.datepicker.setDefaults({
-                    dateFormat: 'yy-mm-dd',
-                    prevText: '이전 달',
-                    nextText: '다음 달',
-                    showMonthAfterYear: true,
-                    yearSuffix: '',
-                    altField: "#alternate",
-                    altFormat: "yy-mm-dd"
-                });
-                
+                $(this).datepicker(dateOpt);       
             });
         }
     },
@@ -162,7 +151,10 @@ function month_calendar(){
 
     var options = {
         pattern: 'yyyy-mm',
-        monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월']
+        i18n: {
+            year: "",
+            months: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월']
+        }
     };
 
     $('.input_month').MonthPicker(options);
