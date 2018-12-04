@@ -1,13 +1,12 @@
 $(function() {
     page.init();
     month_calendar();
+    year_calendar();
 });
 
 var page = {
     init: function() {
         page.calendar();
-
-        //page.year_calendar();
         
         page.popup();
         
@@ -18,7 +17,7 @@ var page = {
             $.each($(".input_date"), function() {
                 var dateOpt = {
                     showOn: "button",
-                    dateFormat: "yymmdd"
+                    dateFormat: "yy-mm-dd"
                 };
                 if($(this).data("min") === true || $(this).data("min") == "true") {
                     dateOpt.minDate = 0;
@@ -26,6 +25,7 @@ var page = {
                 $(this).datepicker(dateOpt);    
 
                 $.datepicker.setDefaults({
+                    changeMonth: true,
                     dateFormat: 'yy-mm-dd',
                     prevText: '이전 달',
                     nextText: '다음 달',
@@ -40,17 +40,6 @@ var page = {
                     altFormat: "yy-mm-dd"
                 });
                 
-            });
-        }
-
-        if($(".input_year").length > 0) {
-            $.each($(".input_year"), function() {
-                var dateOpt = {
-                    showOn: "button",
-                    dateFormat: "yymmdd"
-                };
-                
-                $(this).datepicker(dateOpt);       
             });
         }
     },
@@ -165,5 +154,35 @@ function month_calendar(){
 
     $( ".input_month" ).focusout(function() {
         $(this).next().attr('src','img/icon/date.png');
+    });
+}
+
+function year_calendar(){
+    if($(".input_year").length > 0) {
+        $.each($(".input_year"), function() {
+            var dateOpt = {
+                showOn: "button",
+                changeYear: true,
+                changeMonth: false,
+                showMonthAfterYear: false,
+                showButtonPanel: true,
+                dateFormat: "yy",
+                weekStart: 1,
+                yearSuffix: '',
+                viewMode: "years",
+                minViewMode: "years",
+                onClose: function(dateText, inst) { 
+                    var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
+                    $(this).datepicker('setDate', new Date(year, 1));
+                }
+            };
+            
+            $(this).datepicker(dateOpt);    
+        });
+    }
+
+   
+    $("#schYear").click(function () {
+        $(".ui-datepicker-month").css("display","none");
     });
 }

@@ -954,7 +954,10 @@ button.btns.type_b:disabled:hover {opacity:1}
 .ui-widget.ui-datepicker tr:last-child td {border-bottom:none}
 .ui-widget.ui-datepicker .ui-datepicker-header {padding:0;border-bottom:1px solid #bfc2d0;background-color:#f7f7fa}
 .ui-widget.ui-datepicker .ui-datepicker-title {margin:0;padding:7px 0;font-size:18px;font-family:'Roboto', 'sans-serif'}
-.ui-widget.ui-datepicker .ui-datepicker-title .ui-datepicker-month {cursor:pointer;padding-right:15px;background:url("../img/icon/calendar_month_btn.png") no-repeat right 65%;}
+.ui-widget.ui-datepicker .ui-datepicker-title select::-ms-expand {
+    display: none; 
+ }
+.ui-widget.ui-datepicker .ui-datepicker-title select {-webkit-appearance:none;-moz-appearance:none;appearance:none;cursor:pointer;padding-left:10px;background:url("../img/icon/calendar_month_btn.png") no-repeat right 53%;color: #333;font-size:18px;font-family:'Roboto', 'sans-serif';font-weight:bold;}
 .ui-widget.ui-datepicker th {padding:0;height:40px;background-color:#f7f7fa;border-bottom:1px solid #bfc2d0}
 .ui-widget.ui-datepicker th ~ th {border-left:1px solid #e5e6ed}
 .ui-datepicker {background-color:#f7f7fa;border-radius:0;padding:0}
@@ -972,7 +975,7 @@ button.btns.type_b:disabled:hover {opacity:1}
 .ui-datepicker-calendar .ui-datepicker-today .ui-state-default {background-color:#eef5fb;color:#333}
 /*.ui-datepicker .ui-state-default.ui-state-hover {color:#fff !important;background-color:#c51315}*/
 .ui-datepicker-calendar .ui-datepicker-week-end .ui-state-default {color:#d23c5e}
-.ui-datepicker .ui-datepicker-title select {height:32px;width:80px;color:#666;border-color:#fbfbfe}
+.ui-datepicker .ui-datepicker-title select {height:32px;width:50px;color:#666;border-color:#fbfbfe}
 .ui-widget.ui-datepicker .ui-datepicker-header .ui-datepicker-prev,
 .ui-widget.ui-datepicker .ui-datepicker-header .ui-datepicker-next {cursor:pointer;border:none !important;background-color:transparent !important;top:0 !important;height:44px;width:44px}
 .ui-widget.ui-datepicker .ui-datepicker-prev {left:0 !important}
@@ -1001,8 +1004,10 @@ button.btns.type_b:disabled:hover {opacity:1}
 .month-picker-year-table .month-picker-title:after {content:'';position:absolute;top:0;right:0;bottom:0;left:0;z-index:10}
 
 /*date picker - year*/
-.year_datepicker .ui-datepicker-calendar,
-.year_datepicker .ui-datepicker-month {display:none;}
+.year_datepicker .ui-datepicker-month,
+.year_datepicker .ui-datepicker-calendar {display:none;font-size:0;margin:0;}​
+.year_datepicker .ui-widget-content {margin:0;border:0}
+.year_datepicker.ui-datepicker .ui-datepicker-title select {width:80px;}
 
 /*날짜별 이용관리*/
 .reserve_schedule_area .sch_table tbody p.day_text {position:relative;font-size:14px;color:#30384d;padding-left:20px;margin-top:5px;}
