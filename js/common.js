@@ -1,7 +1,5 @@
 $(function() {
     page.init();
-    month_calendar();
-    year_calendar();
 });
 
 var page = {
@@ -11,6 +9,10 @@ var page = {
         page.popup();
         
         page.style();
+
+        page.month_calendar();
+        page. year_calendar();
+
     },
     calendar: function() {
         if($(".input_date").length > 0) {
@@ -108,6 +110,58 @@ var page = {
             });
             return false;
         });
+    },
+    month_calendar: function() {
+        $("#ImageButton").MonthPicker({
+            Button: '<img class="icon" src="img/icon/date.png" />'
+        });
+    
+        var options = {
+            pattern: 'yyyy-mm',
+            i18n: {
+                year: "",
+                months: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월']
+            }
+        };
+    
+        $('.input_month').MonthPicker(options);
+    
+        $( ".input_month" ).focus(function() {
+            $(this).next().attr('src','img/icon/date_on.png');
+        });
+    
+        $( ".input_month" ).focusout(function() {
+            $(this).next().attr('src','img/icon/date.png');
+        });
+    },
+    year_calendar: function() {
+        if($(".input_year").length > 0) {
+            $.each($(".input_year"), function() {
+                var dateOpt = {
+                    showOn: "button",
+                    changeYear: true,
+                    changeMonth: false,
+                    showMonthAfterYear: false,
+                    showButtonPanel: true,
+                    dateFormat: "yy",
+                    weekStart: 1,
+                    yearSuffix: '',
+                    viewMode: "years",
+                    minViewMode: "years",
+                    onClose: function(dateText, inst) { 
+                        var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
+                        $(this).datepicker('setDate', new Date(year, 1));
+                    }
+                };
+                
+                $(this).datepicker(dateOpt);    
+            });
+        }
+    
+       
+        $("#schYear").click(function () {
+            $(".ui-datepicker-month").css("display","none");
+        });
     }
 }
 
@@ -133,56 +187,56 @@ function Rradio_OnOff(id){
     }                           
 }
 
-function month_calendar(){
-    $("#ImageButton").MonthPicker({
-        Button: '<img class="icon" src="img/icon/date.png" />'
-    });
+// function month_calendar(){
+//     $("#ImageButton").MonthPicker({
+//         Button: '<img class="icon" src="img/icon/date.png" />'
+//     });
 
-    var options = {
-        pattern: 'yyyy-mm',
-        i18n: {
-            year: "",
-            months: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월']
-        }
-    };
+//     var options = {
+//         pattern: 'yyyy-mm',
+//         i18n: {
+//             year: "",
+//             months: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월']
+//         }
+//     };
 
-    $('.input_month').MonthPicker(options);
+//     $('.input_month').MonthPicker(options);
 
-    $( ".input_month" ).focus(function() {
-        $(this).next().attr('src','img/icon/date_on.png');
-    });
+//     $( ".input_month" ).focus(function() {
+//         $(this).next().attr('src','img/icon/date_on.png');
+//     });
 
-    $( ".input_month" ).focusout(function() {
-        $(this).next().attr('src','img/icon/date.png');
-    });
-}
+//     $( ".input_month" ).focusout(function() {
+//         $(this).next().attr('src','img/icon/date.png');
+//     });
+// }
 
-function year_calendar(){
-    if($(".input_year").length > 0) {
-        $.each($(".input_year"), function() {
-            var dateOpt = {
-                showOn: "button",
-                changeYear: true,
-                changeMonth: false,
-                showMonthAfterYear: false,
-                showButtonPanel: true,
-                dateFormat: "yy",
-                weekStart: 1,
-                yearSuffix: '',
-                viewMode: "years",
-                minViewMode: "years",
-                onClose: function(dateText, inst) { 
-                    var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
-                    $(this).datepicker('setDate', new Date(year, 1));
-                }
-            };
+// function year_calendar(){
+//     if($(".input_year").length > 0) {
+//         $.each($(".input_year"), function() {
+//             var dateOpt = {
+//                 showOn: "button",
+//                 changeYear: true,
+//                 changeMonth: false,
+//                 showMonthAfterYear: false,
+//                 showButtonPanel: true,
+//                 dateFormat: "yy",
+//                 weekStart: 1,
+//                 yearSuffix: '',
+//                 viewMode: "years",
+//                 minViewMode: "years",
+//                 onClose: function(dateText, inst) { 
+//                     var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
+//                     $(this).datepicker('setDate', new Date(year, 1));
+//                 }
+//             };
             
-            $(this).datepicker(dateOpt);    
-        });
-    }
+//             $(this).datepicker(dateOpt);    
+//         });
+//     }
 
    
-    $("#schYear").click(function () {
-        $(".ui-datepicker-month").css("display","none");
-    });
-}
+//     $("#schYear").click(function () {
+//         $(".ui-datepicker-month").css("display","none");
+//     });
+// }

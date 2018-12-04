@@ -184,6 +184,8 @@ select.select:focus,
 .form_table textarea.input_text{padding:10px;height:120px;line-height:20px;border:1px solid #bfc2c7;overflow:hidden;overflow-y:auto;resize:none}
 .form_table:last-child{margin-bottom:0}
 .form_table p.value{padding:0 11px;height:32px;line-height:32px;font-size:14px;color:#354052}
+.value_data {position:relative;padding-right:20px}
+.value_data:not(:first-child) {margin-left:7px;}
 .form_table .sms_list span:not(:first-child) {margin-left:10px;}
 .form_table .sms_txt {padding:15px 0;}
 .form_table .sms_txt .value {height:auto;line-height:inherit;padding:10px 11px;}
@@ -782,7 +784,7 @@ button.btns.type_b:disabled:hover {opacity:1}
 
 .org_select{margin-top:20px;padding:20px 0 15px 10px;border-radius:2px;border:1px solid #bfc2c7;overflow:hidden}
 .org_select .org{float:left;position:relative;padding-right:20px;margin:0 10px 5px 0;line-height:20px;font-size:14px;color:#354052}
-.org_select .org .btn_delete{display:block;position:absolute;right:0;top:0;width:20px;height:20px;background:url("../img/icon/delr.png") no-repeat center center}
+.btn_delete{display:block;position:absolute;right:0;top:0;width:20px;height:20px;background:url("../img/icon/delr.png") no-repeat center center}
 .org_wrap .org_select{margin-top:10px;padding:0;border:0}
 .popup_area.popup_org .org_area{overflow:hidden}
 .popup_area.popup_org .org_area .org_box{float:right;position:relative;padding:40px 5px 5px 12px;width:42%;background:#e5e7ec;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
