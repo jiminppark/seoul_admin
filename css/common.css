@@ -304,6 +304,11 @@ select.select:focus,
 .form_table .date_box{width:102%}
 
 .time_box{display:inline-block;vertical-align:middle;*display:inline;zoom:1;white-space:nowrap}
+.time_box.time_box_data {display:block;}
+.popup_area.reserve_stats .room_request .time_box.time_box_data .value {display:block;}
+.popup_area.reserve_stats .room_request .time_box.time_box_data .value:not(:first-child) {margin:5px 0 0;}
+.time_box.time_box_data .btn_del {margin-left:5px;border:0;}
+
 .time_box .unit{float:left;width:20px;height:32px;line-height:32px;text-align:center;font-size:14px;color:#354052}
 .time_box select.select{float:left}
 
@@ -333,7 +338,7 @@ select.select:focus,
 .sub_title{margin-bottom:15px;line-height:20px;font-size:16px;color:#354052;font-weight:700}
 .sub_title b{margin-left:5px;font-weight:700}
 
-.btns{display:inline-block;padding:0 10px;min-width:100px;height:32px;line-height:30px;text-align:center;vertical-align:middle;font-size:14px;color:#ffffff;border-radius:2px;background:#1b89f9;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+.btns{display:inline-block;padding:0 10px;min-width:100px;height:32px;line-height:30px;text-align:center;vertical-align:middle;font-size:14px;color:#ffffff;border-radius:2px;background:#1b89f9;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;border:0;}
 .btns:hover{opacity:0.8}
 .btns.greenline{color:#196d40;border:1px solid #196d40;background:#fff}
 .btns.whiteline{color:#5f6b7e;border:1px solid #dfe4e9;background:#fff}
@@ -784,7 +789,7 @@ button.btns.type_b:disabled:hover {opacity:1}
 
 .org_select{margin-top:20px;padding:20px 0 15px 10px;border-radius:2px;border:1px solid #bfc2c7;overflow:hidden}
 .org_select .org{float:left;position:relative;padding-right:20px;margin:0 10px 5px 0;line-height:20px;font-size:14px;color:#354052}
-.btn_delete{display:block;position:absolute;right:0;top:0;width:20px;height:20px;background:url("../img/icon/delr.png") no-repeat center center}
+.btn_delete{display:block;position:absolute;right:0;top:0;width:20px;height:20px;background:url("../img/icon/delr.png") no-repeat center center;border:0;font-size:0;color:transparent;}
 .org_wrap .org_select{margin-top:10px;padding:0;border:0}
 .popup_area.popup_org .org_area{overflow:hidden}
 .popup_area.popup_org .org_area .org_box{float:right;position:relative;padding:40px 5px 5px 12px;width:42%;background:#e5e7ec;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}

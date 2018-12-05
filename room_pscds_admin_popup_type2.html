@@ -15,6 +15,7 @@
     <script src="js/jquery.placeholder.enhanced-1.5.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/common.js"></script>
+    <script src="js/MonthPicker.min.js"></script>
     <!--[if lt IE 9]>
         <link rel="stylesheet" media="all" href="css/ie.css">
         <script src="js/html5.js"></script>
@@ -123,22 +124,24 @@
                                         <div class="add_box">
                                             <select class="select sizes">
                                                 <option value="">이불</option>
+                                                <option value="">수건</option>
                                             </select>
                                             <select class="select sizess">
+                                                <option value="">1</option>
+                                                <option value="">2</option>
                                                 <option value="">3</option>
                                             </select>
-                                            <a href="#" class="btns btn_add">추가</a>
+                                            <button type="button" class="btns btn_add">추가</button>
                                             <p class="value">
-                                                <span class="value_data">이불 3,<a href="#" title="삭제" class="btn_delete"></a></span>
-                                                <span class="value_data">요 3<a href="#" title="삭제" class="btn_delete"></a></span>
+                                                <span class="value_data">이불 3,<button type="button" class="btn_delete">삭제</button></span>
+                                                <span class="value_data">요 3<button type="button" class="btn_delete">삭제</button></span>
                                             </p>
                                         </div>
                                         <div class="input_box">
                                             <input type="text" class="input_text">
                                         </div>
-                                        <div class="time_box">
-                                            <p class="value">2018-08-01 20:30 수건 10장 </p>
-                                            <a href="#" class="btns btn_delete">삭제</a>
+                                        <div class="time_box time_box_data">
+                                            <p class="value">2018-08-01 20:30 수건 10장<button type="button" class="btns btn_del">삭제</button></p>  
                                         </div>
                                     </div>
                                 </div>
@@ -179,5 +182,30 @@
             </div>
         </div>
     </div>
+
+    <script>
+        /* 객실요청사항에 추가버튼 클릭시, 행삽입 // 삭제버튼 클릭시 행삭제 스크립트 */
+        $(function() {
+            $(".request_box .btn_add").on("click",function() {
+                // clone
+                $.trClone = $(".request_box .time_box:last .value").clone().html();
+                $.newTr = $('.request_box .time_box:last').append("<p class='value'>"+$.trClone+"</p>");
+
+                // console.log($.trClone+",,"+$.newTr);
+                    // append
+                $(".time_box").append($.newTr);
+                                            
+                // delete Button 추가
+                $.btnDelete = $(".request_box .time_box .value +.btns");
+                //$(".request_box .time_box:last").html("");
+                $(".request_box .time_box .value").append($.btnDelete);
+
+                // 버튼에 클릭 이벤트 추가
+                $(".request_box .time_box:last .btns").on('click', function(){
+                    $(this).parent().remove();
+                });
+            });
+        });
+    </script>
 </body>
 </html>
