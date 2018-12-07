@@ -30,9 +30,9 @@
                 <li><a href="#" class="btn_menu">예약관리</a></li>
                 <li><a href="#" class="btn_menu">운영자관리</a></li>
                 <li><a href="#" class="btn_menu">회원관리</a></li>
-                <li><a href="#" class="btn_menu">정산관리</a></li>
+                <li><a href="#" class="btn_menu active">정산관리</a></li>
                 <li><a href="#" class="btn_menu">통계관리</a></li>
-                <li><a href="#" class="btn_menu active">연수원관리</a></li>
+                <li><a href="#" class="btn_menu">연수원관리</a></li>
                 <li><a href="#" class="btn_menu">사이트관리</a></li>
                 <li><a href="#" class="btn_menu">환경설정</a></li>
             </ul>
@@ -53,21 +53,20 @@
                         <p class="name">속초관리자명</p>
                     </div>
                     <ul class="lnb_list">
-                        <li><a href="#" class="btn_lnb">객실 관리</a></li>
-                        <li><a href="#" class="btn_lnb">시설 관리</a></li>
-                        <li><a href="#" class="btn_lnb active">분실물 관리</a></li>
-                        <li><a href="#" class="btn_lnb">컴플레인 관리</a></li>
+                        <li><a href="#" class="btn_lnb">일별마감</a></li>
+                        <li><a href="#" class="btn_lnb active">마감실패내역</a></li>
+                        <li><a href="#" class="btn_lnb">복지포인트 연동 관리</a></li>
                     </ul>
                 </div>
                 <!-- //lnb -->
                 
                 <!-- 메인 헤더 -->
                 <div class="main_header">
-                    <p class="title">분실물 관리</p>
+                    <p class="title">마감실패내역</p>
                     <ul class="navi_list">
                         <li>서울시연수원 통합예약시스템</li>
-                        <li>회원관리</li>
-                        <li class="now">인사DB관리</li>
+                        <li>정산관리</li>
+                        <li class="now">마감실패내역</li>
                     </ul>
                 </div>
                 <!-- //메인 헤더 -->
@@ -137,9 +136,9 @@
                         </colgroup>
                         <tbody>
                             <tr>
-                                <th>분실/습득일</th>
+                                <th>기간</th>
                                 <td>
-                                    <div class="radio_toggle btn_group">
+                                    <div class="radio_toggle">
                                         <label class="radio_box">
                                             <input type="radio" name="date" checked="checked" class="radio">
                                             <span class="txt">지난 3개월</span>
@@ -163,10 +162,10 @@
                                         <input type="text" value="2018-11-06" class="input_text input_date">
                                     </div>
                                 </td>
-                                <th>물품명</th>
+                                <th>이름</th>
                                 <td>
                                     <div class="search_box sizem">
-                                        <input type="text" class="input_text">
+                                        <input type="text" class="input_text" placeholder="이름검색">
                                         <a href="#" class="btns btn_search">검색</a>
                                     </div>
                                 </td>
@@ -177,17 +176,8 @@
                     <!-- bbs -->
                     <div class="bbs_area">
                         <div class="bbs_header">
-                            <div class="bbs_list">
-                                <p class="label">출력 수</p>
-                                <select class="select">
-                                    <option value="10">10개</option>
-                                </select>
-                                <p class="total">총 <b>60,231</b>건 (<span>1</span> / 603 Page)</p>
-                            </div>
                             <div class="btn_box">
-                                <a href="#" class="btns btn_add">등록</a>
-                                <a href="#" class="btns btn_hide">숨기기</a>
-                                <a href="#" class="btns btn_show">보이기</a>
+                                <a href="" class="btns greenline btn_excel">엑셀저장</a>
                             </div>
                         </div>
                         

@@ -156,7 +156,7 @@ select.select:focus,
 .check_box .txt{padding:0 5px 0 28px;height:32px;line-height:32px;font-size:14px;color:#354052}
 .radio_toggle{display:inline-block;margin-right:5px;height:32px;vertical-align:middle;*display:inline;zoom:1}
 .radio_toggle .radio_box{float:left;position:relative;margin:0 0 0 -1px;width:72px;height:32px;z-index:10}
-.radio_toggle .radio_box .radio{cursor:pointer;position:absolute;left:0;top:0;width:72px;height:32px;filter:alpha(opacity=0);opacity:0}
+.radio_toggle .radio_box .radio{cursor:pointer;position:absolute;left:0;top:11px;width:72px;height:32px;filter:alpha(opacity=0);opacity:0}
 .radio_toggle .radio_box .txt{display:block;position:relative;padding:0;width:70px;height:30px;line-height:30px;text-align:center;font-size:14px;color:#354052;border:1px solid #bfc2c7;background:#fff;z-index:10}
 .radio_toggle .radio_box .radio:checked + .txt{color:#1b89f9;border-color:#1b89f9;background:#e8f3fe;z-index:20}
 .radio_toggle .radio_box.active{z-index:20}
