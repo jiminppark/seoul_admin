@@ -84,53 +84,25 @@
                         </colgroup>
                         <tbody>
                             <tr>
-                                <th>구분</th>
+                                <th>연수원</th>
                                 <td>
                                     <select class="select">
-                                        <option value="">속초</option>
+                                        <option value="">전체</option>
                                     </select>
                                 </td>
-                                <th>분실/습득</th>
-                                <td>
-                                    <label class="radio_box">
-                                        <input type="radio" name="loss" checked="checked" value="all" class="radio">
-                                        <span class="txt">전체</span>
-                                    </label>
-                                    <label class="radio_box">
-                                        <input type="radio" name="loss" value="1" class="radio">
-                                        <span class="txt">습득</span>
-                                    </label>
-                                    <label class="radio_box">
-                                        <input type="radio" name="loss" value="2" class="radio">
-                                        <span class="txt">분실</span>
-                                    </label>
-                                </td>
-                                <th>처리상태</th>
-                                <td>
-                                    <label class="radio_box">
-                                        <input type="radio" name="stats" checked="checked" value="all" class="radio">
-                                        <span class="txt">전체</span>
-                                    </label>
-                                    <label class="radio_box">
-                                        <input type="radio" name="stats" value="1" class="radio">
-                                        <span class="txt">미처리</span>
-                                    </label>
-                                    <label class="radio_box">
-                                        <input type="radio" name="stats" value="2" class="radio">
-                                        <span class="txt">처리완료</span>
-                                    </label>
-                                    <label class="radio_box">
-                                        <input type="radio" name="stats" value="3" class="radio">
-                                        <span class="txt">처리불가</span>
-                                    </label>
+                                <th>기관</th>
+                                <td colspan="4">
+                                    <select class="select">
+                                        <option value="">기관명</option>
+                                    </select>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                     <table class="search_table form_area">
                         <colgroup>
-                            <col style="width:90px">
-                            <col style="width:640px">
+                            <col style="width:50px">
+                            <col style="width:61%">
                             <col style="width:70px">
                             <col>
                         </colgroup>
@@ -138,7 +110,7 @@
                             <tr>
                                 <th>기간</th>
                                 <td>
-                                    <div class="radio_toggle">
+                                    <div class="radio_toggle btn_group">
                                         <label class="radio_box">
                                             <input type="radio" name="date" checked="checked" class="radio">
                                             <span class="txt">지난 3개월</span>
@@ -185,138 +157,62 @@
                         <table class="bbs fixed">
                             <colgroup>
                                 <col style="width:60px">
+                                <col style="width:9%">
+                                <col style="width:9%">
                                 <col style="width:8%">
-                                <col style="width:10%">
-                                <col style="width:20%">
-                                <col style="width:10%">
+                                <col style="width:9%">
+                                <col style="width:8%">
+                                <col style="width:12%">
+                                <col style="width:12%">
+                                <col style="width:12%">
+                                <col style="width:11%">
+                                <col style="width:9%">
                                 <col style="width:13%">
-                                <col style="width:13%">
-                                <col style="width:8%">
-                                <col style="width:8%">
-                                <col style="width:8%">
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></th>
                                     <th>번호</th>
-                                    <th>분실/습득</th>
-                                    <th>물품명</th>
-                                    <th>분실/습득일</th>
-                                    <th>처리일</th>
-                                    <th>등록일</th>
-                                    <th>등록자</th>
-                                    <th>노출상태</th>
-                                    <th>처리상태</th>
+                                    <th>예약자명</th>
+                                    <th>기관명</th>
+                                    <th>부서명</th>
+                                    <th>연수원</th>
+                                    <th>객실타입</th>
+                                    <th>체크인</th>
+                                    <th>예약기간</th>
+                                    <th>상태</th>
+                                    <th>차감포인트</th>
+                                    <th>차감포인트<br>합계</th>
+                                    <th>결과</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
-                                    <td>103</td>
-                                    <td>습득</td>
-                                    <td>핸드폰 베터리</td>
+                                    <td>5</td>
+                                    <td>신창균</td>
+                                    <td>서울시립대</td>
+                                    <td>부서명</td>
+                                    <td>속초연수원</td>
+                                    <td>A타입</td>
                                     <td>2018-07-25</td>
-                                    <td></td>
-                                    <td>2018-07-25 17:21</td>
-                                    <td>master</td>
-                                    <td>노출</td>
-                                    <td class="loss incomplete">미처리</td>
+                                    <td>1박2일</td>
+                                    <td>장기재직자</td>
+                                    <td>5</td>
+                                    <td>5</td>
+                                    <td><span class="red">마감실패</span><br>인사DB에 없는 회원</td>
                                 </tr>
                                 <tr>
-                                    <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
-                                    <td>103</td>
-                                    <td>습득</td>
-                                    <td>핸드폰 베터리</td>
+                                    <td>4</td>
+                                    <td>신창균</td>
+                                    <td>서울시립대</td>
+                                    <td>부서명</td>
+                                    <td>속초연수원</td>
+                                    <td>A타입</td>
                                     <td>2018-07-25</td>
-                                    <td></td>
-                                    <td>2018-07-25 17:21</td>
-                                    <td>master</td>
-                                    <td>미노출</td>
-                                    <td class="loss">처리완료</td>
-                                </tr>
-                                <tr>
-                                    <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
-                                    <td>103</td>
-                                    <td>습득</td>
-                                    <td>핸드폰 베터리</td>
-                                    <td>2018-07-25</td>
-                                    <td></td>
-                                    <td>2018-07-25 17:21</td>
-                                    <td>master</td>
-                                    <td>노출</td>
-                                    <td class="loss">처리완료</td>
-                                </tr>
-                                <tr>
-                                    <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
-                                    <td>103</td>
-                                    <td>습득</td>
-                                    <td>핸드폰 베터리</td>
-                                    <td>2018-07-25</td>
-                                    <td></td>
-                                    <td>2018-07-25 17:21</td>
-                                    <td>master</td>
-                                    <td>노출</td>
-                                    <td class="loss">처리완료</td>
-                                </tr>
-                                <tr>
-                                    <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
-                                    <td>103</td>
-                                    <td>습득</td>
-                                    <td>핸드폰 베터리</td>
-                                    <td>2018-07-25</td>
-                                    <td></td>
-                                    <td>2018-07-25 17:21</td>
-                                    <td>master</td>
-                                    <td>노출</td>
-                                    <td class="loss">처리완료</td>
-                                </tr>
-                                <tr>
-                                    <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
-                                    <td>103</td>
-                                    <td>습득</td>
-                                    <td>핸드폰 베터리</td>
-                                    <td>2018-07-25</td>
-                                    <td></td>
-                                    <td>2018-07-25 17:21</td>
-                                    <td>master</td>
-                                    <td>노출</td>
-                                    <td class="loss">처리완료</td>
-                                </tr>
-                                <tr>
-                                    <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
-                                    <td>103</td>
-                                    <td>습득</td>
-                                    <td>핸드폰 베터리</td>
-                                    <td>2018-07-25</td>
-                                    <td></td>
-                                    <td>2018-07-25 17:21</td>
-                                    <td>master</td>
-                                    <td>노출</td>
-                                    <td class="loss">처리완료</td>
-                                </tr>
-                                <tr>
-                                    <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
-                                    <td>103</td>
-                                    <td>습득</td>
-                                    <td>핸드폰 베터리</td>
-                                    <td>2018-07-25</td>
-                                    <td></td>
-                                    <td>2018-07-25 17:21</td>
-                                    <td>master</td>
-                                    <td>노출</td>
-                                    <td class="loss">처리완료</td>
-                                </tr>
-                                <tr>
-                                    <td><label class="check_box"><input type="checkbox" class="check"><span class="txt"></span></label></td>
-                                    <td>103</td>
-                                    <td>습득</td>
-                                    <td>핸드폰 베터리</td>
-                                    <td>2018-07-25</td>
-                                    <td></td>
-                                    <td>2018-07-25 17:21</td>
-                                    <td>master</td>
-                                    <td>노출</td>
-                                    <td class="loss">처리완료</td>
+                                    <td>1박2일</td>
+                                    <td>장기재직자</td>
+                                    <td>5</td>
+                                    <td>5</td>
+                                    <td><span class="red">마감실패</span><br>인사DB에 없는 회원</td>
                                 </tr>
                             </tbody>
                         </table>
