@@ -1050,10 +1050,13 @@ button.btns.type_b:disabled:hover {opacity:1}
 .reserve_room_report .room_table_type2 td span:not(:first-child) {margin-left:10px;}
 .roport_share {position:absolute;bottom:0;color:#1b89f9 !important;font-size:12px !important;}
 
-
-
-
-
+/*단체연수예약 현황타입*/
+.rsv_room_table td {height:auto;padding:7px 10px;}
+.rsv_room_type .element {display:inline-block}
+.rsv_room_type .type_area {vertical-align:middle;min-width:100px;margin-right:40px;}
+.rsv_room_type .element span {display:inline-block;}
+.rsv_room_type .element input {margin:0 5px 0 10px;}
+.rsv_room_type .room_number {vertical-align:middle;word-break:break-all;width:calc(100% - 340px);line-height:22px;}
 
 
 

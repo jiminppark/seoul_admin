@@ -1,0 +1,6 @@
+node_modules/
+src/assets/css/
+src/assets/images/sprite.png
+
+package-lock.json
+.idea/

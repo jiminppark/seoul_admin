@@ -77,12 +77,12 @@
                 
                 <!-- 메인 컨텐츠 -->
                 <div class="main_content">
-                    <table class="form_table">
+                    <table class="form_table rsv_room_table">
                         <colgroup>
-                            <col style="width:136px">
-                            <col style="width:448px">
-                            <col style="width:136px">
-                            <col style="width:448px">
+                            <col style="width:150px">
+                            <col>
+                            <col style="width:150px">
+                            <col>
                         </colgroup>
                         <tbody>
                             <tr>
@@ -168,19 +168,61 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th>객실수</th>
+                                <th rowspan="4">객실</th>
                                 <td colspan="3">
-                                    <div class="btn_right_area">
-                                        <input type="text" class="input_text sizem">
+                                    <div class="btn_right_area rsv_room_type">
+                                        <div class="type_area element">
+                                            <span class="type">A타입</span>
+                                            <input type="text" class="input_text number">개
+                                        </div>
+                                        <p class="room_number element">201,202,203,204,205,206,207,208,209,210,201,202,203,204,205,206,207,208,209,210,201,202,203,204,205,206,207,208,209,210,301,302,303,304</p>
                                         <div class="btn_right">
-                                            <a href="#" class="btns">객실선택</a>
+                                            <button type="button" class="btns">객실선택</button>
                                         </div>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <th>객실</th>
-                                <td colspan="3"><p class="value"></p></td>
+                                <td colspan="3">
+                                    <div class="btn_right_area rsv_room_type">
+                                        <div class="type_area element">
+                                            <span class="type">B타입</span>
+                                            <input type="text" class="input_text number">개
+                                        </div>
+                                        <p class="room_number element">201,202,203,204,205,206,207,208,209,210,201,202,203,204,205,206,207,208,209,210,201,202,203,204,205,206,207,208,209,210,301,302,303,304</p>
+                                        <div class="btn_right">
+                                            <button type="button" class="btns">객실선택</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <div class="btn_right_area rsv_room_type">
+                                        <div class="type_area element">
+                                            <span class="type">C타입</span>
+                                            <input type="text" class="input_text number">개
+                                        </div>
+                                        <p class="room_number element">201,202,203,204,205,206,207,208,209,210,201,202,203,204,205,206,207,208,209,210,201,202,203,204,205,206,207,208,209,210,301,302,303,304</p>
+                                        <div class="btn_right">
+                                            <button type="button" class="btns">객실선택</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <div class="btn_right_area rsv_room_type">
+                                        <div class="type_area element">
+                                            <span class="type">D타입</span>
+                                            <input type="text" class="input_text number">개
+                                        </div>
+                                        <p class="room_number element">201,202</p>
+                                        <div class="btn_right">
+                                            <button type="button" class="btns">객실선택</button>
+                                        </div>
+                                    </div>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
