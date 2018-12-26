@@ -379,7 +379,7 @@ select.select:focus,
 .bbs.fixed{width:100%;table-layout:fixed}
 .bbs thead tr {border-right:1px solid #e5e7ec}
 .bbs thead th{padding:5px;height:31px;text-align:center;font-size:14px;color:#354052;font-weight:500;background:#e5e7ec;}
-.bbs tbody td, .bbs tfoot td{padding:5px;height:33px;text-align:center;font-size:14px;color:#596a7f;border-top:1px solid #ecedee}
+.bbs tbody td, .bbs tfoot td{word-break:break-all;padding:5px;height:33px;text-align:center;font-size:14px;color:#596a7f;border-top:1px solid #ecedee}
 .bbs tbody tr:first-child td{border-top:0;border-top:1px solid #e5e7ec;}
 .bbs tbody tr:hover {cursor: pointer;border-right:1px solid #9acbfc;border-left:1px solid #9acbfc;}
 .bbs tbody tr:hover td {background:#eff7ff;border-top:1px solid #9acbfc;border-bottom:1px solid #9acbfc}
