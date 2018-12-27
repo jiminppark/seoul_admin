@@ -144,7 +144,16 @@ select.select:focus,
 .form_area .search_box.panalty .btns{float:right;width:110px}
 .form_area .search_box.name .input_text{width:160px}
 .form_area .search_box.comm .input_text{width:480px}
+.form_area .search_box.size_mb .input_text{width:372px}
+.form_area .search_box.size_sb .input_text{width:220px}
 .form_area select.select{max-width:240px}
+
+.form_area.type2 select.select{width:100%}
+.form_area.type2 .sub_title {font-weight:normal}
+.form_area.type2 tr.bg_type1 {background-color:#e5e7ec}
+.form_area.type2 tr.bg_type1 td:first-child {padding: 7px 0 7px 10px}
+.form_area.type2 tr.bg_type1 td:last-child {padding: 7px 10px 7px 0}
+
 .stats_form_header.form_area .search_box .input_text {width:calc(100% - 90px);}
 .radio_box{display:inline-block;position:relative;margin-right:10px;background:url("../img/icon/radio.png") no-repeat left center;vertical-align:middle;*display:inline;zoom:1}
 .radio_box .radio{display:block;position:absolute;left:0;top:50%;margin-top:-11px;width:22px;height:22px;filter:alpha(opacity=0);opacity:0;z-index:-1}

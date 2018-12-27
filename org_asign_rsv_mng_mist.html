@@ -77,31 +77,40 @@
                 
                 <!-- 메인 컨텐츠 -->
                 <div class="main_content">
-                    <table class="search_table form_area">
+                    <table class="search_table form_area type2">
                         <colgroup>
-                            <col style="width:60px">
-                            <col style="width:250px">
-                            <col style="width:90px">
-                            <col style="width:615px">
-                            <col>
+                            <col style="width:52px">
+                            <col style="width:150px">
+                            <col style="width:70px">
+                            <col style="width:235px">
+                            <col style="width:85px">
+                            <col style="width:430px">
+                            <col style="width:130px">
                         </colgroup>
                         <tbody>
-                            <tr>
-                                <td colspan="3">
+                            <tr class="bg_type1">
+                                <td colspan="2">
                                     <div class="search_box">
                                         <select class="select">
                                             <option>속초수련원</option>
                                         </select>
                                     </div>
                                 </td>
-                                <td colspan="2">
-                                    <div class="search_box fr">
-                                        <input type="text" class="input_text">
+                                <td colspan="5">
+                                    <div class="search_box fr size_sb">
+                                        <input type="text" class="input_text" placeholder="담당자명 및 배정기관명">
                                         <a href="#" class="btns btn_search">검색</a>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
+                                <td colspan="7" class="sub_title">※ 담당자명, 배정기관을 클릭하시면 변경이 가능합니다.</td>
+                            </tr>
+                            <tr>
+                                <th>연수원</th>
+                                <td>
+                                    <input type="text" class="input_text">
+                                </td>
                                 <th>담당자</th>
                                 <td>
                                     <div class="search_box name">
@@ -111,7 +120,7 @@
                                 </td>
                                 <th>배정기관</th>
                                 <td>
-                                    <div class="search_box">
+                                    <div class="search_box size_mb">
                                         <input type="text" class="input_text">
                                         <a href="#" class="btns btn_search">검색</a>
                                     </div>
@@ -126,9 +135,6 @@
                     </table>
                     
                     <div class="bbs_area">
-                        <p class="sub_title">
-                            담당자명, 배정기관을 클릭하시면 변경이 가능합니다.
-                        </p>
                         <table class="bbs fixed">
                             <colgroup>
                                 <col style="width:6%">
