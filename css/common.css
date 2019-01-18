@@ -239,7 +239,7 @@ select.select:focus,
 .form_table .number_box .unit{float:left;width:34px;height:32px;line-height:32px;text-align:center;font-size:14px;color:#354052}
 
 .form_table .editor{padding:0}
-.form_table .view_box{padding:12px 10px;min-height:100px}
+.form_table .view_box{padding:12px 10px;min-height:100px;word-break:break-all}
 .form_table .view_box p{line-height:18px;font-size:14px;color:#354052}
 .file_upload{position:relative;padding:0 85px}
 .file_upload .input_text{height:30px;border:0}
