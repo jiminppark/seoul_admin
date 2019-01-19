@@ -4,7 +4,7 @@
 
 /* reset */
 html,body{margin:0px;padding:0px;width:100%;font-family:'Noto Sans KR', sans-serif;-webkit-text-size-adjust:none;-webkit-font-smoothing:antialiased;letter-spacing:-0.5px}
-ul,ol,li,dl,dd,dt,input,h1,h2,h3,h4,h5,h6,p,b,input,button,textarea,fieldset,legend,td,th{margin:0px;padding:0px;font-weight:normal;word-break:keep-all}
+ul,ol,li,dl,dd,dt,input,h1,h2,h3,h4,h5,h6,p,b,input,button,textarea,fieldset,legend,td,th{margin:0px;padding:0px;font-weight:normal;word-break:break-all}
 li{list-style:none}
 fieldset,img,a{border:0px}
 a{text-decoration:none}
