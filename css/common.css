@@ -437,6 +437,7 @@ select.select:focus,
 .bbs_table_type3 thead tr:first-child th {background-color:#e5e7ec}
 .bbs_table_type3 tfoot td {background-color:#e6ebf7;font-weight:600;color:#354052}
 .table_bg {background-color:#eff7ff}
+.table_bg2 {background-color:#f2f5fb}
 .bbs_table_type3 tfoot .table_bg2 {background-color:#d8e4f7}
 .bbs_table_type3 td strong {color:#354052}
 
@@ -653,6 +654,7 @@ body.popup{min-width:0;height:100%;background:#fff;overflow:hidden}
 .schedule_area .sch_table thead th{height:44px;text-align:center;font-size:14px;color:#354052;background:#e5e7ec}
 .schedule_area .sch_table tbody td{cursor:pointer;padding:5px 10px;height:100px;text-align:left;vertical-align:top;border:1px solid #dfe4e9;background:#fff}
 .schedule_area .sch_table tbody p{line-height:20px;font-size:14px;color:#354052}
+.schedule_area .sch_table tbody p.day_text peak_season {padding-left:20px;position:relative;}
 .schedule_area .sch_table tbody .blue{color:#1b89f9}
 .schedule_area .sch_table tbody .green{color:#73a533}
 .schedule_area .sch_table tbody .red{color:#f04c5d}
@@ -1058,7 +1060,7 @@ button.btns.type_b:disabled:hover {opacity:1}
 .reserve_room_report .room_table_type2 td {color:#596a7f}
 .reserve_room_report .room_table_type2 tr:first-child td {background-color:#e5e7ec;color:#354052;}
 .reserve_room_report .room_table_type2 td span:not(:first-child) {margin-left:10px;}
-.roport_share {position:absolute;bottom:0;color:#1b89f9 !important;font-size:12px !important;}
+.roport_share {position:absolute;bottom:0;color:#1b89f9 !important;font-size:13px !important;}
 
 /*단체연수예약 현황타입*/
 .rsv_room_table td {height:auto;padding:7px 10px;}

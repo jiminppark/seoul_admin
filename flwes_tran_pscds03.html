@@ -59,9 +59,7 @@
                         <li><a href="#" class="btn_lnb">객실별 리포트</a></li>
                         <li><a href="#" class="btn_lnb">연수내용별 리포트</a></li>
                         <li><a href="#" class="btn_lnb">소속별 리포트</a></li>
-                        <li><a href="#" class="btn_lnb">사용자별 리포트</a></li>
                         <li><a href="#" class="btn_lnb">후생복지시스템 리포트</a></li>
-                        <li><a href="#" class="btn_lnb">객실청소현황</a></li>
                     </ul>
                 </div>
                 <!-- //lnb -->
@@ -84,65 +82,57 @@
                             <col style="width:170px;">
                             <col style="width:50px;">
                             <col style="width:230px;">
-                            <col style="width:380px;">
                             <col style="width:auto;">
                         </colgroup>
                         <tbody>
                             <tr>
-                                    <td>
-                                        <select class="select">
-                                            <option>속초연수원</option>
-                                            <option>속초연수원</option>
-                                        </select>
-                                    </td>
-                                    <th>기간</th>
-                                    <td>
-                                        <label class="radio_box">
-                                            <input type="radio" name="period" checked="checked" value="today" class="radio" onclick="Rradio_OnOff('radio_days');">
-                                            <span class="txt">일별</span>
-                                        </label>
-                                        <label class="radio_box">
-                                            <input type="radio" name="period" value="moday" class="radio" onclick="Rradio_OnOff('radio_month');">
-                                            <span class="txt">월별</span>
-                                        </label>
-                                        <label class="radio_box">
-                                            <input type="radio" name="period" value="year" class="radio" onclick="Rradio_OnOff('radio_year');">
-                                            <span class="txt">연별</span>
-                                        </label>
-                                    </td>
-    
-                                    <!-- 일별일 경우 -->
-                                    <td id="radio_days">
-                                        <div class="date_box">
-                                            <input type="text" value="2018-11-06" class="input_text input_date">
-                                            <p class="unit">-</p>
-                                            <input type="text" value="2018-11-06" class="input_text input_date">
-                                        </div>
-                                    </td>
-                                    <!--// 일별일 경우 -->
-    
-                                    <!-- 월별일 경우 -->
-                                    <td id="radio_month" style="display:none">
-                                        <div class="date_box">
-                                            <input type="text" id="ImageButton" class="input_text input_month">
-                                        </div>
-                                    </td>
-                                        <!--// 월별일 경우 -->
-    
-                                        <!--년별일 경우 -->
-                                        <td id="radio_year" style="display:none">
-                                        <div class="date_box">
-                                            <input type="text" id="schYear" class="input_text input_year">
-                                        </div>
-                                    </td>
-                                    <!--// 년별일 경우 -->
-    
-                                    <td>
-                                        <div class="search_box">
-                                            <input type="text" class="input_text">
-                                            <a href="#" class="btns btn_search">검색</a>
-                                        </div>
-                                    </td>
+                                <td>
+                                    <select class="select">
+                                        <option>속초연수원</option>
+                                        <option>속초연수원</option>
+                                    </select>
+                                </td>
+                                <th>기간</th>
+                                <td>
+                                    <label class="radio_box">
+                                        <input type="radio" name="period" checked="checked" value="today" class="radio" onclick="Rradio_OnOff('radio_days');">
+                                        <span class="txt">일별</span>
+                                    </label>
+                                    <label class="radio_box">
+                                        <input type="radio" name="period" value="moday" class="radio" onclick="Rradio_OnOff('radio_month');">
+                                        <span class="txt">월별</span>
+                                    </label>
+                                    <label class="radio_box">
+                                        <input type="radio" name="period" value="year" class="radio" onclick="Rradio_OnOff('radio_year');">
+                                        <span class="txt">연별</span>
+                                    </label>
+                                </td>
+
+                                <!-- 일별일 경우 -->
+                                <td id="radio_days">
+                                    <div class="date_box">
+                                        <input type="text" value="2018-11-06" class="input_text input_date">
+                                        <p class="unit">-</p>
+                                        <input type="text" value="2018-11-06" class="input_text input_date">
+                                    </div>
+                                </td>
+                                <!--// 일별일 경우 -->
+
+                                <!-- 월별일 경우 -->
+                                <td id="radio_month" style="display:none">
+                                    <div class="date_box">
+                                        <input type="text" id="ImageButton" class="input_text input_month">
+                                    </div>
+                                </td>
+                                    <!--// 월별일 경우 -->
+
+                                    <!--년별일 경우 -->
+                                    <td id="radio_year" style="display:none">
+                                    <div class="date_box">
+                                        <input type="text" id="schYear" class="input_text input_year">
+                                    </div>
+                                </td>
+                                <!--// 년별일 경우 -->
                             </tr>
                         </tbody>
                     </table>
@@ -154,7 +144,7 @@
                                 <p class="title title2">수안보연수원 <span class="blue">2018-08-01 ~ 2018-08-07</span> 예약 현황</p>
                             </div>
                             <div class="btn_box">
-                                <a href="salut_db_mng_list_excel_popup.html" data-width="400" data-height="210" class="btns greenline btn_excel btn_popup">엑셀등록</a>
+                                <a href="salut_db_mng_list_excel_popup.html" data-width="400" data-height="210" class="btns greenline btn_excel btn_popup">엑셀저장</a>
                                 <a href="flwes_tran_pscds_popup.html" data-width="780" data-height="640" class="btns btn_print btn_popup">인쇄</a>
                             </div>
                         </div>
