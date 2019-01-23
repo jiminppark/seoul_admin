@@ -53,6 +53,7 @@ input::-ms-clear{display:none}
 .text_center {text-align:center}
 .vt_top {vertical-align:top !important;}
 .blind {color:transparent;text-indent:-9999px;position:fixed;left:0;top:0;overflow:hidden;}
+.mgbm {margin-bottom:20px;}
 
 .bg_cover{background-size:cover;background-position:center center;background-repeat:no-repeat}
 .bg_cover .bg_img{display:none}
@@ -652,7 +653,7 @@ body.popup{min-width:0;height:100%;background:#fff;overflow:hidden}
 .schedule_area .sch_search .btn_search{padding-left:30px;min-width:80px;background:#1b89f9 url("../img/icon/search.png") no-repeat 10px center}
 .schedule_area .sch_table{width:100%;table-layout:fixed}
 .schedule_area .sch_table thead th{height:44px;text-align:center;font-size:14px;color:#354052;background:#e5e7ec}
-.schedule_area .sch_table tbody td{cursor:pointer;padding:5px 10px;height:100px;text-align:left;vertical-align:top;border:1px solid #dfe4e9;background:#fff}
+.schedule_area .sch_table tbody td{padding:5px 10px;height:100px;text-align:left;vertical-align:top;border:1px solid #dfe4e9;background:#fff}
 .schedule_area .sch_table tbody p{line-height:20px;font-size:14px;color:#354052}
 .schedule_area .sch_table tbody p.day_text peak_season {padding-left:20px;position:relative;}
 .schedule_area .sch_table tbody .blue{color:#1b89f9}
@@ -1037,7 +1038,7 @@ button.btns.type_b:disabled:hover {opacity:1}
 .year_datepicker.ui-datepicker .ui-datepicker-title select {width:80px;}
 
 /*날짜별 이용관리*/
-.reserve_schedule_area .sch_table tbody p.day_text {position:relative;font-size:14px;color:#30384d;padding-left:20px;margin-top:5px;}
+.reserve_schedule_area .sch_table tbody p.day_text {position:relative;font-size:14px;color:#30384d;padding-left:20px;margin-top:5px;cursor:pointer}
 .day_text::before {content:"";display:block;position:absolute;left:0;top:2px;width:16px;height:17px;background:url("../img/icon/icon_day.png") no-repeat 0 0;}
 .peak_season::before {width:17px;height:16px;background-position: 0 0;}
 .election::before {background-position: -30px -24px;}
