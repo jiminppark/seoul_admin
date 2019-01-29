@@ -443,17 +443,18 @@ select.select:focus,
 .bbs_table_type3 td strong {color:#354052}
 
 .bbs_area3 .message_area {width:780px;}
-.message_area .sub_title {margin-bottom:10px;}
-.message_area .sub_title .text_byte {color:#8695a9;font-size:14px;font-weight:normal;}
+.message_area .sub_title {margin-bottom:5px;}
+.message_area .sub_title_desc {color:#8695a9;font-size:14px;font-weight:normal;}
 .sms_time {padding-left:25px;font-size:14px;color:#596a7f;background:url(../img/icon/ico_time.png) 0 0 no-repeat;vertical-align:top;margin-top:4px;display:inline-block;}
-.message_area textarea.input_text {height:170px;margin-bottom:5px;}
+.message_area textarea.input_text {height:170px;margin:5px 0;}
 
 .bbs_area3 .number_area {width:300px;padding-top:28px}
 .number_area .input_text {display:inline-block;vertical-align:top;width:calc(100% - 68px)}
-.number_area textarea.input_text {height:130px;}
+.number_area textarea.input_text {height:150px;}
 .number_area .sub_title {text-align:left;margin-right:6px;}
 .number_area >div:not(:first-child) {margin-top:10px;}
 .number_area .btns {border:0;}
+.number_area .select_list {display:inline-block;width:232px;}
 
 .bbs_area3 .search_table td {padding:10px 0 0}
 .bbs_area3 .bbs th .check_box {margin:0 0 0 20px;}

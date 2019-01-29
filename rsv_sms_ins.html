@@ -80,8 +80,13 @@
 
                     <div class="bbs_area bbs_area3 clear_fix">
                         <div class="message_area fl">
-                            <p class="sub_title">메세지 내용<span class="text_byte fr">(0/60 byte)</span></p>
+                            <p class="sub_title">메세지 내용</p>
+                            <p class="sub_title_desc">
+                                <span>안녕하세요 서울특별시 공무원연수원 속초 수련원입니다.</span>
+                                <span class="text_byte fr">(0/60 byte)</span>
+                            </p>
                             <textarea class="input_text"></textarea>
+                            <p class="sub_title_desc">서울특별시 공무원연수원 속초 연수원 드림</p>
 
                             <div class="message_area_bottom">
                                 <label class="check_box active">
@@ -94,8 +99,14 @@
 
                         <div class="number_area fr text_right">
                             <div>
-                                <label for="caller_number" class="sub_title">발신번호</label>
-                                <input type="text" id="caller_number" class="input_text">
+                                <label for="select_list" class="sub_title">연수원</label>
+                                <span class="select_list">
+                                    <select class="select" id="select_list">
+                                        <option>속초 수련원</option>
+                                        <option>서천 연수원</option>
+                                        <option>수안보 연수원</option>
+                                    </select>
+                                </span>
                             </div>
                             <div>
                                 <label for="reception_number" class="sub_title">수신번호</label>
