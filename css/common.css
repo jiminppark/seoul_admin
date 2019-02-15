@@ -194,7 +194,7 @@ select.select:focus,
 
 .form_table textarea.input_text{padding:10px;height:120px;line-height:20px;border:1px solid #bfc2c7;overflow:hidden;overflow-y:auto;resize:none}
 .form_table:last-child{margin-bottom:0}
-.form_table p.value{padding:0 11px;height:32px;line-height:32px;font-size:14px;color:#354052}
+.form_table p.value{padding:0 11px;min-height:32px;line-height:32px;font-size:14px;color:#354052}
 .value_data {position:relative;padding-right:20px}
 .value_data:not(:first-child) {margin-left:7px;}
 .form_table .sms_list span:not(:first-child) {margin-left:10px;}
@@ -608,6 +608,7 @@ body.popup{min-width:0;height:100%;background:#fff;overflow:hidden}
 .ico_room_state span.checking::before {background-color:#bb782a;}
 .ico_room_state span.cleaning::before {background-color:#f04c5d;}
 .ico_room_state span.clean_request::before {background-color:#ef9ca4;}
+.ico_room_state span.error::before {background:#ff0000}
 
 .reserve_room .room_table td.room_state_area p {color:#fff}
 .reserve_room .room_table td.room_state_area .icon {vertical-align:top;}
@@ -621,6 +622,9 @@ body.popup{min-width:0;height:100%;background:#fff;overflow:hidden}
 .cleaning .icon{width:24px;height:24px;background:url("../img/icon/reserve_clean.png") no-repeat center center}
 .clean_request{background:#ef9ca4}
 .clean_request .icon{width:24px;height:24px;background:url("../img/icon/reserve_clean.png") no-repeat center center}
+.error {background:#fff}
+.error .room_state a {margin-left:8px;cursor:default;color:#7b8592}
+.error .icon {margin:-2px 5px 0 0;width:11px;height:11px;background:url("../img/icon/delr.png") no-repeat center center}
 
 .reserve_room .btn_batch{color:#1b89f9;background:#e8f3fe}
 .reserve_room .room_table td.btn{padding:8px}
@@ -746,7 +750,7 @@ body.popup{min-width:0;height:100%;background:#fff;overflow:hidden}
 .popup_area.popup_schedule .sch_area{padding:0 0 0 20px}
 .popup_area.popup_schedule .sch_area p{line-height:23px;font-size:14px;color:#30384d;font-weight:500}
 .popup_area.popup_schedule .form_table{border:0}
-.popup_area.popup_schedule .form_table td{padding:5px 0;height:32px;border:0}
+.popup_area.popup_schedule .form_table td{padding:5px 0;min-height:32px;border:0}
 .popup_area.popup_schedule .form_table .label{display:inline-block;margin-left:20px;margin-right:10px;vertical-align:middle;font-size:14px;color:#30384d;font-weight:700}
 .popup_area.popup_schedule .form_table .label:first-child{margin-left:0}
 .popup_area.popup_schedule .form_table .date_box{width:auto}
