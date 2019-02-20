@@ -53,7 +53,7 @@ input::-ms-clear{display:none}
 .text_center {text-align:center}
 .vt_top {vertical-align:top !important;}
 .blind {color:transparent;text-indent:-9999px;position:fixed;left:0;top:0;overflow:hidden;}
-.mgbm {margin-bottom:20px;}
+.mgbm {margin-bottom:20px !important;}
 
 .bg_cover{background-size:cover;background-position:center center;background-repeat:no-repeat}
 .bg_cover .bg_img{display:none}
@@ -769,7 +769,7 @@ body.popup{min-width:0;height:100%;background:#fff;overflow:hidden}
 .bbs .sch_box.point .label.type{padding:0 5px 0 15px}
 
 .bbs .btns.type_b {margin-left:5px}
-.btns.type_b {min-width:65px;width:65px;padding:0 7px}
+.btns.type_b {min-width:65px;padding:0 7px}
 button.btns.type_b:disabled {background-color:#bfbfbf;border-color:#bfbfbf}
 button.btns.type_b:disabled:hover {opacity:1}
 

@@ -76,17 +76,40 @@
                     <table class="search_table form_area">
                         <colgroup>
                             <col style="width:48px">
-                            <col style="width:220px">
-                            <col style="width:90px">
-                            <col>
+                            <col style="width:253px">
+                            <col style="width:30px">
+                            <col style="width:55%">
                         </colgroup>
                         <tbody>
                             <tr>
                                 <th>기관</th>
-                                <td colspan="4">
+                                <td class="text_right">
                                     <select class="select">
                                         <option value="">기관명</option>
                                     </select>
+                                </td>
+                                <th>결과</th>
+                                <td>
+                                    <label class="radio_box">
+                                        <input type="radio" name="result" checked="checked" class="radio">
+                                        <span class="txt">전체</span>
+                                    </label>
+                                    <label class="radio_box">
+                                        <input type="radio" name="result" class="radio">
+                                        <span class="txt">마감성공</span>
+                                    </label>
+                                    <label class="radio_box">
+                                        <input type="radio" name="result" class="radio">
+                                        <span class="txt">마감실패</span>
+                                    </label>
+                                    <label class="radio_box">
+                                        <input type="radio" name="result" class="radio">
+                                        <span class="txt">복원성공</span>
+                                    </label>
+                                    <label class="radio_box">
+                                        <input type="radio" name="result" class="radio">
+                                        <span class="txt">복원실패</span>
+                                    </label>
                                 </td>
                             </tr>
                         </tbody>
