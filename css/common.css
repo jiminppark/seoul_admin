@@ -769,7 +769,7 @@ body.popup{min-width:0;height:100%;background:#fff;overflow:hidden}
 .bbs .sch_box.point .label.type{padding:0 5px 0 15px}
 
 .bbs .btns.type_b {margin-left:5px}
-.btns.type_b {min-width:65px;padding:0 7px}
+.btns.type_b {min-width:65px;width:65px;padding:0 1px}
 button.btns.type_b:disabled {background-color:#bfbfbf;border-color:#bfbfbf}
 button.btns.type_b:disabled:hover {opacity:1}
 
