@@ -731,7 +731,7 @@ body.popup{min-width:0;height:100%;background:#fff;overflow:hidden}
 .room_table_header .btns {vertical-align:top;margin-top:10px;min-width:60px;padding:0 10px;border:1px solid #bfc2c7;color:#354052;background:#fff;}
 .room_table_header .btn_group {margin-left:15px;padding-right:26px;}
 .room_table_header .btn_group .btns {padding:0 21px;margin:10px 0 0 4px;}
-.room_table_header .btn_group .btns.active {border:1px solid #1b89f9;background:#1b89f9;color:#fff;}
+.room_table_header .btn_group .btns.active, .room_table_header .btn_group .btns:focus {padding:0 21px;border:1px solid #1b89f9;background:#1b89f9;color:#fff;}
 .room_table_header .fr {position:relative;right:15px;}
 .room_table_header .fr .select {border-left:1px solid #dddee5;}
 .room_table_header .date_area {display:inline-block;padding-left:16px;}
@@ -1008,7 +1008,8 @@ button.btns.type_b:disabled:hover {opacity:1}
 .ui-datepicker-calendar .ui-datepicker-today .ui-state-default {background-color:#eef5fb;color:#333}
 /*.ui-datepicker .ui-state-default.ui-state-hover {color:#fff !important;background-color:#c51315}*/
 .ui-datepicker-calendar .ui-datepicker-week-end .ui-state-default {color:#d23c5e}
-.ui-datepicker .ui-datepicker-title select {height:32px;width:50px;color:#666;border-color:#fbfbfe}
+.ui-datepicker .ui-datepicker-title select {height:32px;width:47px;color:#666;border-color:#fbfbfe}
+.ui-datepicker .ui-datepicker-title .ui-datepicker-year {width:69px;margin-right:5px}
 .ui-widget.ui-datepicker .ui-datepicker-header .ui-datepicker-prev,
 .ui-widget.ui-datepicker .ui-datepicker-header .ui-datepicker-next {cursor:pointer;border:none !important;background-color:transparent !important;top:0 !important;height:44px;width:44px}
 .ui-widget.ui-datepicker .ui-datepicker-prev {left:0 !important}

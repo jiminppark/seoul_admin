@@ -28,6 +28,7 @@ var page = {
 
                 $.datepicker.setDefaults({
                     changeMonth: true,
+                    changeYear: true,
                     dateFormat: 'yy-mm-dd',
                     prevText: '이전 달',
                     nextText: '다음 달',
@@ -37,7 +38,8 @@ var page = {
                     dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
                     dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
                     showMonthAfterYear: true,
-                    yearSuffix: '.',
+                    showMonthAfterYear: true,
+                    //yearSuffix: '.',
                     altField: "#alternate",
                     altFormat: "yy-mm-dd"
                 });
