@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>서울시연수원 통합예약시스템</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=1, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/jquery-ui-monthpicker.css">
+    <link rel="stylesheet" media="all" href="css/common.css">
+    <link rel="stylesheet" media="all" href="css/MonthPicker.min.css" />
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.placeholder.enhanced-1.5.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/MonthPicker.min.js"></script>
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" media="all" href="css/ie.css">
+        <script src="js/html5.js"></script>
+        <script src="js/respond.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- 헤더 -->
+    <div id="header">
+        <div class="contains">
+            <h1 class="logo"><img src="img/common/logo.png" alt="서울시연수원 통합예약시스템"></h1>
+            <ul id="gnb">
+                <li><a href="#" class="btn_menu">예약관리</a></li>
+                <li><a href="#" class="btn_menu">운영자관리</a></li>
+                <li><a href="#" class="btn_menu">회원관리</a></li>
+                <li><a href="#" class="btn_menu">정산관리</a></li>
+                <li><a href="#" class="btn_menu active">통계관리</a></li>
+                <li><a href="#" class="btn_menu">연수원관리</a></li>
+                <li><a href="#" class="btn_menu">사이트관리</a></li>
+                <li><a href="#" class="btn_menu">환경설정</a></li>
+            </ul>
+            <div class="user">
+                <a href="#" class="btn_logout">로그아웃</a>
+            </div>
+        </div>
+    </div>
+    <!-- 헤더 -->
+    
+    <div id="content">
+        <div class="contains">
+            <!-- 컨텐츠 -->
+            <div class="content_wrap">
+                <!-- lnb -->
+                <div class="lnb_area">
+                    <div class="name_box">
+                        <p class="name">속초관리자명</p>
+                    </div>
+                    <ul class="lnb_list">
+                        <li><a href="#" class="btn_lnb">FORECAST</a></li>
+                        <li><a href="#" class="btn_lnb">연수원 이용률 리포트</a></li>
+                        <li><a href="#" class="btn_lnb active">객실별 리포트</a></li>
+                        <li><a href="#" class="btn_lnb">연수내용별 리포트</a></li>
+                        <li><a href="#" class="btn_lnb">소속별 리포트</a></li>
+                        <li><a href="#" class="btn_lnb">후생복지시스템 리포트</a></li>
+                    </ul>
+                </div>
+                <!-- //lnb -->
+                
+                <!-- 메인 헤더 -->
+                <div class="main_header">
+                    <p class="title">객실별 리포트</p>
+                    <ul class="navi_list">
+                        <li>서울시연수원 통합예약시스템</li>
+                        <li>통계관리</li>
+                        <li class="now">객실별 리포트</li>
+                    </ul>
+                </div>
+                <!-- //메인 헤더 -->
+                
+                <!-- 메인 컨텐츠 -->
+                <div class="main_content">
+                    <table class="search_table form_area stats_form_header">
+                        <colgroup>
+                            <col style="width:170px;">
+                            <col style="width:170px;">
+                            <col style="width:50px;">
+                            <col style="width:230px;">
+                            <col style="width:auto;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td class="room_state">
+                                    <select class="select sizess">
+                                        <option>수안보연수원</option>
+                                        <option>속초연수원</option>
+                                        <option>서천연수원</option>
+                                    </select>
+                                </td>
+                                <td class="room_state">
+                                    <select class="select sizess">
+                                        <option>숲속관</option>
+                                        <option>하늘관</option>
+                                    </select>
+                                </td>
+                                <th>기간</th>
+                                <td class="room_state">
+                                    <label class="radio_box">
+                                        <input type="radio" name="period" checked="checked" value="today" class="radio" onclick="Rradio_OnOff('radio_days');">
+                                        <span class="txt">일별</span>
+                                    </label>
+                                    <label class="radio_box">
+                                        <input type="radio" name="period" value="moday" class="radio" onclick="Rradio_OnOff('radio_month');">
+                                        <span class="txt">월별</span>
+                                    </label>
+                                    <label class="radio_box">
+                                        <input type="radio" name="period" value="year" class="radio" onclick="Rradio_OnOff('radio_year');">
+                                        <span class="txt">연별</span>
+                                    </label>
+                                </td>
+
+                                <!-- 일별일 경우 -->
+                                <td class="room_state" id="radio_days">
+                                    <div class="date_box">
+                                        <input type="text" value="2018-11-06" class="input_text input_date">
+                                        <p class="unit">-</p>
+                                        <input type="text" value="2018-11-06" class="input_text input_date">
+                                    </div>
+                                </td>
+                                <!--// 일별일 경우 -->
+
+                                <!-- 월별일 경우 -->
+                                <td class="room_state" id="radio_month" style="display:none">
+                                    <div class="date_box">
+                                        <input type="text" id="ImageButton" class="input_text input_month">
+                                    </div>
+                                </td>
+                                 <!--// 월별일 경우 -->
+
+                                 <!--년별일 경우 -->
+                                 <td class="room_state" id="radio_year" style="display:none">
+                                    <div class="date_box">
+                                        <input type="text" id="schYear" class="input_text input_year">
+                                    </div>
+                                </td>
+                                <!--// 년별일 경우 -->
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- bbs -->
+                    <div class="bbs_area">
+                        <div class="bbs_header">
+                            <div class="bbs_list">
+                                <p class="title title2">수안보 연수원 <span class="blue">2018-08-01 ~ 2018-08-07</span> 객실별 점유율</p>
+                            </div>
+                            <div class="btn_box">
+                                <a href="" class="btns greenline btn_excel">엑셀저장</a>
+                                <a href="flwes_tran_pscds_popup.html" data-width="780" data-height="640" class="btns btn_print btn_popup">인쇄</a>
+                            </div>
+                        </div>
+                        
+                        <!-- bbs -->
+                        <div class="reserve_room reserve_room_report">
+                            <table class="room_table">
+                                <colgroup>
+                                    <col style="width:70px;">
+                                    <col style="width:50px;">
+                                    <col style="width:50px;">
+                                    <col style="width:50px;">
+                                    <col style="width:50px;">
+                                    <col style="width:50px;">
+                                    <col style="width:50px;">
+                                    <col style="width:50px;">
+                                    <col style="width:50px;">
+                                    <col style="width:50px;">
+                                    <col style="width:50px;">
+                                    <col style="width:50px;">
+                                    <col style="width:50px;">
+                                    <col style="width:50px;">
+                                    <col style="width:50px;">
+                                    <col style="width:50px;">
+                                </colgroup>
+                                <tbody>
+                                <tr>
+                                    <th>6층</th>
+                                    <td>
+                                        <div class="room_state" onclick="window.open('daily_popup.html','window_name','width=470,height=260,location=no,status=no,scrollbars=yes');">
+                                            <p>601호</p>
+                                            <p class="roport_share">24 (30.0%)</p>
+                                        </div>
+                                    </td>
+                                    <td><div class="room_state" onclick="window.open('http://www.naver.com')"><p>602호</p></div></td>
+                                    <td><div class="room_state"><p>603호</p></div></td>
+                                    <td><div class="room_state"><p>604호</p></div></td>
+                                    <td><div class="room_state"><p>605호</p></div></td>
+                                    <td><div class="room_state"><p>606호</p></div></td>
+                                    <td colspan="2"><div class="room_state"><p>607호</p></div></td>
+                                    <td><div class="room_state"><p>608호</p></div></td>
+                                    <td><div class="room_state"><p>609호</p></div></td>
+                                    <td><div class="room_state"><p>610호</p></div></td>
+                                    <td><div class="room_state"><p>611호</p></div></td>
+                                    <td><div class="room_state"><p>612호</p></div></td>
+                                    <td><div class="room_state"><p>613호</p></div></td>
+                                    <td><div class="room_state"><p>614호</p></div></td>
+                                </tr>
+                                <tr>
+                                    <th>5층</th>
+                                    <td>
+                                        <div class="room_state">
+                                            <p>501호</p>
+                                            <p class="roport_share">24 (30.0%)</p>
+                                        </div>
+                                    </td>
+                                    <td><div class="room_state"><p>502호</p></div></td>
+                                    <td><div class="room_state"><p>503호</p></div></td>
+                                    <td><div class="room_state"><p>504호</p></div></td>
+                                    <td><div class="room_state"><p>505호</p></div></td>
+                                    <td><div class="room_state"><p>506호</p></div></td>
+                                    <td colspan="2"><div class="room_state"><p>507호</p></div></td>
+                                    <td><div class="room_state"><p>508호</p></div></td>
+                                    <td><div class="room_state"><p>509호</p></div></td>
+                                    <td><div class="room_state"><p>510호</p></div></td>
+                                    <td><div class="room_state"><p>511호</p></div></td>
+                                    <td><div class="room_state"><p>512호</p></div></td>
+                                    <td><div class="room_state"><p>513호</p></div></td>
+                                    <td><div class="room_state"><p>514호</p></div></td>
+                                </tr>
+                                <tr>
+                                    <th>4층</th>
+                                    <td><div class="room_state"><p>401호</p></div></td>
+                                    <td><div class="room_state"><p>402호</p></div></td>
+                                    <td><div class="room_state"><p>403호</p></div></td>
+                                    <td><div class="room_state"><p>404호</p></div></td>
+                                    <td><div class="room_state"><p>405호</p></div></td>
+                                    <td><div class="room_state"><p>406호</p></div></td>
+                                    <td colspan="2"><div class="room_state"><p>407호</p></div></td>
+                                    <td><div class="room_state"><p>408호</p></div></td>
+                                    <td><div class="room_state"><p>409호</p></div></td>
+                                    <td><div class="room_state"><p>410호</p></div></td>
+                                    <td><div class="room_state"><p>411호</p></div></td>
+                                    <td><div class="room_state"><p>412호</p></div></td>
+                                    <td><div class="room_state"><p>413호</p></div></td>
+                                    <td><div class="room_state"><p>414호</p></div></td>
+                                </tr>
+                                <tr>
+                                    <th>3층</th>
+                                    <td>
+                                        <div class="room_state">
+                                            <p>301호</p>
+                                            <p class="roport_share">24 (30.0%)</p>
+                                        </div>
+                                    </td>
+                                    <td><div class="room_state"><p>302호</p></div></td>
+                                    <td><div class="room_state"><p>303호</p></div></td>
+                                    <td><div class="room_state"><p>304호</p></div></td>
+                                    <td><div class="room_state"><p>305호</p></div></td>
+                                    <td><div class="room_state"><p>306호</p></div></td>
+                                    <td><div class="room_state"><p>307호</p></div></td>
+                                    <td><div class="room_state"><p>308호</p></div></td>
+                                    <td><div class="room_state"><p>309호</p></div></td>
+                                    <td><div class="room_state"><p>310호</p></div></td>
+                                    <td><div class="room_state"><p>311호</p></div></td>
+                                    <td><div class="room_state"><p>312호</p></div></td>
+                                    <td><div class="room_state"><p>313호</p></div></td>
+                                    <td><div class="room_state"><p>314호</p></div></td>
+                                    <td><div class="room_state"><p>315호</p></div></td>
+                                </tr>
+                                <tr>
+                                    <th>2층</th>
+                                    <td><div class="room_state"><p>201호</p></div></td>
+                                    <td><div class="room_state"><p>202호</p></div></td>
+                                    <td><div class="room_state"><p>203호</p></div></td>
+                                    <td><div class="room_state"><p>204호</p></div></td>
+                                    <td><div class="room_state"><p>205호</p></div></td>
+                                    <td><div class="room_state"><p>206호</p></div></td>
+                                    <td><div class="room_state"><p>207호</p></div></td>
+                                    <td><div class="room_state"><p>208호</p></div></td>
+                                    <td><div class="room_state"><p>209호</p></div></td>
+                                    <td>
+                                        <div class="room_state">
+                                            <p>210호</p>
+                                            <p class="roport_share">24 (30.0%)</p>
+                                        </div>
+                                    </td>
+                                    <td><div class="room_state"><p>211호</p></div></td>
+                                    <td><div class="room_state"><p>212호</p></div></td>
+                                    <td><div class="room_state"><p>213호</p></div></td>
+                                    <td><div class="room_state"><p>214호</p></div></td>
+                                    <td><div class="room_state"><p>215호</p></div></td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            <table class="room_table room_table_type2">
+                                <colgroup>
+                                    <col style="width:25%">
+                                    <col style="width:25%">
+                                    <col style="width:25%">
+                                    <col style="width:25%">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th rowspan="2">점유율이 가장 높은 객실</th>
+                                        <td>1위</td>
+                                        <td>2위</td>
+                                        <td>3위</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span>507</span>
+                                            <span>502</span>
+                                            <span>204</span>
+                                        </td>
+                                        <td>
+                                            <span>801</span>
+                                        </td>
+                                        <td>
+                                            <span>602</span>
+                                            <span>403</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <table class="room_table room_table_type2">
+                                <colgroup>
+                                    <col style="width:25%">
+                                    <col style="width:25%">
+                                    <col style="width:25%">
+                                    <col style="width:25%">
+                                </colgroup>
+                                <tbody>
+                                   <tr>
+                                        <th rowspan="2">점유율이 가장 낮은 객실</th>
+                                        <td>1위</td>
+                                        <td>2위</td>
+                                        <td>3위</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span>203</span>
+                                        </td>
+                                        <td>
+                                            <span>802</span>
+                                        </td>
+                                        <td>
+                                            <span>202</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- //bbs -->
+                </div>
+                <!-- //메인 컨텐츠 -->
+            </div>
+            <!-- //컨텐츠 -->
+        </div>
+    </div>
+</body>
+</html>
